@@ -19,7 +19,10 @@
 <acme:menu-bar>
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-curro" action="https://www.youtube.com/"/>
+      <acme:menu-suboption code="master.menu.anonymous.favourite-link-javi" action="https://imslp.org/"/>
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
