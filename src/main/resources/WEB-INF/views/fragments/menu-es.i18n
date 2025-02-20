@@ -1,4 +1,4 @@
-# menu-es.i18n
+# menu-es.i18n 
 #
 # Copyright (C) 2012-2025 Rafael Corchuelo.
 #
@@ -15,6 +15,7 @@ master.menu.anonymous.favourite-link-max = Y4266043V: Corti, Max Cameron
 master.menu.anonymous.favourite-link-nico = 47429335T: Parrilla Geniz, Nicolas
 master.menu.anonymous.favourite-link-curro = 77931075Z: Ayala Díaz, Francisco
 master.menu.anonymous.favourite-link-javi = 32909435T: Luque Ruiz, Javier
+master.menu.anonymous.favourite-link-pablo = 75919464Y: Vargas Sáez, Pablo
 
 # master.menu.administrator ###################################################
 

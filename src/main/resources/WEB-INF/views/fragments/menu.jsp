@@ -1,5 +1,5 @@
 <%--
-- menu.jsp
+- menu.jsp 
 -
 - Copyright (C) 2012-2025 Rafael Corchuelo.
 -
@@ -22,9 +22,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-max" action="https://arkm.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-nico" action="https://ev.us.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-curro" action="https://www.youtube.com/"/>
-      <acme:menu-suboption code="master.menu.anonymous.favourite-link-javi" action="https://imslp.org/"/>
+      		<acme:menu-suboption code="master.menu.anonymous.favourite-link-javi" action="https://imslp.org/"/>
+      		<acme:menu-suboption code="master.menu.anonymous.favourite-link-pablo" action="https://www.marca.com/"/>
 		</acme:menu-option>
-
+		
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
