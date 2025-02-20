@@ -58,8 +58,10 @@
     
     
     
-    <wb-module deploy-name="Acme-ANS-D01-25.1.0">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    <wb-module deploy-name="Acme-ANS-D01">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
+        
         
         
         
@@ -118,7 +120,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
+        
         
         
         
@@ -177,7 +181,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                
+        
+        
         
         
         
@@ -223,7 +229,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                                                                                                                        
+                                                                                                                                        
+        
+        
         
         
         
@@ -238,7 +246,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -249,10 +259,14 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                        
+                                        
+        
+        
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
+        
         
         
         
@@ -311,8 +325,10 @@
         
         
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
-        <property name="context-root" value="Acme-ANS-D01"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        <property name="context-root" value="Acme-ANS"/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    
+    
     
     
     
@@ -372,7 +388,9 @@
     
     
     </wb-module>
-                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                    
+
+
 
 
 
