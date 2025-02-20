@@ -11,8 +11,7 @@
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link = Favourite link
-
+master.menu.anonymous.favourite-link-max = Y4266043V: Corti, Max Cameron
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
