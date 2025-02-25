@@ -8,12 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,10 +25,9 @@ public class Manager extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@Valid
+	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$")
 	@Mandatory
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{2,3}\\d{6}$", message = "El formato no es válido")
 	private String				identifierNumber;
 
 	@Valid
