@@ -10,6 +10,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
+import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -32,6 +33,7 @@ public class Manager extends AbstractRole {
 
 	@Valid
 	@Mandatory
+	@Automapped
 	private Integer				yearsOfExperience;
 
 	@ValidMoment
@@ -41,6 +43,7 @@ public class Manager extends AbstractRole {
 
 	@ValidUrl
 	@Optional
+	@Automapped
 	private String				pictureUrl;
 
 }
