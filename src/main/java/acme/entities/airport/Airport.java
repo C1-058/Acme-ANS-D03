@@ -9,7 +9,9 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidString;
+import acme.client.components.validation.ValidUrl;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -50,12 +52,12 @@ public class Airport extends AbstractEntity {
 	private String				country;
 
 	@Optional
-	@ValidString
+	@ValidUrl
 	@Automapped
 	private String				website;
 
 	@Optional
-	@ValidString
+	@ValidEmail
 	@Automapped
 	private String				emailAddress;
 
