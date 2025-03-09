@@ -8,5 +8,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is a project by group C1.058 for the course Diseño y Pruebas 2.
+This is an academic project by group C1.058 for the course Diseño y Pruebas 2.
 It consists of an information system for managing an airline company.
