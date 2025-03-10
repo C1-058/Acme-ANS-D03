@@ -14,6 +14,8 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
+import acme.constraints.ValidPhone;
+import acme.entities.airline.Airline;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,17 +31,17 @@ public class FlighCrewMember extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$", message = "El formato no es válido")
+	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$")
 	@Column(unique = true)
 	private String				empoyeeCode;
 
 	@Mandatory
-	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "El formato no es válido")
-	@Column(unique = true)
+	@ValidPhone
+	@Automapped
 	private String				phoneNumber;
 
 	@Mandatory
-	@ValidString
+	@ValidString(max = 255)
 	@Automapped
 	private String				languageSkills;
 
@@ -63,5 +65,5 @@ public class FlighCrewMember extends AbstractRole {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Airlane				airlane;
+	private Airline				airline;
 }
