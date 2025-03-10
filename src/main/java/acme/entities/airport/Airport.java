@@ -43,7 +43,7 @@ public class Airport extends AbstractEntity {
 	private OperationalScope	operationalScope;
 
 	@Mandatory
-	@ValidString
+	@ValidString(max = 50)
 	@Automapped
 	private String				city;
 
