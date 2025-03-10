@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class FlighCrewMember extends AbstractRole {
+public class FlightCrewMember extends AbstractRole {
 
 	// Serialisation version --------------------------------------------------
 
