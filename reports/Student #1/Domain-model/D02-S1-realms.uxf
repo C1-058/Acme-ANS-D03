@@ -14,7 +14,7 @@ Manager
 --
 + identifierNumber: String { Mandatory, ValidString(pattern = "^[A-Z]{2,3}\\d{6}$"), Column(unique=true) }
 + yearsOfExperience: Integer { Mandatory, ValidNumber(min=0), Automapped}
-+ birthdate: Date { Mandatory, ValidMoment, Temporal(TemporalType.TIMESTAMP) }
++ birthdate: Date { Mandatory, ValidMoment(past=true), Temporal(TemporalType.TIMESTAMP) }
 + pictureUrl: String { Optional, ValidUrl, Automapped }
 bg=pink</panel_attributes>
     <additional_attributes/>
