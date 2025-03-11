@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>128</x>
+      <y>368</y>
+      <w>520</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+FlightCrewMember
+--
++ employeeCode: String {Mandatory, ValidString(pattern = "^[A-Z]{2,3}\\d{6}$"), Column(unique = true)}
++ phoneNumber: String {Mandatory, ValidPhone, Automapped}
++ languageSkills: String {Mandatory, ValidText, Automapped}
++ availabilityStatus: AvailabilityStatus {Mandatory, Valid, Automapped}
++ salary: Money {Mandatory, ValidMoney, Automapped}
++ yearsOfExperience: Integer {Optional, ValidNumber(min = 0, max = 120) Automapped}
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>416</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>416</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>works for &gt;
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
