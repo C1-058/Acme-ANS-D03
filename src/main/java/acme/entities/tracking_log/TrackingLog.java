@@ -1,6 +1,8 @@
 
 package acme.entities.tracking_log;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
@@ -8,7 +10,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
@@ -29,7 +30,7 @@ public class TrackingLog extends AbstractEntity {
 	@Mandatory
 	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
-	private Moment				lastUpdateMoment;
+	private Date				lastUpdateMoment;
 
 	@Mandatory
 	@ValidString(max = 50)

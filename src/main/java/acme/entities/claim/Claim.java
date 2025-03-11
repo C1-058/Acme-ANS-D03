@@ -1,6 +1,8 @@
 
 package acme.entities.claim;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -8,7 +10,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidEmail;
@@ -28,7 +29,7 @@ public class Claim extends AbstractEntity {
 	@Mandatory
 	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Moment				registrationMoment;
+	private Date				registrationMoment;
 
 	@Mandatory
 	@ValidEmail
