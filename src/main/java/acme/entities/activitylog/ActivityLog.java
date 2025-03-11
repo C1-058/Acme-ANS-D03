@@ -16,6 +16,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.constraints.ValidText;
+import acme.entities.flightassignment.FlightAssignment;
 import lombok.Getter;
 import lombok.Setter;
 
