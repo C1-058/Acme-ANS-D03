@@ -13,7 +13,6 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.entities.airline.Airline;
-import acme.entities.airport.Airport;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -58,10 +57,5 @@ public class Aircraft extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Airline				airline;
-
-	@Mandatory
-	@Valid
-	@ManyToOne
-	private Airport				airport;
 
 }
