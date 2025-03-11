@@ -1,5 +1,5 @@
 
-package acme.entities.trackingLog;
+package acme.entities.tracking_log;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
