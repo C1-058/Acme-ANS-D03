@@ -37,7 +37,7 @@ public class Manager extends AbstractRole {
 	private Integer				yearsOfExperience;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				birthdate;
 
