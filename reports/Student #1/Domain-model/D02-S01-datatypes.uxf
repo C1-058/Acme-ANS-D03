@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>180</y>
+      <x>200</x>
+      <y>170</y>
       <w>160</w>
       <h>120</h>
     </coordinates>
@@ -16,23 +16,6 @@ LegStatus
 + DELAYED
 + CANCELLED
 + LANDED
-bg=LIGHT_GRAY</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>160</x>
-      <y>180</y>
-      <w>160</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Enum&gt;&gt;
-AirlineType
---
-+ LUXURY
-+ STANDARD
-+ LOW_COST
 bg=LIGHT_GRAY</panel_attributes>
     <additional_attributes/>
   </element>
