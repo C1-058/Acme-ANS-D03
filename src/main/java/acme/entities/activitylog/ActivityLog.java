@@ -13,8 +13,8 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidNumber;
-import acme.client.components.validation.ValidString;
+import acme.constraints.ValidSecurityLevel;
+import acme.constraints.ValidShortText;
 import acme.constraints.ValidText;
 import acme.entities.flightassignment.FlightAssignment;
 import lombok.Getter;
@@ -37,7 +37,7 @@ public class ActivityLog extends AbstractEntity {
 	private Date				registrationMoment;
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidShortText
 	@Automapped
 	private String				typeOfIncident;
 
@@ -47,7 +47,7 @@ public class ActivityLog extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidNumber(min = 0, max = 10)
+	@ValidSecurityLevel
 	@Automapped
 	private Integer				securityLevel;
 

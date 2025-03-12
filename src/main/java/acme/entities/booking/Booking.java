@@ -1,29 +1,34 @@
 
-package acme.realms.flightcrewmembers;
+package acme.entities.booking;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
-import acme.client.components.basis.AbstractRole;
+import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-import acme.constraints.ValidEmployeeIdentifier;
-import acme.constraints.ValidPhone;
-import acme.constraints.ValidText;
-import acme.constraints.ValidYearsOfExperience;
-import acme.entities.airline.Airline;
+
+import acme.constraints.ValidLastNibble;
+import acme.constraints.ValidLocatorCode;
+
+import acme.realms.Customer;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class FlightCrewMember extends AbstractRole {
+public class Booking extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
@@ -32,39 +37,35 @@ public class FlightCrewMember extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidEmployeeIdentifier
+	@ValidLocatorCode
 	@Column(unique = true)
-	private String				employeeCode;
+	private String				locatorCode;
 
 	@Mandatory
-	@ValidPhone
-	@Automapped
-	private String				phoneNumber;
-
-	@Mandatory
-	@ValidText
-	@Automapped
-	private String				languageSkills;
+	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				purchaseMoment;
 
 	@Mandatory
 	@Valid
 	@Automapped
-	private AvailabilityStatus	availabilityStatus;
+	private TravelClass			travelClass;
 
 	@Mandatory
 	@ValidMoney
 	@Automapped
-	private Money				salary;
+	private Money				price;
 
 	@Optional
-	@ValidYearsOfExperience
+	@ValidLastNibble
 	@Automapped
-	private Integer				yearsOfExperience;
+	private String				lastNibble;
 
 	// Relationships ----------------------------------------------------------
 
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Airline				airline;
+	private Customer			customer;
+
 }

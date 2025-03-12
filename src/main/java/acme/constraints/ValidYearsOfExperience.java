@@ -9,23 +9,21 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.ReportAsSingleViolation;
-import javax.validation.constraints.Size;
-
-import acme.constraints.validators.NotBlankOrNullValidator;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {
-	NotBlankOrNullValidator.class
-})
+@Constraint(validatedBy = {})
 @ReportAsSingleViolation
 
-@Size(min = 1, max = 255)
-public @interface ValidText {
+@Min(0)
+@Max(120)
+public @interface ValidYearsOfExperience {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The text must not consist of empty characters and must have a length between 1 and 255 characters.";
+	String message() default "The years of experience must be between 0 and 120.";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
