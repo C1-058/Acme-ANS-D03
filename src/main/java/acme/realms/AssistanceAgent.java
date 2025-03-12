@@ -2,6 +2,7 @@
 package acme.realms;
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -16,8 +17,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidEmployeeIdentifier;
+import acme.constraints.ValidText;
 import acme.entities.airline.Airline;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,12 +32,12 @@ public class AssistanceAgent extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$")
+	@ValidEmployeeIdentifier
 	@Column(unique = true)
 	private String				employeeCode;
 
 	@Mandatory
-	@ValidString(max = 255)
+	@ValidText
 	@Automapped
 	private String				spokenLanguagues;
 
@@ -45,7 +47,7 @@ public class AssistanceAgent extends AbstractRole {
 	private Date				moment;
 
 	@Optional
-	@ValidString(max = 255)
+	@ValidText
 	@Automapped
 	private String				bio;
 

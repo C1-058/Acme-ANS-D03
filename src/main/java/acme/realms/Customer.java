@@ -14,8 +14,6 @@ package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.mappings.Automapped;
@@ -23,7 +21,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.entities.purchase.Purchase;
+import acme.constraints.ValidEmployeeIdentifier;
+import acme.constraints.ValidPhone;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -42,14 +42,14 @@ public class Customer extends AbstractRole {
 
 	@Mandatory
 
-	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$")
+	@ValidEmployeeIdentifier
 
 	@Column(unique = true)
 	private String				identifier;
 
 	@Mandatory
 
-	@ValidString
+	@ValidPhone
 
 	@Automapped
 	private String				phoneNumber;
@@ -63,14 +63,14 @@ public class Customer extends AbstractRole {
 
 	@Mandatory
 
-	@ValidString(max = 50)
+	@ValidShortText
 
 	@Automapped
 	private String				city;
 
 	@Mandatory
 
-	@ValidString(max = 50)
+	@ValidShortText
 
 	@Automapped
 	private String				country;
@@ -85,11 +85,4 @@ public class Customer extends AbstractRole {
 
 	// Relationships ----------------------------------------------------------
 
-	@Mandatory
-
-	@Valid
-
-	@ManyToOne(optional = false)
-
-	private Purchase			purchase;
 }
