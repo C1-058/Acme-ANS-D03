@@ -6,6 +6,7 @@
     <coordinates>
       <x>0</x>
       <y>185</y>
+
       <w>335</w>
       <h>95</h>
     </coordinates>
@@ -27,6 +28,7 @@ bg=green
     <coordinates>
       <x>430</x>
       <y>330</y>
+
       <w>270</w>
       <h>80</h>
     </coordinates>
@@ -46,6 +48,7 @@ bg=green</panel_attributes>
     <coordinates>
       <x>105</x>
       <y>385</y>
+
       <w>105</w>
       <h>30</h>
     </coordinates>
@@ -59,6 +62,7 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>155</x>
       <y>410</y>
+
       <w>50</w>
       <h>120</h>
     </coordinates>
@@ -73,6 +77,7 @@ m2=*</panel_attributes>
     <coordinates>
       <x>470</x>
       <y>220</y>
+
       <w>105</w>
       <h>30</h>
     </coordinates>
@@ -86,6 +91,7 @@ bg=green</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>225</y>
+
       <w>150</w>
       <h>25</h>
     </coordinates>
@@ -101,6 +107,7 @@ m2=*
     <coordinates>
       <x>520</x>
       <y>245</y>
+
       <w>40</w>
       <h>95</h>
     </coordinates>
@@ -116,6 +123,7 @@ m2=*
     <coordinates>
       <x>310</x>
       <y>485</y>
+
       <w>235</w>
       <h>110</h>
     </coordinates>
@@ -143,6 +151,7 @@ bg=green
     <coordinates>
       <x>115</x>
       <y>520</y>
+
       <w>95</w>
       <h>40</h>
     </coordinates>
@@ -158,6 +167,7 @@ bg=green
     <coordinates>
       <x>205</x>
       <y>535</y>
+
       <w>115</w>
       <h>30</h>
     </coordinates>
@@ -174,6 +184,7 @@ m2=*
     <coordinates>
       <x>155</x>
       <y>275</y>
+
       <w>40</w>
       <h>120</h>
     </coordinates>
