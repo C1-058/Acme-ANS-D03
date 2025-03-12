@@ -28,7 +28,7 @@ bg=LIGHT_GRAY</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
-Airline
+AirlineType
 --
 + LUXURY
 + STANDARD
