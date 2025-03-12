@@ -10,7 +10,7 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.ReportAsSingleViolation;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -18,12 +18,12 @@ import javax.validation.constraints.Pattern;
 @ReportAsSingleViolation
 
 @NotBlank
-@Pattern(regexp = "^\\+?\\d{6,15}$")
-public @interface ValidPhone {
+@Size(min = 1, max = 50)
+public @interface ValidShortText {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The phone number must not be empty and must follow the correct pattern.";
+	String message() default "The text must not consist of empty characters and must have a length between 1 and 50 characters.";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
