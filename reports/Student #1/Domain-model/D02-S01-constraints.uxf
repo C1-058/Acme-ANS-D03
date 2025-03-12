@@ -76,7 +76,7 @@ bg=RED</panel_attributes>
       <h>80</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Constraint&gt;&gt;
-ValidManagerIdentifier
+ValidEmployeeIdentifier
 --
 + NotBlank
 + Pattern(regexp = "^[A-Z]{2,3}\\d{6}$")
