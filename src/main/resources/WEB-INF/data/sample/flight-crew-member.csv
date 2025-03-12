@@ -22,8 +22,8 @@ flight-crew-member-16,CKA320728,999999999999999,"Lorem ipsum dolor sit amet,cons
 #languageSkills - standard variations,,,,,,,,
 flight-crew-member-17,SVO408026,3047492557,L,AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
 flight-crew-member-18,YYZ947216,3047492557,Lo,AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
-flight-crew-member-19,GKI642082,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed do eiusmod te",AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
-flight-crew-member-20,KBM550894,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing elit. Sed do eiusmod tem",AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
+flight-crew-member-19,GKI642082,3047492557,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
+flight-crew-member-20,KBM550894,3047492557,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
 flight-crew-member-21,ZXH819962,3047492557,โลเร็ม อิปซัม,AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
 flight-crew-member-22,ZFN173500,3047492557,لوريم إيبسوم,AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
 flight-crew-member-23,PTH505860,3047492557,洛伦·伊普森,AVAILABLE,EUR 600000,30,user-account-flight-crew-member-01,airline-01
@@ -43,3 +43,4 @@ flight-crew-member-33,CWB920323,3047492557,"Lorem ipsum dolor sit amet,consectet
 flight-crew-member-34,WUT196024,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing",AVAILABLE,EUR 600000,1,user-account-flight-crew-member-01,airline-01
 flight-crew-member-35,NLF699248,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing",AVAILABLE,EUR 600000,119,user-account-flight-crew-member-01,airline-01
 flight-crew-member-36,KWL748943,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing",AVAILABLE,EUR 600000,120,user-account-flight-crew-member-01,airline-01
+flight-crew-member-37,AAA748943,3047492557,"Lorem ipsum dolor sit amet,consectetur adipiscing",AVAILABLE,EUR 600000,,user-account-flight-crew-member-01,airline-01

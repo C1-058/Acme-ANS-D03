@@ -1,0 +1,3 @@
+key,duty,moment,status,remarks,key:flightCrewMember
+#base entity
+flight-assignment-00,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",flight-crew-member-00
