@@ -5,7 +5,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
+
       <y>185</y>
+
 
       <w>335</w>
       <h>95</h>
@@ -27,6 +29,7 @@ bg=green
     <id>UMLClass</id>
     <coordinates>
       <x>430</x>
+
       <y>330</y>
 
       <w>270</w>
@@ -35,11 +38,11 @@ bg=green
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Passenger
 --
-+ full name: String {Mandatory, ValidLongText, Automapped}
++ full name: String {Mandatory, ValidString, Automapped}
 + email: String {Mandatory, ValidEmail, Automapped}
-+ passport number: String {Mandatory, ValidPassport, Automapped}
++ passport number: String {Mandatory, ValidPassportNumber, Automapped}
 + date of birth: Date {Mandatory, ValidMoment(past=true), Temporal(TIMESTAMP)}
-+ special needs: String {Optional,ValidString, Automapped}
++ special needs: String {Optional,ValidShortText, Automapped}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -47,6 +50,7 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>105</x>
+
       <y>385</y>
 
       <w>105</w>
@@ -61,7 +65,9 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>155</x>
+
       <y>410</y>
+
 
       <w>50</w>
       <h>120</h>
@@ -76,6 +82,7 @@ m2=*</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>470</x>
+
       <y>220</y>
 
       <w>105</w>
@@ -90,7 +97,9 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>330</x>
+
       <y>225</y>
+
 
       <w>150</w>
       <h>25</h>
@@ -106,7 +115,9 @@ m2=*
     <id>Relation</id>
     <coordinates>
       <x>520</x>
+
       <y>245</y>
+
 
       <w>40</w>
       <h>95</h>
@@ -122,7 +133,9 @@ m2=*
     <id>UMLClass</id>
     <coordinates>
       <x>310</x>
+
       <y>485</y>
+
 
       <w>235</w>
       <h>110</h>
@@ -150,7 +163,9 @@ bg=green
     <id>UMLClass</id>
     <coordinates>
       <x>115</x>
+
       <y>520</y>
+
 
       <w>95</w>
       <h>40</h>
@@ -166,7 +181,9 @@ bg=green
     <id>Relation</id>
     <coordinates>
       <x>205</x>
+
       <y>535</y>
+
 
       <w>115</w>
       <h>30</h>
@@ -183,7 +200,9 @@ m2=*
     <id>Relation</id>
     <coordinates>
       <x>155</x>
+
       <y>275</y>
+
 
       <w>40</w>
       <h>120</h>
