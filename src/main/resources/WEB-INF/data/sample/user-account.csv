@@ -8,8 +8,8 @@ user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטי�
 user-account-agent-1,true,"UserIdentity{name:'Nicolás', surname: 'Parrilla', email:'xxxxxxx@gmail.com'}",agent1,agent1
 user-account-agent-2,true,"UserIdentity{name:'Ainhoa', surname: 'Jimenez', email:'xxxxxyy@gmail.com'}",agent2,agent2
 user-account-manager-3,true,"UserIdentity{name:'Lionel', surname: 'Messi', email:'xxyxxyy@gmail.com'}",manager3,manager3
-user-accoutn-flight-crew-member-01,true,"UserIdentity{name:'Cristiano', surname: 'Ronaldo', email:'cristiano@acme.com'}",member1,member1
-user-accoutn-flight-crew-member-02,true,"UserIdentity{name:'زين', surname: 'زين الفاروق', email:'zayn@acme.com'}",member2,member2
-user-accoutn-flight-crew-member-03,true,"UserIdentity{name:'明泽', surname: '龙', email:'mingze@acme.com'}",member3,member3
-user-accoutn-flight-crew-member-04,true,"UserIdentity{name:'Javier', surname: 'Luque', email:'javier@acme.com'}",member4,member4
-user-accoutn-flight-crew-member-05,true,"UserIdentity{name:'Björn', surname: 'Magnússon', email:'björn@acme.com'}",member,member
+user-account-flight-crew-member-01,true,"UserIdentity{name:'Cristiano', surname: 'Ronaldo', email:'cristiano@acme.com'}",member1,member1
+user-account-flight-crew-member-02,true,"UserIdentity{name:'زين', surname: 'زين الفاروق', email:'zayn@acme.com'}",member2,member2
+user-account-flight-crew-member-03,true,"UserIdentity{name:'明泽', surname: '龙', email:'mingze@acme.com'}",member3,member3
+user-account-flight-crew-member-04,true,"UserIdentity{name:'Javier', surname: 'Luque', email:'javier@acme.com'}",member4,member4
+user-account-flight-crew-member-05,true,"UserIdentity{name:'Björn', surname: 'Magnússon', email:'björn@acme.com'}",member,member

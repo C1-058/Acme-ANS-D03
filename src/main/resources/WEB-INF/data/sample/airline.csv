@@ -1,3 +1,4 @@
 key,name,iataCode,website,type,foundation,phoneNumber
-airline-01,iberia,IBA,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-
+airline-01,Iberia,IBA,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
+airline-02,Eusa,EAX,http://www.eusa.com,STANDARD,2003/01/21 00:00,736194723
+airline-03,Gold Wings,GBX,http://www.gwings.com,LOW_COST,2022/06/10 00:00,346251876
