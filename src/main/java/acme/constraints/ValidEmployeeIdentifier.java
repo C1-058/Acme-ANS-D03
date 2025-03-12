@@ -19,7 +19,7 @@ import javax.validation.constraints.Pattern;
 
 @NotBlank
 @Pattern(regexp = "^[A-Z]{2,3}\\d{6}$")
-public @interface ValidManagerIdentifier {
+public @interface ValidEmployeeIdentifier {
 
 	// Standard validation properties -----------------------------------------
 

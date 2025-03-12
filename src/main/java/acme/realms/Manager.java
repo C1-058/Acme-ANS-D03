@@ -14,7 +14,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
-import acme.constraints.ValidManagerIdentifier;
+import acme.constraints.ValidEmployeeIdentifier;
 import acme.constraints.ValidYearsOfExperience;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +27,7 @@ public class Manager extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@ValidManagerIdentifier
+	@ValidEmployeeIdentifier
 	@Column(unique = true)
 	private String				identifierNumber;
 
