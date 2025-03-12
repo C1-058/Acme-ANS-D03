@@ -4,19 +4,19 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>102</x>
-      <y>264</y>
+      <x>24</x>
+      <y>174</y>
       <w>354</w>
       <h>114</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Customer
 --
-+ identifier: String {Mandatory, ValidString, Column(unique=true)}
++ identifier: String {Mandatory, ValidEmployeeIdentifier, Column(unique=true)}
 + phoneNumber: String {Mandatory, ValidPhone, Automapped}
 + physicalAddress: String {Mandatory, ValidString, Automapped}
-+ city: String {Mandatory, ValidString(max=50), Automapped}
-+ country: String {Mandatory, ValidString(max=50), Automapped}
++ city: String {Mandatory, ValidShortText, Automapped}
++ country: String {Mandatory, ValidShortText, Automapped}
 + earnedPoints: Integer {Optional, ValidNumber(max = 500000), Automapped}
 bg=pink</panel_attributes>
     <additional_attributes/>
