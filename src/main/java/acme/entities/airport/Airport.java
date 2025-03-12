@@ -10,9 +10,10 @@ import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidEmail;
-import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidIataCode;
 import acme.constraints.ValidPhone;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,12 +29,12 @@ public class Airport extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidShortText
 	@Automapped
 	private String				name;
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{3}$", message = "El formato no es válido")
+	@ValidIataCode
 	@Column(unique = true)
 	private String				iataCode;
 
@@ -43,12 +44,12 @@ public class Airport extends AbstractEntity {
 	private OperationalScope	operationalScope;
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidShortText
 	@Automapped
 	private String				city;
 
 	@Mandatory
-	@ValidString(min = 1, max = 50)
+	@ValidShortText
 	@Automapped
 	private String				country;
 
