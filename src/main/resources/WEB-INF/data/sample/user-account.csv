@@ -7,7 +7,7 @@ user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза 
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
 user-account-agent-1,true,"UserIdentity{name:'Nicolás', surname: 'Parrilla', email:'xxxxxxx@gmail.com'}",agent1,agent1
 user-account-agent-2,true,"UserIdentity{name:'Ainhoa', surname: 'Jimenez', email:'xxxxxyy@gmail.com'}",agent2,agent2
-user-account-agent-3,true,"UserIdentity{name:'Lionel', surname: 'Messi', email:'xxyxxyy@gmail.com'}",manager3,manager3
+user-account-agent-3,true,"UserIdentity{name:'Lionel', surname: 'Messi', email:'xxyxxyy@gmail.com'}",agent3,agent3
 user-account-flight-crew-member-01,true,"UserIdentity{name:'Cristiano', surname: 'Ronaldo', email:'cristiano@acme.com'}",member1,member1
 user-account-flight-crew-member-02,true,"UserIdentity{name:'زين', surname: 'زين الفاروق', email:'zayn@acme.com'}",member2,member2
 user-account-flight-crew-member-03,true,"UserIdentity{name:'明泽', surname: '龙', email:'mingze@acme.com'}",member3,member3
