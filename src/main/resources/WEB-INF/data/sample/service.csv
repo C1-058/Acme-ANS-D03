@@ -1,0 +1,34 @@
+key,name,pictureUrl,averageDwellTime,promotionCode,money
+# base entity
+service-01,VIP catering,http://www.ejemplo.com,75.54,CODE-00,EUR 100
+# name - variation
+service-02,L,http://www.ejemplo.com,75.54,CODE-01,EUR 100
+service-03,Lo,http://www.ejemplo.com,75.54,CODE-02,EUR 100
+service-04,"Lorem ipsum dolor sit amet, consectetur adipiscin",http://www.ejemplo.com,75.54,CODE-03,EUR 100
+service-05,"Lorem ipsum dolor sit amet, consectetur adipiscing",http://www.ejemplo.com,75.54,CODE-04,EUR 100
+service-06,โลเร็ม อิปซัม,http://www.ejemplo.com,75.54,CODE-05,EUR 100
+service-07,لوريم إيبسوم,http://www.ejemplo.com,75.54,CODE-06,EUR 100
+service-08,洛伦·伊普森,http://www.ejemplo.com,75.54,CODE-07,EUR 100
+service-09,<marquee>Hacked</marquee>,http://www.ejemplo.com,75.54,CODE-08,EUR 100
+service-10,"<script>alert(‘Hacked!’),</script>",http://www.ejemplo.com,75.54,CODE-09,EUR 100
+service-11,' or 'A' = 'A,http://www.ejemplo.com,75.54,CODE-10,EUR 100
+# pictureUrl - variation
+service-12,VIP catering,ftp://a,75.54,CODE-20,EUR 100
+service-13,VIP catering,ftp://a.b,75.54,CODE-30,EUR 100
+service-14,VIP catering,https://www.lorem.com,75.54,CODE-40,EUR 100
+service-15,VIP catering,http://www.lorem.com/dolor/sit.html#dolor,75.54,CODE-50,EUR 100
+service-16,VIP catering,http://example.org?a=1&b=2,75.54,CODE-60,EUR 100
+service-17,VIP catering,http://example.org/a/b?a&b,75.54,CODE-70,EUR 100
+# averageDwellTime - variation
+service-18,VIP catering,http://www.ejemplo.com,0.00,CODE-80,EUR 100
+service-19,VIP catering,http://www.ejemplo.com,0.01,CODE-90,EUR 100
+service-20,VIP catering,http://www.ejemplo.com,999.99,CODE-11,EUR 100
+# promotionCode - variation
+service-21,VIP catering,http://www.ejemplo.com,75.54,AAAA-00,EUR 100
+service-22,VIP catering,http://www.ejemplo.com,75.54,ZZZZ-99,EUR 100
+service-23,VIP catering,http://www.ejemplo.com,75.54,BCDE-12,EUR 100
+# money - variation
+service-24,VIP catering,http://www.ejemplo.com,75.54,CODE-22,AAA 0.00
+service-25,VIP catering,http://www.ejemplo.com,75.54,CODE-33,ZZZ 0.01
+service-26,VIP catering,http://www.ejemplo.com,75.54,CODE-44,EUR 999999.99
+service-27,VIP catering,http://www.ejemplo.com,75.54,CODE-55,EUR 1000000
