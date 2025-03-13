@@ -4,7 +4,7 @@ package acme.entities.tracking_log;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -55,6 +55,6 @@ public class TrackingLog extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	private Claim				claim;
 }
