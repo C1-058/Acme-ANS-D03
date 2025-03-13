@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>549</y>
+      <w>522</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+TrackingLog
+--
++ lastUpdateMoment: Date {Mandatory, ValidMoment, Temporal(TIMESTAMP)}
++ step: String {Mandatory, ValidShortText, Automapped}
++ resolutionPercentage: Double {Mandatory, ValidScore, Automapped}
++ resolution: String {Optional, ValidText, Automapped}
++ indicator: Boolean {Optional, Valid, Automapped}
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>63</y>
+      <w>576</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+AssistanceAgent
+--
++ employeeCode: String {Mandatory, ValidEmployeeIdentifier, Automapped}
++ resolution: String {Mandatory, ValidText, Automapped}
++ moment: Date {Mandatory, ValidMoment(past=true), Temporal(TIMESTAMP)}
++ bio: String {Optional, ValidText, Automapped}
++ salary: Money {Optional, ValidMoney, Automapped}
++ pictureUrl: String {Optional, ValidUrl, Automapped}
+
+bg=PINK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>315</y>
+      <w>576</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Claim
+--
++ registrationMoment: Date {Mandatory, ValidMoment(past=true), Temporal(TIMESTAMP)}
++ passengerEmail: String {Mandatory, ValidEmail, Automapped}
++ description: String {Mandatory, ValidText, Automapped}
++ type: ClaimType {Mandatory, Valid, Automapped}
++ indicator: Boolean {Mandatory, Valid, Automapped}
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>981</x>
+      <y>324</y>
+      <w>153</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ClaimType
+--
++ FLIGHT_ISSUES
++ LUGGAGE_ISSUES
++ SECURITY_INCIDENT
++ OTHER_ISSUES
+bg=LIGHT_GRAY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1035</x>
+      <y>117</y>
+      <w>99</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>117</y>
+      <w>171</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>works for &gt;
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>198</y>
+      <w>117</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>registered by ^
+lt=&lt;-x
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>441</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>tracked through v
+lt=&lt;-x
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
