@@ -1,0 +1,36 @@
+key,lastUpdateMoment,step,resolutionPercentage,indicator,resolution,key:claim
+#base-entity
+tracking-log-01,2021/07/30 00:00,First step,50,false,Destroy the airport,claim-01
+#lastUpdateMoment - variations
+tracking-log-02,2000/01/01 00:00,First step,50,false,Destroy the airport,claim-01
+tracking-log-03,2000/01/01 00:01,First step,50,false,Destroy the airport,claim-01
+tracking-log-04,2022/07/29 23:59,First step,50,false,Destroy the airport,claim-01
+#step - variations
+tracking-log-05,2021/07/30 00:00,L,50,false,Destroy the airport,claim-01
+tracking-log-06,2021/07/30 00:00,Lo,50,false,Destroy the airport,claim-01
+tracking-log-07,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipis",50,false,Destroy the airport,claim-01
+tracking-log-08,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipisc",50,false,Destroy the airport,claim-01
+tracking-log-09,2021/07/30 00:00,โลเร็ม อิปซัม,50,false,Destroy the airport,claim-01
+tracking-log-10,2021/07/30 00:00,لوريم إيبسوم,50,false,Destroy the airport,claim-01
+tracking-log-11,2021/07/30 00:00,洛伦·伊普森,50,false,Destroy the airport,claim-01
+tracking-log-12,2021/07/30 00:00,<marquee>Hacked</marquee>,50,false,Destroy the airport,claim-01
+tracking-log-13,2021/07/30 00:00,"<script>alert(‘Hacked!’),</script>",50,false,Destroy the airport,claim-01
+tracking-log-14,2021/07/30 00:00,or 'A' = 'A,50,false,Destroy the airport,claim-01
+#resolutionPercentage - variations
+tracking-log-15,2021/07/30 00:00,First step,0.00,false,Destroy the airport,claim-01
+tracking-log-16,2021/07/30 00:00,First step,0.01,false,Destroy the airport,claim-01
+tracking-log-17,2021/07/30 00:00,First step,99.99,false,Destroy the airport,claim-01
+tracking-log-18,2021/07/30 00:00,First step,100.00,false,Destroy the airport,claim-01
+#indicator - variations
+tracking-log-19,2021/07/30 00:00,First step,50,true,Destroy the airport,claim-01
+#resolution - variations
+tracking-log-20,2021/07/30 00:00,First step,50,false,L,claim-01
+tracking-log-21,2021/07/30 00:00,First step,50,false,Lo,claim-01
+tracking-log-22,2021/07/30 00:00,First step,50,false,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",claim-01
+tracking-log-23,2021/07/30 00:00,First step,50,false,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",claim-01
+tracking-log-24,2021/07/30 00:00,First step,50,false,โลเร็ม อิปซัม,claim-01
+tracking-log-25,2021/07/30 00:00,First step,50,false,لوريم إيبسوم,claim-01
+tracking-log-26,2021/07/30 00:00,First step,50,false,洛伦·伊普森,claim-01
+tracking-log-27,2021/07/30 00:00,First step,50,false,<marquee>Hacked</marquee>,claim-01
+tracking-log-28,2021/07/30 00:00,First step,50,false,"<script>alert(‘Hacked!’),</script>",claim-01
+tracking-log-29,2021/07/30 00:00,First step,50,false,or 'A' = 'A,claim-01
