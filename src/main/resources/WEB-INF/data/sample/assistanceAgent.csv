@@ -3,14 +3,14 @@ agent1,user-account-agent-1,AB123456,Spanish and English,2021/07/30 00:00,Hablo 
 agent2,user-account-agent-2,XYZ987654,Italian and French,2021/07/30 01:00,Hablo italiano y francés,50000 GBP,http://www.ejemplo.com,airline-01
 #base-entity
 agent3,user-account-agent-1,ABC000000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
-#employeeCode - boundary cases
+#employeeCode - variations
 agent4,user-account-agent-1,AAA123456,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent5,user-account-agent-1,AA123456,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent6,user-account-agent-1,BC000000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent7,user-account-agent-1,DEF999999,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent8,user-account-agent-1,ZZ123456,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent9,user-account-agent-1,ZZZ123456,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
-#spokenLanguagues - boundary cases
+#spokenLanguagues - variations
 agent10,user-account-agent-1,AAA000001,L,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent11,user-account-agent-1,ABC000002,Lo,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent12,user-account-agent-1,ABC000003,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
@@ -21,11 +21,11 @@ agent16,user-account-agent-1,ABC000007,洛伦·伊普森,2021/07/30 00:00,Hablo 
 agent17,user-account-agent-1,ABC000008,<marquee>Hacked</marquee>,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent18,user-account-agent-1,ABC000009,"<script>alert(‘Hacked!’),</script>",2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent19,user-account-agent-1,ABC000010,or 'A' = 'A,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
-#moment - boundary cases
+#moment - variations
 agent20,user-account-agent-1,ABC000020,Spanish and English,2000/01/01 00:00,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent21,user-account-agent-1,ABC000030,Spanish and English,2000/01/01 00:01,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
 agent22,user-account-agent-1,ABC000040,Spanish and English,2022/07/29 23:59,Hablo español e inglés,34000 EUR,http://www.ejemplo.com,airline-01
-#bio - boundary cases
+#bio - variations
 agent23,user-account-agent-1,ABC000050,Spanish and English,2021/07/30 00:00,L,34000 EUR,http://www.ejemplo.com,airline-01
 agent24,user-account-agent-1,ABC000060,Spanish and English,2021/07/30 00:00,Lo,34000 EUR,http://www.ejemplo.com,airline-01
 agent25,user-account-agent-1,ABC000070,Spanish and English,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",34000 EUR,http://www.ejemplo.com,airline-01
@@ -36,12 +36,12 @@ agent29,user-account-agent-1,ABC000200,Spanish and English,2021/07/30 00:00,洛�
 agent30,user-account-agent-1,ABC000300,Spanish and English,2021/07/30 00:00,<marquee>Hacked</marquee>,34000 EUR,http://www.ejemplo.com,airline-01
 agent31,user-account-agent-1,ABC000400,Spanish and English,2021/07/30 00:00,"<script>alert(‘Hacked!’),</script>",34000 EUR,http://www.ejemplo.com,airline-01
 agent32,user-account-agent-1,ABC000500,Spanish and English,2021/07/30 00:00,or 'A' = 'A,34000 EUR,http://www.ejemplo.com,airline-01
-#salary - boundary cases
+#salary - variations
 agent33,user-account-agent-1,ABC000600,Spanish and English,2021/07/30 00:00,Hablo español e inglés,0.00 EUR,http://www.ejemplo.com,airline-01
 agent34,user-account-agent-1,ABC000700,Spanish and English,2021/07/30 00:00,Hablo español e inglés,0.01 EUR,http://www.ejemplo.com,airline-01
 agent35,user-account-agent-1,ABC000800,Spanish and English,2021/07/30 00:00,Hablo español e inglés,999999.99 EUR,http://www.ejemplo.com,airline-01
 agent36,user-account-agent-1,ABC000900,Spanish and English,2021/07/30 00:00,Hablo español e inglés,1000000 EUR,http://www.ejemplo.com,airline-01
-#pictureUrl - boundary cases
+#pictureUrl - variations
 agent37,user-account-agent-1,ABC001000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,ftp://a,airline-01
 agent38,user-account-agent-1,ABC002000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,ftp://a.b,airline-01
 agent39,user-account-agent-1,ABC003000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,https://www.lorem.com,airline-01
