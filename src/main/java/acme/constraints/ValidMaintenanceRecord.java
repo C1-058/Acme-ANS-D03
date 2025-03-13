@@ -8,24 +8,16 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.ReportAsSingleViolation;
-import javax.validation.constraints.Size;
 
-import acme.constraints.validators.NotBlankOrNullValidator;
-
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {
-	NotBlankOrNullValidator.class
-})
-@ReportAsSingleViolation
+@Constraint(validatedBy = MaintenanceRecordValidator.class)
 
-@Size(min = 1, max = 255)
-public @interface ValidText {
+public @interface ValidMaintenanceRecord {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The text must not consist of empty characters and must have a length between 1 and 255 characters.";
+	String message() default "";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

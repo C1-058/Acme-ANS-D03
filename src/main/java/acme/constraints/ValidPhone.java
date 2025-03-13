@@ -23,7 +23,7 @@ public @interface ValidPhone {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "{acme.validation.phone.message}";
+	String message() default "The phone number must not be empty and must follow the correct pattern.";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

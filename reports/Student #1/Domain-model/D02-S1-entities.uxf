@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>392</y>
+      <w>504</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Leg
+--
++ flightNumber: String { Mandatory, ValidString(pattern = "^[A-Z]{3}\\d{4}$"), Column(unique=true) }
++ scheduledDeparture: Date { Mandatory, ValidString, Temporal(TIMESTAMP) }
++ scheduledArrival: Date { Mandatory, ValidString, Temporal(TIMESTAMP) }
++ duration: int { Mandatory, ValidNumber(min=0, max=24), Automapped }
++ status: LegStatus { Mandatory, Valid, Automapped }
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>272</y>
+      <w>104</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Component of ^
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>96</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airport
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>432</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Aircraft
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>440</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>uses &gt;
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>88</x>
+      <y>408</y>
+      <w>168</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt; departs from
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>88</x>
+      <y>448</y>
+      <w>168</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt; arrives at
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>120</y>
+      <w>376</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Flight
+--
++ tag: String { Mandatory, ValidString(max=50), Automapped }
++ indication: boolean { Mandatory, Valid, Automapped }
++ cost: double { Mandatory, ValidMoney, Automapped }
++ description: String { Optional, ValidString, Automapped }
++ departure: Date { Mandatory, ValidMoment, Temporal(TIMESTAMP) }
++ arrival: Date { Mandatory, ValidMoment, Temporal(TIMESTAMP) }
++ origin: String { Mandatory, ValidString(max=25), Automapped } 
++ destination: String { Mandatory, ValidString(max=25), Automapped }
++ layovers: int { Mandatory, ValidNumber(min=0), Automapped }
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

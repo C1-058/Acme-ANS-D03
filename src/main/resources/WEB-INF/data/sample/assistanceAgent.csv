@@ -1,3 +1,3 @@
-key,key:userAccount,employeeCode,spokenLanguagues,moment,key:airline
-agent1,user-account-agent-1,AB123456,"Spanish, English",2021/07/30 00:00,airline-01
-agent2,user-account-agent-2,XYZ987654,"Italian, French",2021/07/30 01:00,airline-01
+key,key:userAccount,employeeCode,spokenLanguagues,moment,bio,key:airline
+agent1,user-account-agent-1,AB123456,"Spanish, English",2021/07/30 00:00,"Hablo español e inglés",airline-01
+agent2,user-account-agent-2,XYZ987654,"Italian, French",2021/07/30 01:00,null,airline-01
