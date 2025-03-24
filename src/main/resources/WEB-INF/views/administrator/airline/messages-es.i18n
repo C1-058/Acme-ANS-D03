@@ -1,0 +1,9 @@
+administrator.airline.list.title = Listado de aerolíneas
+
+administrator.airline.label.name = Nombre
+administrator.airline.label.iataCode = Código IATA 
+administrator.airline.label.website = Página web
+administrator.airline.label.type = Tipo
+administrator.airline.label.foundation = Fundación
+administrator.airline.label.email = Correo electrónico (Opcional)
+administrator.airline.label.phoneNumber = Número de teléfono (Opcional)

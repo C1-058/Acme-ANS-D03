@@ -1,0 +1,9 @@
+administrator.airline.list.title = Listing of airlines
+
+administrator.airline.label.name = Name
+administrator.airline.label.iataCode = IATA Code
+administrator.airline.label.website = Web site
+administrator.airline.label.type = Type
+administrator.airline.label.foundation = Foundation
+administrator.airline.label.email = E-mail (Optional)
+administrator.airline.label.phoneNumber = Phone number (Optional)
