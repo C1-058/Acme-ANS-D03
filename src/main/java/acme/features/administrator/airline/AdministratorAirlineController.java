@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.administrator.airline;
+package acme.features.administrator.airline;
 
 import javax.annotation.PostConstruct;
 

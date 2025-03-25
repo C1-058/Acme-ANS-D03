@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.administrator.airline;
+package acme.features.administrator.airline;
 
 import java.util.Collection;
 
@@ -10,7 +10,6 @@ import acme.client.components.principals.Administrator;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airline.Airline;
-import acme.entities.airline.AirlineRepository;
 
 @GuiService
 public class AdministratorAirlineListService extends AbstractGuiService<Administrator, Airline> {
@@ -18,7 +17,7 @@ public class AdministratorAirlineListService extends AbstractGuiService<Administ
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AirlineRepository repository;
+	private AdministratorAirlineRepository repository;
 
 	// AbstractGuiService interface -------------------------------------------
 

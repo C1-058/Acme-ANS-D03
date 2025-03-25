@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.administrator.airline;
+package acme.features.administrator.airline;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,7 +9,6 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airline.Airline;
-import acme.entities.airline.AirlineRepository;
 import acme.entities.airline.AirlineType;
 
 @GuiService
@@ -18,7 +17,7 @@ public class AdministratorAirlineShowService extends AbstractGuiService<Administ
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AirlineRepository repository;
+	private AdministratorAirlineRepository repository;
 
 	// AbstractGuiService interface -------------------------------------------
 

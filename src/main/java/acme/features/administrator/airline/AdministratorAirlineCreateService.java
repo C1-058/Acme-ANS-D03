@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.administrator.airline;
+package acme.features.administrator.airline;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,18 +9,17 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airline.Airline;
-import acme.entities.airline.AirlineRepository;
 import acme.entities.airline.AirlineType;
 
 @GuiService
-public class AdministratorAirlineUpdateService extends AbstractGuiService<Administrator, Airline> {
+public class AdministratorAirlineCreateService extends AbstractGuiService<Administrator, Airline> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AirlineRepository repository;
+	private AdministratorAirlineRepository repository;
 
-	// AbstractGuiService interfaced ------------------------------------------
+	// AbstractGuiService interface -------------------------------------------
 
 
 	@Override
@@ -35,10 +34,8 @@ public class AdministratorAirlineUpdateService extends AbstractGuiService<Admini
 	@Override
 	public void load() {
 		Airline airline;
-		int id;
 
-		id = super.getRequest().getData("id", int.class);
-		airline = this.repository.findAirlineById(id);
+		airline = new Airline();
 
 		super.getBuffer().addData(airline);
 	}
