@@ -1,19 +1,19 @@
 
-package acme.features.authenticated.administrator;
-
-import java.util.Collection;
+package acme.features.authenticated.administrator.airline;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
 import acme.client.components.principals.Administrator;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airline.Airline;
 import acme.entities.airline.AirlineRepository;
+import acme.entities.airline.AirlineType;
 
 @GuiService
-public class AdministratorAirlineListService extends AbstractGuiService<Administrator, Airline> {
+public class AdministratorAirlineShowService extends AbstractGuiService<Administrator, Airline> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -34,19 +34,24 @@ public class AdministratorAirlineListService extends AbstractGuiService<Administ
 
 	@Override
 	public void load() {
-		Collection<Airline> airlines;
+		Airline airline;
+		int id;
 
-		airlines = this.repository.findAllAirlines();
+		id = super.getRequest().getData("id", int.class);
+		airline = this.repository.findAirlineById(id);
 
-		super.getBuffer().addData(airlines);
+		super.getBuffer().addData(airline);
 	}
 
 	@Override
 	public void unbind(final Airline airline) {
+		SelectChoices choices;
 		Dataset dataset;
 
-		dataset = super.unbindObject(airline, "name", "iataCode", "website", "type");
-		super.addPayload(dataset, airline, "foundation", "email", "phoneNumber");
+		choices = SelectChoices.from(AirlineType.class, airline.getType());
+
+		dataset = super.unbindObject(airline, "name", "iataCode", "website", "type", "foundation", "email", "phoneNumber");
+		dataset.put("types", choices);
 
 		super.getResponse().addData(dataset);
 	}
