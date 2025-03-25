@@ -1,0 +1,13 @@
+manager.flight.list.title = Listing of flights
+
+manager.flight.label.tag = Tag
+manager.flight.label.requiresSelfTransfer = Requires self transfer
+manager.flight.label.cost = cost
+
+manager.flight.form.title = Flight form
+manager.flight.form.label.tag = Tag:
+manager.flight.form.label.requiresSelfTransfer = Requires self transfer:
+manager.flight.form.label.cost = Cost:
+manager.flight.form.description = Description:
+
+manager.flight.form.label.confirmation = Confirm changes

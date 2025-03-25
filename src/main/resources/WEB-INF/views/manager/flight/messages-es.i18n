@@ -1,0 +1,13 @@
+manager.flight.list.title = Listado de vuelos
+
+manager.flight.label.tag = Etiqueta
+manager.flight.label.requiresSelfTransfer = Requiere autotraslado
+manager.flight.label.cost = Coste
+
+manager.flight.form.title = Formulario del vuelo
+manager.flight.form.label.tag = Etiqueta:
+manager.flight.form.label.requiresSelfTransfer = Requiere autotraslado:
+manager.flight.form.label.cost = Precio:
+manager.flight.form.description = Descripción:
+
+manager.flight.form.label.confirmation = Confirmar cambios
