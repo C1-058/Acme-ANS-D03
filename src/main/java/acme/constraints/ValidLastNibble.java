@@ -21,7 +21,7 @@ public @interface ValidLastNibble {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The code must follow the correct last nibble pattern.";
+	String message() default "The code must follow the correct last nibble pattern";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

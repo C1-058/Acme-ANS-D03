@@ -22,3 +22,6 @@ administrator.airline.form.label.phoneNumber = Número de teléfono (Opcional):
 administrator.airline.form.label.confirmation = Confirmar cambios
 administrator.airline.form.button.update = Actualizar
 administrator.airline.form.button.create = Crear
+
+administrator.airline.update.existingIataCode = Ya existe una aerolínea con este código IATA
+administrator.airline.update.dateInTheFuture = La fecha debe estar en el pasado

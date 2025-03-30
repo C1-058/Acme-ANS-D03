@@ -1,6 +1,9 @@
 
 package acme.features.administrator.airline;
 
+import java.util.Date;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
@@ -52,7 +55,19 @@ public class AdministratorAirlineUpdateService extends AbstractGuiService<Admini
 		boolean confirmation;
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
-		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
+		if (confirmation) {
+			String newIataCode = super.getRequest().getData("iataCode", String.class);
+			int airlineId = super.getRequest().getData("id", int.class);
+			Date newDate = super.getRequest().getData("foundation", Date.class);
+			Date currentDate = new Date();
+			Optional<Airline> currentAirlineWithIataCode = this.repository.findAirlineByIataCode(newIataCode);
+
+			if (currentAirlineWithIataCode.isPresent() && currentAirlineWithIataCode.get().getId() != airlineId)
+				super.state(false, "iataCode", "administrator.airline.update.existingIataCode");
+			if (newDate.after(currentDate))
+				super.state(false, "foundation", "administrator.airline.update.dateInTheFuture");
+		} else
+			super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public @interface ValidIataCode {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The code must follow the correct IATA code pattern.";
+	String message() default "The code must follow the correct IATA code pattern";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

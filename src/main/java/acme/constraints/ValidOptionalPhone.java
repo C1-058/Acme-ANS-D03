@@ -9,23 +9,22 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.ReportAsSingleViolation;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
 
-import acme.constraints.validators.NotBlankOrNullValidator;
+import acme.client.components.validation.Optional;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {
-	NotBlankOrNullValidator.class
-})
+@Constraint(validatedBy = {})
 @ReportAsSingleViolation
 
-@Size(min = 1, max = 255)
-public @interface ValidText {
+@Optional
+@Pattern(regexp = "^\\s*$|^\\+?\\d{6,15}$")
+public @interface ValidOptionalPhone {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The text must not consist of empty characters and must have a length between 1 and 255 characters";
+	String message() default "The phone number must follow the correct pattern";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

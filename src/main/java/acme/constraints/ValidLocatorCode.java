@@ -20,7 +20,7 @@ import javax.validation.constraints.Pattern;
 public @interface ValidLocatorCode {
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The code must follow the correct locator code pattern.";
+	String message() default "The code must follow the correct locator code pattern";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
