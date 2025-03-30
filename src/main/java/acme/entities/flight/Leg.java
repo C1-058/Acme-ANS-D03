@@ -48,6 +48,11 @@ public class Leg extends AbstractEntity {
 	@Automapped
 	private LegStatus			status;
 
+	@Mandatory
+	@Valid
+	@Automapped
+	private Boolean				draftMode;
+
 
 	@Transient
 	private int getDuration() {

@@ -1,16 +1,19 @@
 
 package acme.features.manager.flight;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.flight.Flight;
+import acme.entities.flight.Leg;
 import acme.realms.Manager;
 
 @GuiService
-public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight> {
+public class ManagerFlightPublishService extends AbstractGuiService<Manager, Flight> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -32,7 +35,7 @@ public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight
 
 		if (flight != null) {
 			int managerId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = flight.getManager().getId() == managerId;
+			status = flight.getManager().getId() == managerId && flight.getDraftMode();
 		} else
 			status = false;
 
@@ -51,17 +54,32 @@ public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight
 	}
 
 	@Override
+	public void bind(final Flight flight) {
+		super.bindObject(flight, "tag", "cost", "requiresSelfTransfer", "description");
+	}
+
+	@Override
+	public void validate(final Flight flight) {
+		Collection<Leg> legs = this.repository.findLegsByFlightId(flight.getId());
+		super.state(!legs.isEmpty(), "*", "manager.flight.form.publish.noLegs");
+
+		for (Leg leg : legs) {
+			boolean isPublished = !leg.getDraftMode();
+			super.state(isPublished, "*", "manager.flight.form.publish.legNotPublished");
+		}
+	}
+
+	@Override
+	public void perform(final Flight flight) {
+		flight.setDraftMode(false);
+		this.repository.save(flight);
+	}
+
+	@Override
 	public void unbind(final Flight flight) {
 		Dataset dataset;
-
-		dataset = super.unbindObject(flight, "tag", "requiresSelfTransfer", "cost", "description", "draftMode");
-
-		dataset.put("departure", flight.getDeparture());
-		dataset.put("arrival", flight.getArrival());
-		dataset.put("departureCity", flight.getDepartureCity());
-		dataset.put("arrivalCity", flight.getArrivalCity());
-		dataset.put("numberOfLayovers", flight.getNumberOfLayovers());
-
+		dataset = super.unbindObject(flight, "tag", "cost", "requiresSelfTransfer", "description", "draftMode");
 		super.getResponse().addData(dataset);
 	}
+
 }

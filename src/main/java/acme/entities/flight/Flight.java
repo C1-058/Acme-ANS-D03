@@ -48,6 +48,11 @@ public class Flight extends AbstractEntity {
 	@Automapped
 	private String				description;
 
+	@Mandatory
+	@Valid
+	@Automapped
+	private Boolean				draftMode;
+
 
 	@Transient
 	public Date getDeparture() {
@@ -55,7 +60,7 @@ public class Flight extends AbstractEntity {
 		FlightRepository repository;
 
 		repository = SpringHelper.getBean(FlightRepository.class);
-		res = repository.findDeparture(this.getId());
+		res = repository.findDeparture(this.getId()).orElse(null);
 
 		return res;
 	}
@@ -66,7 +71,7 @@ public class Flight extends AbstractEntity {
 		FlightRepository repository;
 
 		repository = SpringHelper.getBean(FlightRepository.class);
-		res = repository.findArrival(this.getId());
+		res = repository.findArrival(this.getId()).orElse(null);
 
 		return res;
 	}
@@ -77,7 +82,7 @@ public class Flight extends AbstractEntity {
 		FlightRepository repository;
 
 		repository = SpringHelper.getBean(FlightRepository.class);
-		res = repository.findDepartureCity(this.getId());
+		res = repository.findDepartureCity(this.getId()).orElse(null);
 
 		return res;
 	}
@@ -88,7 +93,7 @@ public class Flight extends AbstractEntity {
 		FlightRepository repository;
 
 		repository = SpringHelper.getBean(FlightRepository.class);
-		res = repository.findArrivalCity(this.getId());
+		res = repository.findArrivalCity(this.getId()).orElse(null);
 
 		return res;
 	}
@@ -99,9 +104,9 @@ public class Flight extends AbstractEntity {
 		FlightRepository repository;
 
 		repository = SpringHelper.getBean(FlightRepository.class);
-		res = repository.findNumberOfLegs(this.getId()) - 1;
+		res = repository.findNumberOfLegs(this.getId());
 
-		return res;
+		return res == 0 ? res : res - 1;
 	}
 
 

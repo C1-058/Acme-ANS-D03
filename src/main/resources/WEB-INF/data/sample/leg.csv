@@ -1,18 +1,22 @@
-key,flight-number-digits,departure,arrival,status,key:flight,key:departure-airport,key:arrival-airport,key:aircraft
+key,flight-number-digits,departure,arrival,status,draftMode,key:flight,key:departure-airport,key:arrival-airport,key:aircraft
 # base entity
-leg-01,0000,2021/07/30 00:00,2021/01/01 00:00,LANDED,flight-01,airport-01,airport-02,aircraft-01
+leg-01,0000,2021/07/30 00:00,2021/01/01 00:00,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
 # variation: flight-number-digits
-leg-02,0001,2021/07/30 00:00,2021/01/01 00:00,LANDED,flight-01,airport-01,airport-02,aircraft-01
-leg-03,9999,2021/07/30 00:00,2021/01/01 00:00,LANDED,flight-01,airport-01,airport-02,aircraft-01
-leg-04,1234,2021/07/30 00:00,2021/01/01 00:00,LANDED,flight-01,airport-01,airport-02,aircraft-01
+leg-02,0001,2021/07/30 00:00,2021/01/01 00:00,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-03,9999,2021/07/30 00:00,2021/01/01 00:00,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-04,1234,2021/07/30 00:00,2021/01/01 00:00,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
 # variation: departure and arrival
-leg-05,0010,2000/01/01 00:00,2000/01/01 00:00,LANDED,flight-01,airport-01,airport-02,aircraft-01
-leg-06,0011,2000/01/01 00:01,2000/01/01 00:01,LANDED,flight-01,airport-01,airport-02,aircraft-01
-leg-07,0100,2200/01/01 00:01,2200/01/01 00:01,LANDED,flight-01,airport-01,airport-02,aircraft-01
-leg-08,0101,2200/12/31 23:59,2200/12/31 23:59,LANDED,flight-01,airport-01,airport-02,aircraft-01
+leg-05,0010,2000/01/01 00:00,2000/01/01 00:00,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-06,0011,2000/01/01 00:01,2000/01/01 00:01,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-07,0100,2200/01/01 00:01,2200/01/01 00:01,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-08,0101,2200/12/31 23:59,2200/12/31 23:59,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
 # variation: status
-leg-09,0110,2200/12/31 23:59,2200/12/31 23:59,ON_TIME,flight-01,airport-01,airport-02,aircraft-01
-leg-10,0111,2200/12/31 23:59,2200/12/31 23:59,DELAYED,flight-01,airport-01,airport-02,aircraft-01
-leg-11,1000,2200/12/31 23:59,2200/12/31 23:59,CANCELLED,flight-01,airport-01,airport-02,aircraft-01
-leg-12,1001,2200/12/31 23:59,2200/12/31 23:59,LANDED,flight-01,airport-01,airport-02,aircraft-01
+leg-09,0110,2200/12/31 23:59,2200/12/31 23:59,ON_TIME,true,flight-01,airport-01,airport-02,aircraft-01
+leg-10,0111,2200/12/31 23:59,2200/12/31 23:59,DELAYED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-11,1000,2200/12/31 23:59,2200/12/31 23:59,CANCELLED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-12,1001,2200/12/31 23:59,2200/12/31 23:59,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+# test: publish flight
+leg-13,1010,2021/07/30 00:00,2021/01/01 00:00,LANDED,false,flight-23,airport-01,airport-02,aircraft-01
+leg-14,1011,2021/08/01 00:00,2021/08/02 00:00,LANDED,false,flight-23,airport-01,airport-02,aircraft-01
+leg-15,1100,2021/07/30 00:00,2021/01/01 00:00,LANDED,true,flight-24,airport-01,airport-02,aircraft-01
 

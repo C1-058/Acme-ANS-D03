@@ -10,7 +10,7 @@ import acme.entities.flight.Flight;
 import acme.realms.Manager;
 
 @GuiService
-public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight> {
+public class ManagerFlightUpdateService extends AbstractGuiService<Manager, Flight> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -32,7 +32,7 @@ public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight
 
 		if (flight != null) {
 			int managerId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = flight.getManager().getId() == managerId;
+			status = flight.getManager().getId() == managerId && flight.getDraftMode();
 		} else
 			status = false;
 
@@ -51,17 +51,30 @@ public class ManagerFlightShowService extends AbstractGuiService<Manager, Flight
 	}
 
 	@Override
+	public void bind(final Flight flight) {
+		super.bindObject(flight, "tag", "cost", "requiresSelfTransfer", "description");
+	}
+
+	@Override
+	public void validate(final Flight flight) {
+		boolean confirmation;
+
+		confirmation = super.getRequest().getData("confirmation", boolean.class);
+		if (confirmation && !flight.getDraftMode())
+			super.state(confirmation, "*", "manager.flight.deletePublishedFlight");
+		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
+	}
+
+	@Override
+	public void perform(final Flight flight) {
+		this.repository.save(flight);
+	}
+
+	@Override
 	public void unbind(final Flight flight) {
 		Dataset dataset;
-
-		dataset = super.unbindObject(flight, "tag", "requiresSelfTransfer", "cost", "description", "draftMode");
-
-		dataset.put("departure", flight.getDeparture());
-		dataset.put("arrival", flight.getArrival());
-		dataset.put("departureCity", flight.getDepartureCity());
-		dataset.put("arrivalCity", flight.getArrivalCity());
-		dataset.put("numberOfLayovers", flight.getNumberOfLayovers());
-
+		dataset = super.unbindObject(flight, "tag", "cost", "requiresSelfTransfer", "description", "draftMode");
 		super.getResponse().addData(dataset);
 	}
+
 }
