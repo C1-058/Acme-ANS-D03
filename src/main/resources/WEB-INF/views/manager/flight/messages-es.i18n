@@ -7,6 +7,7 @@ manager.flight.label.published = Publicado
 
 manager.flight.form.title = Formulario del vuelo
 manager.flight.form.label.tag = Etiqueta:
+manager.flight.form.label.airline = Aerolínea:
 manager.flight.form.label.requiresSelfTransfer = Requiere autotraslado.
 manager.flight.form.label.cost = Precio:
 manager.flight.form.description = Descripción:

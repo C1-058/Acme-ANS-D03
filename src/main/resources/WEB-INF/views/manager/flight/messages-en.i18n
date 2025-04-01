@@ -7,6 +7,7 @@ manager.flight.label.published = Published
 
 manager.flight.form.title = Flight form
 manager.flight.form.label.tag = Tag:
+manager.flight.form.label.airline = Airline:
 manager.flight.form.label.requiresSelfTransfer = Requires self transfer.
 manager.flight.form.label.cost = Cost:
 manager.flight.form.description = Description:

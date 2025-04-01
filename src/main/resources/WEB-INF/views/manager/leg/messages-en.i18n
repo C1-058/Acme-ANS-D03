@@ -1,0 +1,30 @@
+manager.leg.list.title = Listing of legs
+
+manager.leg.label.flightNumber = Flight number
+manager.leg.label.duration = Duration (minutes)
+manager.leg.label.departure = Departure
+manager.leg.label.arrival = Arrival
+manager.leg.label.status = Status
+manager.leg.label.published = Published
+
+manager.leg.create = Create
+
+manager.leg.form.title = Leg form
+
+manager.leg.form.label.flightNumber = Flight number:
+manager.leg.form.label.flightNumberDigits = Flight number digits:
+manager.leg.form.label.duration = Duration (minutes):
+manager.leg.form.label.departure = Departure:
+manager.leg.form.label.arrival = Arrival:
+manager.leg.form.label.status = Status:
+manager.leg.form.label.flight = Associated flight:
+manager.leg.form.label.aircraft = Associated aircraft:
+manager.leg.form.label.departureAirport = Departure airport:
+manager.leg.form.label.arrivalAirport = Arrival airport:
+
+manager.leg.form.label.confirmation = Confirm changes
+
+manager.leg.form.button.update = Update
+manager.leg.form.button.delete = Delete
+manager.leg.form.button.publish = Publish
+manager.leg.form.button.create = Create

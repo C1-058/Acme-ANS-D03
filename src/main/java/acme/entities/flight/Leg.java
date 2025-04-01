@@ -55,12 +55,13 @@ public class Leg extends AbstractEntity {
 
 
 	@Transient
-	private int getDuration() {
-		return this.departure.compareTo(this.arrival);
+	public int getDuration() {
+		long diffInMillis = this.arrival.getTime() - this.departure.getTime();
+		return (int) (diffInMillis / (1000 * 60));
 	}
 
 	@Transient
-	private String getFlightNumber() {
+	public String getFlightNumber() {
 		return this.aircraft.getAirline().getIataCode() + this.flightNumberDigits;
 	}
 
