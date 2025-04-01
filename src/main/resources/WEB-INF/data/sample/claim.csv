@@ -1,40 +1,35 @@
-key,registrationMoment,passengerEmail,description,type,indicator,key:assistanceAgent,key:leg
+key,registrationMoment,passengerEmail,description,type,key:assistanceAgent,key:leg
 #base-entity
-claim-01,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
+claim-01,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
 #registrationMoment - variations
-claim-02,2000/01/01 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-03,2000/01/01 00:01,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-04,2022/07/29 23:59,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
+claim-02,2000/01/01 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-03,2000/01/01 00:01,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-04,2022/07/29 23:59,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
 #passengerEmail - variations
-claim-05,2021/07/30 00:00,a@b.c,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-06,2021/07/30 00:00,verylongemailaddresswithmultiplecharacters@averylongdomainnameincludingmultiplesubdomains.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-07,2021/07/30 00:00,johnsmith@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-08,2021/07/30 00:00,123456@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-09,2021/07/30 00:00,john123@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-10,2021/07/30 00:00,user.name@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-11,2021/07/30 00:00,user_name@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-12,2021/07/30 00:00,a1.b2_c3+d4-e5%f6@example-domain.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-13,2021/07/30 00:00,user@example.co.uk,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-14,2021/07/30 00:00,user@mail.sub.example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-15,2021/07/30 00:00,John.Doe@Example.COM,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
-claim-16,2021/07/30 00:00,user@x.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
+claim-05,2021/07/30 00:00,a@b.c,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-06,2021/07/30 00:00,verylongemailaddresswithmultiplecharacters@averylongdomainnameincludingmultiplesubdomains.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-07,2021/07/30 00:00,johnsmith@example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-08,2021/07/30 00:00,123456@example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-09,2021/07/30 00:00,john123@example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-10,2021/07/30 00:00,user.name@example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-11,2021/07/30 00:00,user_name@example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-12,2021/07/30 00:00,a1.b2_c3+d4-e5%f6@example-domain.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-13,2021/07/30 00:00,user@example.co.uk,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-14,2021/07/30 00:00,user@mail.sub.example.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-15,2021/07/30 00:00,John.Doe@Example.COM,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
+claim-16,2021/07/30 00:00,user@x.com,My seat is broken,FLIGHT_ISSUES,agent1,leg-01
 #description - variations
-claim-17,2021/07/30 00:00,claimer@gmail.com,L,FLIGHT_ISSUES,false,agent1,leg-01
-claim-18,2021/07/30 00:00,claimer@gmail.com,Lo,FLIGHT_ISSUES,false,agent1,leg-01
-claim-19,2021/07/30 00:00,claimer@gmail.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",FLIGHT_ISSUES,false,agent1,leg-01
-claim-20,2021/07/30 00:00,claimer@gmail.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",FLIGHT_ISSUES,false,agent1,leg-01
-claim-21,2021/07/30 00:00,claimer@gmail.com,โลเร็ม อิปซัม,FLIGHT_ISSUES,false,agent1,leg-01
-claim-22,2021/07/30 00:00,claimer@gmail.com,لوريم إيبسوم,FLIGHT_ISSUES,false,agent1,leg-01
-claim-23,2021/07/30 00:00,claimer@gmail.com,洛伦·伊普森,FLIGHT_ISSUES,false,agent1,leg-01
-claim-24,2021/07/30 00:00,claimer@gmail.com,<marquee>Hacked</marquee>,FLIGHT_ISSUES,false,agent1,leg-01
-claim-25,2021/07/30 00:00,claimer@gmail.com,"<script>alert(‘Hacked!’),</script>",FLIGHT_ISSUES,false,agent1,leg-01
-claim-26,2021/07/30 00:00,claimer@gmail.com,' or 'A' = 'A,FLIGHT_ISSUES,false,agent1,leg-01
+claim-17,2021/07/30 00:00,claimer@gmail.com,L,FLIGHT_ISSUES,agent1,leg-01
+claim-18,2021/07/30 00:00,claimer@gmail.com,Lo,FLIGHT_ISSUES,agent1,leg-01
+claim-19,2021/07/30 00:00,claimer@gmail.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",FLIGHT_ISSUES,agent1,leg-01
+claim-20,2021/07/30 00:00,claimer@gmail.com,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",FLIGHT_ISSUES,agent1,leg-01
+claim-21,2021/07/30 00:00,claimer@gmail.com,โลเร็ม อิปซัม,FLIGHT_ISSUES,agent1,leg-01
+claim-22,2021/07/30 00:00,claimer@gmail.com,لوريم إيبسوم,FLIGHT_ISSUES,agent1,leg-01
+claim-23,2021/07/30 00:00,claimer@gmail.com,洛伦·伊普森,FLIGHT_ISSUES,agent1,leg-01
+claim-24,2021/07/30 00:00,claimer@gmail.com,<marquee>Hacked</marquee>,FLIGHT_ISSUES,agent1,leg-01
+claim-25,2021/07/30 00:00,claimer@gmail.com,"<script>alert(‘Hacked!’),</script>",FLIGHT_ISSUES,agent1,leg-01
+claim-26,2021/07/30 00:00,claimer@gmail.com,' or 'A' = 'A,FLIGHT_ISSUES,agent1,leg-01
 #type - variations
-claim-27,2021/07/30 00:00,claimer@gmail.com,My seat is broken,SECURITY_INCIDENT,false,agent1,leg-01
-claim-28,2021/07/30 00:00,claimer@gmail.com,My seat is broken,LUGGAGE_ISSUES,false,agent1,leg-01
-claim-29,2021/07/30 00:00,claimer@gmail.com,My seat is broken,OTHER_ISSUES,false,agent1,leg-01
-#indicator - variations
-claim-30,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,true,agent1,leg-01
-
-
-
+claim-27,2021/07/30 00:00,claimer@gmail.com,My seat is broken,SECURITY_INCIDENT,agent1,leg-01
+claim-28,2021/07/30 00:00,claimer@gmail.com,My seat is broken,LUGGAGE_ISSUES,agent1,leg-01
+claim-29,2021/07/30 00:00,claimer@gmail.com,My seat is broken,OTHER_ISSUES,agent1,leg-01
