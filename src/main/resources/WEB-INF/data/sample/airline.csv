@@ -1,28 +1,28 @@
-key,name,iataCode,website,type,foundation,phoneNumber
+key,name,iataCode,website,type,foundation,phoneNumber,draftMode
 # base entities
-airline-01,"iberia",IBA,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-02,"Eusa",EAX,http://www.eusa.com,STANDARD,2003/01/21 00:00,736194723
-airline-03,"Gold Wings",GBX,http://www.gwings.com,LOW_COST,2022/06/10 00:00,346251876
+airline-01,"iberia",IBA,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-02,"Eusa",EAX,http://www.eusa.com,STANDARD,2003/01/21 00:00,736194723,false
+airline-03,"Gold Wings",GBX,http://www.gwings.com,LOW_COST,2022/06/10 00:00,346251876,false
 # variation: name
-airline-04,"The cheapest. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",AVR,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-05,"A",EUK,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-06,"नमस्ते",GHM,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-07,"مرحبًا",HWJ,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-08,"你好",IKU,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-09,"<marquee>Hacked</marquee>",JHM,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-10,"<script>alert('Hacked!');</script>",KLF,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
+airline-04,"The cheapest. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",AVR,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-05,"A",EUK,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-06,"नमस्ते",GHM,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-07,"مرحبًا",HWJ,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-08,"你好",IKU,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-09,"<marquee>Hacked</marquee>",JHM,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-10,"<script>alert('Hacked!');</script>",KLF,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
 # variation: website
-airline-11,"iberia",KPV,ftp://a,LUXURY,2021/06/30 00:00,612345678
-airline-12,"iberia",LCC,ftp://a.b,LUXURY,2021/06/30 00:00,612345678
-airline-13,"iberia",LQK,https://www.lorem.com,LUXURY,2021/06/30 00:00,612345678
-airline-14,"iberia",NSJ,http://www.lorem.com/dolor/sit.html#dolor,LUXURY,2021/06/30 00:00,612345678
-airline-15,"iberia",OMV,http://example.org?a=1&b=2,LUXURY,2021/06/30 00:00,612345678
-airline-16,"iberia",OVJ,http://example.org/a/b?a&b,LUXURY,2021/06/30 00:00,612345678
+airline-11,"iberia",KPV,ftp://a,LUXURY,2021/06/30 00:00,612345678,false
+airline-12,"iberia",LCC,ftp://a.b,LUXURY,2021/06/30 00:00,612345678,false
+airline-13,"iberia",LQK,https://www.lorem.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-14,"iberia",NSJ,http://www.lorem.com/dolor/sit.html#dolor,LUXURY,2021/06/30 00:00,612345678,false
+airline-15,"iberia",OMV,http://example.org?a=1&b=2,LUXURY,2021/06/30 00:00,612345678,false
+airline-16,"iberia",OVJ,http://example.org/a/b?a&b,LUXURY,2021/06/30 00:00,612345678,false
 # variation: type
-airline-17,"iberia",RDG,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
-airline-18,"Eusa",RGA,http://www.eusa.com,STANDARD,2003/01/21 00:00,736194723
-airline-19,"Gold Wings",SIL,http://www.gwings.com,LOW_COST,2022/06/10 00:00,346251876
+airline-17,"iberia",RDG,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
+airline-18,"Eusa",RGA,http://www.eusa.com,STANDARD,2003/01/21 00:00,736194723,false
+airline-19,"Gold Wings",SIL,http://www.gwings.com,LOW_COST,2022/06/10 00:00,346251876,false
 # variation: foundation
-airline-20,"iberia",UKF,http://www.ejemplo.com,LUXURY,2000/01/01 00:00,612345678
-airline-21,"iberia",VPW,http://www.ejemplo.com,LUXURY,2000/01/01 00:01,612345678
-airline-22,"iberia",WSW,http://www.ejemplo.com,LUXURY,2022/07/29 23:59,612345678
+airline-20,"iberia",UKF,http://www.ejemplo.com,LUXURY,2000/01/01 00:00,612345678,false
+airline-21,"iberia",VPW,http://www.ejemplo.com,LUXURY,2000/01/01 00:01,612345678,false
+airline-22,"iberia",WSW,http://www.ejemplo.com,LUXURY,2022/07/29 23:59,612345678,false
