@@ -28,3 +28,11 @@ manager.leg.form.button.update = Actualizar
 manager.leg.form.button.delete = Eliminar
 manager.leg.form.button.publish = Publicar
 manager.leg.form.button.create = Crear
+
+manager.leg.deletePublishedLeg = No se puede eliminar o editar un tramo publicado
+
+manager.leg.existingFlightNumberDigits = Ya existe un tramo con esos dígitos del número de vuelo
+manager.leg.sameAirports = Los aeropuertos de salida y llegada no pueden ser el mismo
+manager.leg.departureInThePast = La salida no puede estar en el pasado
+manager.leg.arrivalBeforeDeparture = La llegada no puede ser antes que la salida
+manager.leg.usedAircraft = Ya existe un tramo con este avión en el intervalo de tiempo

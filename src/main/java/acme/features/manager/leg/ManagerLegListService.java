@@ -49,6 +49,7 @@ public class ManagerLegListService extends AbstractGuiService<Manager, Leg> {
 
 		legs = this.repository.findLegsByFlight(masterId);
 
+		super.getResponse().addGlobal("masterId", masterId);
 		super.getBuffer().addData(legs);
 	}
 
@@ -56,12 +57,15 @@ public class ManagerLegListService extends AbstractGuiService<Manager, Leg> {
 	public void unbind(final Leg leg) {
 		Dataset dataset;
 
+		int masterId = super.getRequest().getData("masterId", int.class);
+
 		dataset = super.unbindObject(leg, "departure", "arrival", "status");
 
 		dataset.put("duration", leg.getDuration());
 		dataset.put("flightNumber", leg.getFlightNumber());
 		dataset.put("published", !leg.getDraftMode());
 
+		super.getResponse().addGlobal("masterId", masterId);
 		super.getResponse().addData(dataset);
 	}
 

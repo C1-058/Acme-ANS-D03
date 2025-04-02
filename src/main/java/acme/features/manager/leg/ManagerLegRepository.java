@@ -2,7 +2,9 @@
 package acme.features.manager.leg;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -12,6 +14,7 @@ import acme.entities.aircraft.Aircraft;
 import acme.entities.airport.Airport;
 import acme.entities.flight.Flight;
 import acme.entities.flight.Leg;
+import acme.entities.flight.LegStatus;
 
 @Repository
 public interface ManagerLegRepository extends AbstractRepository {
@@ -34,4 +37,9 @@ public interface ManagerLegRepository extends AbstractRepository {
 	@Query("select a from Aircraft a")
 	List<Aircraft> findAllAircrafts();
 
+	@Query("select l from Leg l where l.flightNumberDigits = :flightNumberDigits")
+	Optional<Leg> findLegByFlightNumberDigits(String flightNumberDigits);
+
+	@Query("select l from Leg l where l.departure < :arrival and l.arrival > :departure and (l.status = :onTime or l.status = :delayed)")
+	List<Leg> findLegsByMomentBracket(Date departure, Date arrival, LegStatus onTime, LegStatus delayed);
 }
