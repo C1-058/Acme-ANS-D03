@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.models.Dataset;
 import acme.client.components.principals.Administrator;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.airline.Airline;
@@ -59,12 +60,11 @@ public class AdministratorAirlineUpdateService extends AbstractGuiService<Admini
 			String newIataCode = super.getRequest().getData("iataCode", String.class);
 			int airlineId = super.getRequest().getData("id", int.class);
 			Date newDate = super.getRequest().getData("foundation", Date.class);
-			Date currentDate = new Date();
 			Optional<Airline> currentAirlineWithIataCode = this.repository.findAirlineByIataCode(newIataCode);
 
 			if (currentAirlineWithIataCode.isPresent() && currentAirlineWithIataCode.get().getId() != airlineId)
 				super.state(false, "iataCode", "administrator.airline.update.existingIataCode");
-			if (newDate.after(currentDate))
+			if (MomentHelper.isFuture(newDate))
 				super.state(false, "foundation", "administrator.airline.update.dateInTheFuture");
 		} else
 			super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
