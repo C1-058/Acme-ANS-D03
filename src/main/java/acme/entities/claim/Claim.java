@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -14,8 +15,11 @@ import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
+import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidText;
 import acme.entities.flight.Leg;
+import acme.entities.tracking_log.TrackingLog;
+import acme.entities.tracking_log.TrackingLogRepository;
 import acme.realms.AssistanceAgent;
 import lombok.Getter;
 import lombok.Setter;
@@ -48,9 +52,8 @@ public class Claim extends AbstractEntity {
 	private ClaimType			type;
 
 	@Mandatory
-	@Valid
 	@Automapped
-	private Boolean				indicator;
+	private boolean				draftMode;
 
 	@Mandatory
 	@Valid
@@ -61,4 +64,14 @@ public class Claim extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Leg					leg;
+
+
+	@Transient
+	public ClaimStatus getIndicator() {
+		TrackingLogRepository repository;
+
+		repository = SpringHelper.getBean(TrackingLogRepository.class);
+		return repository.findOrderTrackingLog(this.getId()).flatMap(list -> list.stream().findFirst()).map(TrackingLog::getIndicator).orElse(ClaimStatus.PENDING);
+	}
+
 }

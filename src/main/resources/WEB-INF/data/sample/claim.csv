@@ -1,4 +1,4 @@
-key,registrationMoment,passengerEmail,description,type,indicator,key:assistanceAgent,key:leg
+key,registrationMoment,passengerEmail,description,type,draftMode,key:assistanceAgent,key:leg
 #base-entity
 claim-01,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
 #registrationMoment - variations
@@ -30,11 +30,6 @@ claim-24,2021/07/30 00:00,claimer@gmail.com,<marquee>Hacked</marquee>,FLIGHT_ISS
 claim-25,2021/07/30 00:00,claimer@gmail.com,"<script>alert(‘Hacked!’),</script>",FLIGHT_ISSUES,false,agent1,leg-01
 claim-26,2021/07/30 00:00,claimer@gmail.com,' or 'A' = 'A,FLIGHT_ISSUES,false,agent1,leg-01
 #type - variations
-claim-27,2021/07/30 00:00,claimer@gmail.com,My seat is broken,SECURITY_INCIDENT,false,agent1,leg-01
-claim-28,2021/07/30 00:00,claimer@gmail.com,My seat is broken,LUGGAGE_ISSUES,false,agent1,leg-01
-claim-29,2021/07/30 00:00,claimer@gmail.com,My seat is broken,OTHER_ISSUES,false,agent1,leg-01
-#indicator - variations
-claim-30,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,true,agent1,leg-01
-
-
-
+claim-27,2021/07/30 00:00,claimer@gmail.com,My seat is broken,SECURITY_INCIDENT,false,agent43,leg-01
+claim-28,2021/07/30 00:00,claimer@gmail.com,My seat is broken,LUGGAGE_ISSUES,false,agent43,leg-01
+claim-29,2021/07/30 00:00,claimer@gmail.com,My seat is broken,OTHER_ISSUES,false,agent43,leg-01

@@ -25,7 +25,7 @@ public @interface ValidText {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The text must not consist of empty characters and must have a length between 1 and 255 characters.";
+	String message() default "The text must not consist of empty characters and must have a length between 1 and 255 characters";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

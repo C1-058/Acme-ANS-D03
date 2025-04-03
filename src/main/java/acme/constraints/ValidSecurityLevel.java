@@ -23,7 +23,7 @@ public @interface ValidSecurityLevel {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The security level must be between 0 and 10.";
+	String message() default "The security level must be between 0 and 10";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
