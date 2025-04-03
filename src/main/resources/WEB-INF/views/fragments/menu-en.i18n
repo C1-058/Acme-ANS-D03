@@ -43,6 +43,12 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.flightCrewMember #################################################
+
+master.menu.flightCrewMember = FlightCrewMember
+master.menu.flightCrewMember.listCompleted = List completed assignments
+master.menu.flightCrewMember.listPlanned = List planned assignments
+ 
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
