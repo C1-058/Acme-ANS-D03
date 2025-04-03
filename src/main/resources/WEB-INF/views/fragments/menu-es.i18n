@@ -20,6 +20,7 @@ master.menu.anonymous.favourite-link-pablo = 75919464Y: Vargas Sáez, Pablo
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.list-airports = Ver Aeropuertos
 master.menu.administrator.list-airlines = Ver aerolíneas
 master.menu.administrator.list-user-accounts = Ver cuentas de usuario
 master.menu.administrator.populate-db-initial = Poblar BD (inicial)
