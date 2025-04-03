@@ -1,35 +1,43 @@
-key,locatorCode,purchaseMoment,travelClass,price,lastNibble,key:customer
+key,locatorCode,purchaseMoment,travelClass,price,lastNibble,draftMode,key:customer,key:flight
 # base entity
-booking-00,"AAAAAB",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
+booking-00,"AAAAAB",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
 #locatorCode - standard variations
-booking-01,"AAAAAA",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-02,"ZZZZZZZZ",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-03,"000000",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-04,"99999999",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-05,"A1B2C3",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-06,"Z9Y8X7W6",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
+booking-01,"AAAAAA",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-02,"ZZZZZZZZ",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-03,"000000",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-04,"99999999",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-05,"A1B2C3",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-06,"Z9Y8X7W6",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
 #purchaseMoment - standard variations
-booking-07,"AAAAAZ",2000/01/01 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-08,"AAAAAC",2000/01/01 00:01,ECONOMY,100.00 EUR,0000,customer-01
-booking-09,"AAAAAD",2022/07/29 23:58,ECONOMY,100.00 EUR,0000,customer-01
-booking-10,"AAAAAE",2022/07/29 23:59,ECONOMY,100.00 EUR,0000,customer-01
+booking-07,"AAAAES",2000/01/01 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-08,"AAAAAC",2000/01/01 00:01,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-09,"AAAAAD",2022/07/29 23:58,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-10,"AAAAAE",2022/07/29 23:59,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
 #travelClass - standard variations
-booking-11,"AAAAAF",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-12,"AAAAAG",2021/07/30 00:00,BUSINESS,100.00 EUR,0000,customer-01
+booking-11,"AAAAAF",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-12,"AAAAAG",2021/07/30 00:00,BUSINESS,100.00 EUR,0000,true,customer-01,flight-01
 #price - standard variations
-booking-13,"AAAAAH",2021/07/30 00:00,ECONOMY,EUR 0.00,0000,customer-01
-booking-14,"AAAAAI",2021/07/30 00:00,ECONOMY,EUR 0.01,0000,customer-01
-booking-15,"AAAAAJ",2021/07/30 00:00,ECONOMY,EUR 999999.99,0000,customer-01
-booking-16,"AAAAAK",2021/07/30 00:00,ECONOMY,EUR 1000000,0000,customer-01
-booking-17,"AAAAAL",2021/07/30 00:00,ECONOMY,100.00 GBP,0000,customer-01
-booking-18,"AAAAAM",2021/07/30 00:00,ECONOMY,0.00 GBP,0000,customer-01
+booking-13,"AAAAAH",2021/07/30 00:00,ECONOMY,EUR 0.00,0000,true,customer-01,flight-01
+booking-14,"AAAAAI",2021/07/30 00:00,ECONOMY,EUR 0.01,0000,true,customer-01,flight-01
+booking-15,"AAAAAJ",2021/07/30 00:00,ECONOMY,EUR 999999.99,0000,true,customer-01,flight-01
+booking-16,"AAAAAK",2021/07/30 00:00,ECONOMY,EUR 1000000,0000,true,customer-01,flight-01
+booking-17,"AAAAAL",2021/07/30 00:00,ECONOMY,100.00 GBP,0000,true,customer-01,flight-01
+booking-18,"AAAAAM",2021/07/30 00:00,ECONOMY,0.00 GBP,0000,true,customer-01,flight-01
 #lastNibble - standard variations
-booking-19,"AAAAAN",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-20,"AAAAAO",2021/07/30 00:00,ECONOMY,100.00 EUR,0001,customer-01
-booking-21,"AAAAAP",2021/07/30 00:00,ECONOMY,100.00 EUR,9998,customer-01
-booking-22,"AAAAAQ",2021/07/30 00:00,ECONOMY,100.00 EUR,9999,customer-01
+booking-19,"AAAAAN",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-20,"AAAAAO",2021/07/30 00:00,ECONOMY,100.00 EUR,0001,true,customer-01,flight-01
+booking-21,"AAAAAP",2021/07/30 00:00,ECONOMY,100.00 EUR,9998,true,customer-01,flight-01
+booking-22,"AAAAAQ",2021/07/30 00:00,ECONOMY,100.00 EUR,9999,true,customer-01,flight-01
+#draftMode - standard variations
+booking-23,"AAAAAV",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-24,"AAAAAW",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,false,customer-01,flight-01
 #key:customer - standard variations
-booking-23,"AAAAAR",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-01
-booking-24,"AAAAAS",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-02
-booking-25,"AAAAAT",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-03
-booking-26,"AAAAAU",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,customer-04
+booking-25,"AAAAAR",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-26,"AAAAAS",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-02,flight-01
+booking-27,"AAAAAT",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-03,flight-01
+booking-28,"AAAAAU",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-04,flight-01
+#key:flight - standard variations
+booking-29,"AAAAAX",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-01
+booking-30,"AAAAAY",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-02
+booking-31,"AAAAAZ",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-03
+booking-32,"AAAABA",2021/07/30 00:00,ECONOMY,100.00 EUR,0000,true,customer-01,flight-04
