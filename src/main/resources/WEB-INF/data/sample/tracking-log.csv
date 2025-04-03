@@ -22,8 +22,8 @@ tracking-log-16,2021/07/30 00:00,First step,0.01,PENDING,Destroy the airport,cla
 tracking-log-17,2021/07/30 00:00,First step,99.99,PENDING,Destroy the airport,claim-01
 tracking-log-18,2021/07/30 00:00,First step,100.00,PENDING,Destroy the airport,claim-01
 #indicator - variations
-tracking-log-19,2021/07/30 00:00,First step,50,ACCEPTED,Destroy the airport,claim-01
-tracking-log-30,2021/07/30 00:00,First step,50,REJECTED,Destroy the airport,claim-01
+tracking-log-19,2021/07/30 00:00,First step,100,ACCEPTED,Destroy the airport,claim-27
+tracking-log-30,2021/07/30 00:00,First step,100,REJECTED,Destroy the airport,claim-28
 #resolution - variations
 tracking-log-20,2021/07/30 00:00,First step,50,PENDING,L,claim-01
 tracking-log-21,2021/07/30 00:00,First step,50,PENDING,Lo,claim-01

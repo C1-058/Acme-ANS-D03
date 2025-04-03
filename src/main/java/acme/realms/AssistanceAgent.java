@@ -61,9 +61,9 @@ public class AssistanceAgent extends AbstractRole {
 	@Automapped
 	private String				pictureUrl;
 
-	@Mandatory
+	@Optional
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	private Airline				airline;
 
 }
