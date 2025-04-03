@@ -1,26 +1,32 @@
-key,tag,requires-self-transfer,cost,description
+key,tag,requires-self-transfer,cost,description,draftMode,key:manager
 # base entity
-flight-01,"The cheapest.",true,100.00 EUR,"Aerolina comprometida con sus clientes"
+flight-01,"The cheapest.",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
 # variation: tag
-flight-02,"T",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-03,"The cheapest. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-04,"नमस्ते",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-05,"مرحبًا",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-06,"你好",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-07,"<marquee>Hacked</marquee>",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-08,"<script>alert('Hacked!');</script>",true,100.00 EUR,"Aerolina comprometida con sus clientes"
+flight-02,"T",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-03,"The cheapest. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-04,"नमस्ते",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-05,"مرحبًا",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,1
+flight-06,"你好",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-07,"<marquee>Hacked</marquee>",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-08,"<script>alert('Hacked!');</script>",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,1
 # variation: requires-self-transfer
-flight-09,"The cheapest.",true,100.00 EUR,"Aerolina comprometida con sus clientes"
-flight-10,"The cheapest.",false,100.00 EUR,"Aerolina comprometida con sus clientes"
+flight-09,"The cheapest.",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,1
+flight-10,"The cheapest.",false,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
 # variation: cost
-flight-11,"The cheapest.",true,1000000.00 EUR,"Aerolina comprometida con sus clientes"
-flight-12,"The cheapest.",true,0.00 EUR,"Aerolina comprometida con sus clientes"
-flight-13,"The cheapest.",true,10.55 GBP,"Aerolina comprometida con sus clientes"
+flight-11,"The cheapest.",true,1000000.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-12,"The cheapest.",true,0.00 EUR,"Aerolina comprometida con sus clientes",true,1
+flight-13,"The cheapest.",true,10.55 GBP,"Aerolina comprometida con sus clientes",true,1
 # variation: description
-flight-14,"The cheapest.",true,100.00 EUR,"Aerolínea Celeste, líder en vuelos internacionales, te invita a descubrir nuevos horizontes. Con una flota moderna y tecnología de punta, brindamos seguridad, confort y servicio de primera en cada despegue. Experimenta la excelencia en cada viaje. ¡Vuela!"
-flight-15,"The cheapest.",true,100.00 EUR,"A"
-flight-16,"The cheapest.",true,100.00 EUR,"नमस्ते"
-flight-17,"The cheapest.",true,100.00 EUR,"مرحبًا"
-flight-18,"The cheapest.",true,100.00 EUR,"你好"
-flight-19,"The cheapest.",true,100.00 EUR,"<marquee>Hacked</marquee>"
-flight-20,"The cheapest.",true,100.00 EUR,"<script>alert('Hacked!');</script>"
+flight-14,"The cheapest.",true,100.00 EUR,"Aerolínea Celeste, líder en vuelos internacionales, te invita a descubrir nuevos horizontes. Con una flota moderna y tecnología de punta, brindamos seguridad, confort y servicio de primera en cada despegue. Experimenta la excelencia en cada viaje. ¡Vuela!",true,1
+flight-15,"The cheapest.",true,100.00 EUR,"A",true,1
+flight-16,"The cheapest.",true,100.00 EUR,"नमस्ते",true,1
+flight-17,"The cheapest.",true,100.00 EUR,"مرحبًا",true,0
+flight-18,"The cheapest.",true,100.00 EUR,"你好",true,0
+flight-19,"The cheapest.",true,100.00 EUR,"<marquee>Hacked</marquee>",true,0
+flight-20,"The cheapest.",true,100.00 EUR,"<script>alert('Hacked!');</script>",true,1
+flight-21,"Para borrar.",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,0
+flight-22,"Para borrar",true,100.00 EUR,"Aerolina comprometida con sus clientes",false,0
+# test: publish flight
+flight-23,"Prueba para publicar un vuelo 1.",true,100.00 EUR,"La publicación de este vuelo debe ser exitosa.",true,0
+flight-24,"Prueba para publicar un vuelo 2.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0
+flight-25,"Prueba para publicar un vuelo 3.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0

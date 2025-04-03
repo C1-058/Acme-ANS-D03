@@ -23,7 +23,7 @@ public @interface ValidEmployeeIdentifier {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The identifier must follow de correct pattern and must not be empty.";
+	String message() default "The identifier must follow de correct pattern and must not be empty";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

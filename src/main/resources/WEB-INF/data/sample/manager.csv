@@ -1,3 +1,4 @@
 key,key:user-account,identifier-number,years-of-experience,birthdate,picture-url,key:airline
 0,user-account-manager-1,AB123456,10,2001/06/15 00:00,http://example.com/picture1.jpg,airline-01
 1,user-account-manager-2,XYZ987654,5,2005/09/22 00:00,http://example.com/picture2.jpg,airline-02
+2,user-account-manager-3,ZYX987654,2,2004/01/01 00:00,http://example.com/picture3.jpg,airline-03

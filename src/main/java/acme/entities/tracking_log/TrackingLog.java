@@ -18,7 +18,7 @@ import acme.client.components.validation.ValidScore;
 import acme.constraints.ValidShortText;
 import acme.constraints.ValidText;
 import acme.entities.claim.Claim;
-import acme.entities.claim.ClaimState;
+import acme.entities.claim.ClaimStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -47,12 +47,16 @@ public class TrackingLog extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Automapped
-	private ClaimState			indicator;
+	private ClaimStatus			indicator;
 
 	@Optional
 	@ValidText
 	@Automapped
 	private String				resolution;
+
+	@Mandatory
+	@Automapped
+	private boolean				draftMode;
 
 	@Mandatory
 	@Valid

@@ -1,0 +1,32 @@
+manager.flight.list.title = Listado de vuelos
+
+manager.flight.label.tag = Etiqueta
+manager.flight.label.requiresSelfTransfer = Requiere autotraslado
+manager.flight.label.cost = Coste
+manager.flight.label.published = Publicado 
+
+manager.flight.form.title = Formulario del vuelo
+manager.flight.form.label.tag = Etiqueta:
+manager.flight.form.label.airline = Aerolínea:
+manager.flight.form.label.requiresSelfTransfer = Requiere autotraslado.
+manager.flight.form.label.cost = Precio:
+manager.flight.form.description = Descripción:
+manager.flight.form.label.departure: Salida:
+manager.flight.form.label.arrival = Llegada:
+manager.flight.form.label.departureCity = Ciudad de salida:
+manager.flight.form.label.arrivalCity = Ciudad de llegada:
+manager.flight.form.label.numberOfLayovers = Número de escalas:
+
+manager.flight.create = Crear
+
+manager.flight.form.label.confirmation = Confirmar cambios
+
+manager.flight.legs = Listar tramos
+manager.flight.form.button.update = Actualizar
+manager.flight.form.button.delete = Eliminar
+manager.flight.form.button.publish = Publicar
+manager.flight.form.button.create = Crear
+
+manager.flight.deletePublishedFlight = No se puede eliminar o editar un vuelo publicado
+
+manager.flight.form.publish.noLegs = Este vuelo no tiene ningún tramo.

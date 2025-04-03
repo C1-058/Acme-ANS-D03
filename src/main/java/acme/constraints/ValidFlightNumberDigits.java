@@ -23,7 +23,7 @@ public @interface ValidFlightNumberDigits {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "Must be 4 flight digits.";
+	String message() default "Must be 4 flight digits";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

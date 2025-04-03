@@ -23,7 +23,7 @@ public @interface ValidYearsOfExperience {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The years of experience must be between 0 and 120.";
+	String message() default "The years of experience must be between 0 and 120";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
