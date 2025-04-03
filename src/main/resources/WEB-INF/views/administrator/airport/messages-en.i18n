@@ -1,4 +1,4 @@
-administrator.aiport.list.title = Listing of airports
+administrator.airport.list.title = Listing of airports
 
 administrator.airport.label.name = Name
 administrator.airport.label.iataCode = IATA Code
@@ -9,7 +9,7 @@ administrator.airport.label.website = Website (Optional)
 administrator.airport.label.emailAddress = Email (Optional)
 administrator.airport.label.contactPhoneNumber = Phone number (Optional)
 
-administrator.aiport.list.button.create = Create
+administrator.airport.list.button.create = Create
 
 administrator.airport.form.title = Airport form
 administrator.airport.form.label.name = Name:
@@ -22,10 +22,10 @@ administrator.airport.form.label.emailAddress = Email (Optional):
 administrator.airport.form.label.contactPhoneNumber = Phone number (Optional): 
 
 administrator.airport.form.label.confirmation = Confirm changes
-administrator.aiport.form.button.update = Update
+administrator.airport.form.button.update = Update
 administrator.airport.form.button.create = Create
 
-administrator.airport.update.existingIataCode = There´s already an airport with that IATA code
+administrator.airport.update.existifngIataCode = There´s already an airport with that IATA code
 administrator.airport.create.existingIataCode = There´s already an airport with that IATA code
 
 

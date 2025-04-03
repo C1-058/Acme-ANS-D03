@@ -17,10 +17,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-
 import acme.constraints.ValidLastNibble;
 import acme.constraints.ValidLocatorCode;
-
+import acme.entities.flight.Flight;
 import acme.realms.Customer;
 import lombok.Getter;
 import lombok.Setter;
@@ -61,6 +60,11 @@ public class Booking extends AbstractEntity {
 	@Automapped
 	private String				lastNibble;
 
+	@Mandatory
+	@Valid
+	@Automapped
+	private Boolean				draftMode;
+
 	// Relationships ----------------------------------------------------------
 
 	@Mandatory
@@ -68,4 +72,8 @@ public class Booking extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private Customer			customer;
 
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Flight				flight;
 }
