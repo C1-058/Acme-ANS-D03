@@ -37,6 +37,10 @@
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="assistanceAgent.claim.form.button.create" action="/assistance-agent/claim/create"/>
-		</jstl:when>		
-	</jstl:choose>
+		</jstl:when>			
+	</jstl:choose>	
+		<jstl:if test="${_command != 'create'}">
+		<acme:button code="assistanceAgent.claim.form.show.trackingLogs" action="/assistance-agent/tracking-log/list?claimId=${id}"/>
+	</jstl:if>
+	
 </acme:form>

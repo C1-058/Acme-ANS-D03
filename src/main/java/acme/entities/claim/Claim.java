@@ -19,7 +19,7 @@ import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidText;
 import acme.entities.flight.Leg;
 import acme.entities.tracking_log.TrackingLog;
-import acme.entities.tracking_log.TrackingLogRepository;
+import acme.features.assistanceAgent.trackingLog.AssistanceAgentTrackingLogRepository;
 import acme.realms.AssistanceAgent;
 import lombok.Getter;
 import lombok.Setter;
@@ -68,9 +68,9 @@ public class Claim extends AbstractEntity {
 
 	@Transient
 	public ClaimStatus getIndicator() {
-		TrackingLogRepository repository;
+		AssistanceAgentTrackingLogRepository repository;
 
-		repository = SpringHelper.getBean(TrackingLogRepository.class);
+		repository = SpringHelper.getBean(AssistanceAgentTrackingLogRepository.class);
 		return repository.findOrderTrackingLog(this.getId()).flatMap(list -> list.stream().findFirst()).map(TrackingLog::getIndicator).orElse(ClaimStatus.PENDING);
 	}
 
