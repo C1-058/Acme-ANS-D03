@@ -19,11 +19,11 @@ import javax.validation.constraints.Min;
 
 @Min(0)
 @Max(10)
-public @interface ValidSecurityLevel {
+public @interface ValidSeverityLevel {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The security level must be between 0 and 10";
+	String message() default "The severity level must be between 0 and 10";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

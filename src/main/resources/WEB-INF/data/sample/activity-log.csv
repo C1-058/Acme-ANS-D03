@@ -1,4 +1,4 @@
-key,registration-moment,type-of-incident,description,security-level,draft-mode,key:flightAssignment
+key,registration-moment,type-of-incident,description,severity-level,draft-mode,key:flightAssignment
 #base entity
 activity-log-01,2022/03/12 10:00,"Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",5,true,flight-assignment-01
 #registrationMoment - standard variations
@@ -28,7 +28,7 @@ activity-log-22,2022/03/12 10:00,"Lorem ipsum dolor sit amet","洛伦·伊普森
 activity-log-23,2022/03/12 10:00,"Lorem ipsum dolor sit amet","<marquee>Hacked</marquee>",5,true,flight-assignment-01
 activity-log-24,2022/03/12 10:00,"Lorem ipsum dolor sit amet","<script>alert(‘Hacked!’);</script>",5,true,flight-assignment-01
 activity-log-25,2022/03/12 10:00,"Lorem ipsum dolor sit amet","' or 'A' = 'A",5,true,flight-assignment-01
-#securityLevel - standard variations
+#severityLevel - standard variations
 activity-log-26,2022/03/12 10:00,"Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0,true,flight-assignment-01
 activity-log-27,2022/03/12 10:00,"Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",1,true,flight-assignment-01
 activity-log-28,2022/03/12 10:00,"Lorem ipsum dolor sit amet","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",9,true,flight-assignment-01

@@ -13,7 +13,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
-import acme.constraints.ValidSecurityLevel;
+import acme.constraints.ValidSeverityLevel;
 import acme.constraints.ValidShortText;
 import acme.constraints.ValidText;
 import acme.entities.flightassignment.FlightAssignment;
@@ -47,9 +47,9 @@ public class ActivityLog extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidSecurityLevel
+	@ValidSeverityLevel
 	@Automapped
-	private Integer				securityLevel;
+	private Integer				severityLevel;
 
 	@Mandatory
 	@Valid
