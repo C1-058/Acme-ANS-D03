@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.flightCrewMember.flightAssignment;
+package acme.features.flightCrewMember.flightAssignment;
 
 import java.util.Collection;
 
@@ -17,7 +17,7 @@ import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
 @GuiService
-public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
+public class FlightCrewMemberAssignmentUpdateService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -34,29 +34,29 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 
 	@Override
 	public void load() {
-		FlightAssignment flightAssignment;
-		FlightCrewMember flightCrewMember = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
+		FlightAssignment assignment;
+		int id;
 
-		flightAssignment = new FlightAssignment();
-		flightAssignment.setFlightCrewMember(flightCrewMember);
-		flightAssignment.setMoment(MomentHelper.getCurrentMoment());
-		super.getBuffer().addData(flightAssignment);
+		id = super.getRequest().getData("id", int.class);
+		assignment = this.repository.findFlightAssignmentById(id);
 
+		super.getBuffer().addData(assignment);
 	}
 
 	@Override
-	public void bind(final FlightAssignment flightAssignment) {
-		super.bindObject(flightAssignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg", "draftMode");
+	public void bind(final FlightAssignment assignment) {
+		super.bindObject(assignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg");
 	}
 
 	@Override
-	public void validate(final FlightAssignment flightAssignment) {
+	public void validate(final FlightAssignment assignment) {
 		;
 	}
 
 	@Override
-	public void perform(final FlightAssignment flightAssignment) {
-		this.repository.save(flightAssignment);
+	public void perform(final FlightAssignment assignment) {
+		assignment.setMoment(MomentHelper.getCurrentMoment());
+		this.repository.save(assignment);
 	}
 
 	@Override
@@ -87,6 +87,6 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 		dataset.put("flightCrewMemberChoice", flightCrewMemberChoice);
 
 		super.getResponse().addData(dataset);
-
 	}
+
 }
