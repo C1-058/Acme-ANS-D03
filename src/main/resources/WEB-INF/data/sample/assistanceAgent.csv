@@ -43,8 +43,8 @@ agent34,user-account-agent-1,ABC000700,Spanish and English,2021/07/30 00:00,Habl
 agent35,user-account-agent-1,ABC000800,Spanish and English,2021/07/30 00:00,Hablo español e inglés,999999.99 EUR,http://www.ejemplo.com,airline-01
 agent36,user-account-agent-1,ABC000900,Spanish and English,2021/07/30 00:00,Hablo español e inglés,1000000 EUR,http://www.ejemplo.com,airline-01
 #pictureUrl - variations
-agent37,user-account-agent-1,ABC001000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,ftp://a,airline-01
-agent38,user-account-agent-1,ABC002000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,ftp://a.b,airline-01
+agent37,user-account-agent-1,ABC001000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://a,airline-01
+agent38,user-account-agent-1,ABC002000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://a.b,airline-01
 agent39,user-account-agent-1,ABC003000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,https://www.lorem.com,airline-01
 agent40,user-account-agent-1,ABC004000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://www.lorem.com/dolor/sit.html#dolor,airline-01
 agent41,user-account-agent-1,ABC005000,Spanish and English,2021/07/30 00:00,Hablo español e inglés,34000 EUR,http://example.org?a=1&b=2,airline-01
