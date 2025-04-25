@@ -31,3 +31,5 @@ manager.flight.deletePublishedFlight = Can´t delete or update a published fligh
 
 manager.flight.form.publish.noLegs = This flight doesn't have any legs
 manager.flight.form.publish.legNotPublished = This flight has unplublished legs
+manager.flight.form.currency = This currency is not valid
+manager.flight.form.nullCost = The cost can´t be null

@@ -1,8 +1,11 @@
 
 package acme.features.manager.flight;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+import acme.client.components.datatypes.Money;
 import acme.client.components.models.Dataset;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
@@ -58,10 +61,17 @@ public class ManagerFlightUpdateService extends AbstractGuiService<Manager, Flig
 	@Override
 	public void validate(final Flight flight) {
 		boolean confirmation;
+		List<String> acceptedCurrencies = List.of("EUR", "USD", "GBP");
+
+		Money flightCost = super.getRequest().getData("cost", Money.class);
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
+
 		if (confirmation && !flight.getDraftMode())
 			super.state(confirmation, "*", "manager.flight.deletePublishedFlight");
+
+		super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.currency");
+
 		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}
 

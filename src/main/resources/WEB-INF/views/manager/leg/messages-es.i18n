@@ -24,6 +24,8 @@ manager.leg.form.label.arrivalAirport = Aeropuerto de llegada:
 
 manager.leg.form.label.confirmation = Confirmar cambios
 
+manager.leg.form.null = Debes introducir datos para todas las entradas
+
 manager.leg.form.button.update = Actualizar
 manager.leg.form.button.delete = Eliminar
 manager.leg.form.button.publish = Publicar
