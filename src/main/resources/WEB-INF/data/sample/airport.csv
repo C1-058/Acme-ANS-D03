@@ -75,3 +75,8 @@ airport-64,"Lorem ipsum dolor sit ame","FFL","INTERNATIONAL","Lorem ipsum dolor 
 airport-65,"Lorem ipsum dolor sit ame","FFM","INTERNATIONAL","Lorem ipsum dolor sit ame","Lorem ipsum dolor sit ame","http://lorem.com","lorem@acme.com","999999999999998"
 airport-66,"Lorem ipsum dolor sit ame","FFN","INTERNATIONAL","Lorem ipsum dolor sit ame","Lorem ipsum dolor sit ame","http://lorem.com","lorem@acme.com","999999999999999"
 airport-67,"Lorem ipsum dolor sit ame","FFO","INTERNATIONAL","Lorem ipsum dolor sit ame","Lorem ipsum dolor sit ame","http://lorem.com","lorem@acme.com","+44539394964887"
+# leg tests
+airport-68,"Aeropuerto de salida 1","FII","INTERNATIONAL","Sevilla","España","http://lorem.com","lorem@acme.com","5462854987"
+airport-69,"Aeropuerto de salida 2","FOO","INTERNATIONAL","Teruel","España","http://lorem.com","lorem@acme.com","5462854987"
+airport-70,"Aeropuerto de llegada 1","FEE","INTERNATIONAL","Málaga","España","http://lorem.com","lorem@acme.com","5462854987"
+airport-71,"Aeropuerto de llegada 2","FAA","INTERNATIONAL","Lugo","España","http://lorem.com","lorem@acme.com","5462854987"

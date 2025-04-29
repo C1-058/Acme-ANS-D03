@@ -31,4 +31,4 @@ flight-23,"Prueba para publicar un vuelo 1.",true,100.00 EUR,"La publicación de
 flight-24,"Prueba para publicar un vuelo 2.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0
 flight-25,"Prueba para publicar un vuelo 3.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0
 # calim test
-flight-26,"The cheapest.",true,100.00 EUR,"Aerolina comprometida con sus clientes",true,3
+flight-26,"Claim tests.",true,100.00 EUR,"Vuelo para los tests de claim",true,3
