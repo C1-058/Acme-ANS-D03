@@ -14,7 +14,7 @@ claim-09,2021/07/30 00:00,john123@example.com,My seat is broken,FLIGHT_ISSUES,fa
 claim-10,2021/07/30 00:00,user.name@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-11,2021/07/30 00:00,user_name@example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-12,2021/07/30 00:00,a1.b2_c3+d4-e5%f6@example-domain.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
-claim-13,2021/07/30 00:00,user@example.co.uk,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-01
+claim-13,2021/07/30 00:00,user@example.co.uk,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-14,2021/07/30 00:00,user@mail.sub.example.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-15,2021/07/30 00:00,John.Doe@Example.COM,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-16,2021/07/30 00:00,user@x.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18

@@ -72,34 +72,37 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 
 		if (confirmation) {
-			String newFlightNumberDigits = super.getRequest().getData("flightNumberDigits", String.class);
-			Optional<Leg> currentLegWithFlightNumberDigits = this.repository.findLegByFlightNumberDigits(newFlightNumberDigits);
 			int legId = super.getRequest().getData("id", int.class);
-
+			String newFlightNumberDigits = super.getRequest().getData("flightNumberDigits", String.class);
 			Airport departureAirportCode = super.getRequest().getData("departureAirport", Airport.class);
 			Airport arrivalAirportCode = super.getRequest().getData("arrivalAirport", Airport.class);
-
 			Date departure = super.getRequest().getData("departure", Date.class);
 			Date arrival = super.getRequest().getData("arrival", Date.class);
-
-			List<String> numbersAtTheSameTime = this.repository.findLegsByMomentBracket(departure, arrival, LegStatus.ON_TIME, LegStatus.DELAYED).stream().filter(x -> x.getId() != legId).map(x -> x.getAircraft().getRegistrationNumber()).toList();
 			Aircraft newAircraft = super.getRequest().getData("aircraft", Aircraft.class);
-			String newAircraftNumber = newAircraft.getRegistrationNumber();
 
-			if (currentLegWithFlightNumberDigits.isPresent() && currentLegWithFlightNumberDigits.get().getId() != legId)
-				super.state(false, "flightNumberDigits", "manager.leg.existingFlightNumberDigits");
+			if (newFlightNumberDigits != null && departureAirportCode != null && arrivalAirportCode != null && departure != null && arrival != null && newAircraft != null) {
+				Optional<Leg> currentLegWithFlightNumberDigits = this.repository.findLegByFlightNumberDigits(newFlightNumberDigits);
 
-			if (departureAirportCode.equals(arrivalAirportCode))
-				super.state(false, "*", "manager.leg.sameAirports");
+				List<String> numbersAtTheSameTime = this.repository.findLegsByMomentBracket(departure, arrival, LegStatus.ON_TIME, LegStatus.DELAYED).stream().filter(x -> x.getId() != legId).map(x -> x.getAircraft().getRegistrationNumber()).toList();
 
-			if (MomentHelper.isPast(departure))
-				super.state(false, "departure", "manager.leg.departureInThePast");
+				String newAircraftNumber = newAircraft.getRegistrationNumber();
 
-			if (arrival.before(departure))
-				super.state(false, "arrival", "manager.leg.arrivalBeforeDeparture");
+				if (currentLegWithFlightNumberDigits.isPresent() && currentLegWithFlightNumberDigits.get().getId() != legId)
+					super.state(false, "flightNumberDigits", "manager.leg.existingFlightNumberDigits");
 
-			if (numbersAtTheSameTime.contains(newAircraftNumber))
-				super.state(false, "aircraft", "manager.leg.usedAircraft");
+				if (departureAirportCode.equals(arrivalAirportCode))
+					super.state(false, "*", "manager.leg.sameAirports");
+
+				if (MomentHelper.isPast(departure))
+					super.state(false, "departure", "manager.leg.departureInThePast");
+
+				if (arrival.before(departure))
+					super.state(false, "arrival", "manager.leg.arrivalBeforeDeparture");
+
+				if (numbersAtTheSameTime.contains(newAircraftNumber))
+					super.state(false, "aircraft", "manager.leg.usedAircraft");
+			} else
+				super.state(false, "*", "manager.leg.form.null");
 
 			super.state(leg.getDraftMode(), "*", "manager.leg.deletePublishedLeg");
 		} else
@@ -135,7 +138,7 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 		dataset = super.unbindObject(leg, "flightNumberDigits", "departure", "arrival", "status", "draftMode");
 
 		dataset.put("flightNumber", leg.getFlightNumber());
-		dataset.put("duration", leg.getDuration());
+		//dataset.put("duration", leg.getDuration());
 		dataset.put("statusChoices", statusChoices);
 		dataset.put("published", !leg.getDraftMode());
 		dataset.put("flight", leg.getFlight().getTag());
