@@ -1,24 +1,28 @@
 key,flight-number-digits,departure,arrival,status,draftMode,key:flight,key:departure-airport,key:arrival-airport,key:aircraft
 # base entity
-leg-01,0000,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-01,0000,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-68,airport-70,aircraft-46
 # variation: flight-number-digits
-leg-02,0001,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-03,9999,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-04,1234,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-02,0001,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-69,airport-71,aircraft-46
+leg-03,9999,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-68,airport-70,aircraft-46
+leg-04,1234,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-69,airport-71,aircraft-46
 # variation: departure and arrival
-leg-05,0010,2000/01/01 00:00,2000/01/01 00:01,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-06,0011,2000/01/01 00:01,2000/01/01 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-07,0100,2200/01/01 00:01,2200/01/01 03:15,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-08,0101,2200/12/31 22:59,2200/12/31 23:59,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-05,0010,2000/01/01 00:00,2000/01/01 00:01,LANDED,true,flight-01,airport-68,airport-70,aircraft-46
+leg-06,0011,2000/01/01 00:01,2000/01/01 01:30,LANDED,true,flight-01,airport-69,airport-71,aircraft-46
+leg-07,0100,2200/01/01 00:01,2200/01/01 03:15,LANDED,true,flight-01,airport-68,airport-70,aircraft-46
+leg-08,0101,2200/12/31 22:59,2200/12/31 23:59,LANDED,true,flight-01,airport-69,airport-71,aircraft-46
 # variation: status
-leg-09,0110,2021/07/30 00:00,2021/07/30 01:30,ON_TIME,true,flight-01,airport-01,airport-02,aircraft-01
-leg-10,0111,2021/07/30 00:00,2021/07/30 01:30,DELAYED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-11,1000,2021/07/30 00:00,2021/07/30 01:30,CANCELLED,true,flight-01,airport-01,airport-02,aircraft-01
-leg-12,1001,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-01,airport-02,aircraft-01
+leg-09,0110,2021/07/30 00:00,2021/07/30 01:30,ON_TIME,true,flight-01,airport-68,airport-70,aircraft-46
+leg-10,0111,2021/07/30 00:00,2021/07/30 01:30,DELAYED,true,flight-01,airport-69,airport-71,aircraft-46
+leg-11,1000,2021/07/30 00:00,2021/07/30 01:30,CANCELLED,true,flight-01,airport-68,airport-70,aircraft-46
+leg-12,1001,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-01,airport-69,airport-71,aircraft-46
 # test: publish flight
-leg-13,1010,2021/07/30 00:00,2021/07/30 01:30,LANDED,false,flight-23,airport-01,airport-02,aircraft-01
-leg-14,1011,2021/08/01 00:00,2021/08/01 05:00,LANDED,false,flight-23,airport-01,airport-02,aircraft-01
-leg-15,1100,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-24,airport-01,airport-02,aircraft-01
+leg-13,1010,2021/07/30 00:00,2021/07/30 01:30,LANDED,false,flight-23,airport-68,airport-70,aircraft-46
+leg-14,1011,2021/08/01 00:00,2021/08/01 05:00,LANDED,false,flight-23,airport-69,airport-71,aircraft-46
+leg-15,1100,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-24,airport-68,airport-70,aircraft-46
 #test: update leg
-leg-16,1122,2021/07/30 00:00,2021/07/30 01:30,ON_TIME,true,flight-03,airport-01,airport-02,aircraft-01
-leg-17,1121,2021/07/30 02:00,2021/07/30 03:00,ON_TIME,true,flight-03,airport-01,airport-02,aircraft-01
+leg-16,1122,2021/07/30 00:00,2021/07/30 01:30,ON_TIME,true,flight-03,airport-69,airport-71,aircraft-46
+leg-17,1121,2021/07/30 02:00,2021/07/30 03:00,ON_TIME,true,flight-03,airport-68,airport-70,aircraft-46
+# claim test
+leg-18,2406,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-26,airport-69,airport-70,aircraft-46
+# flight-assignment test
+leg-19,2407,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-26,airport-68,airport-71,aircraft-46

@@ -12,8 +12,8 @@ airline-08,"你好",IKU,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678
 airline-09,"<marquee>Hacked</marquee>",JHM,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
 airline-10,"<script>alert('Hacked!');</script>",KLF,http://www.ejemplo.com,LUXURY,2021/06/30 00:00,612345678,false
 # variation: website
-airline-11,"iberia",KPV,ftp://a,LUXURY,2021/06/30 00:00,612345678,false
-airline-12,"iberia",LCC,ftp://a.b,LUXURY,2021/06/30 00:00,612345678,false
+airline-11,"iberia",KPV,http://example.org/,LUXURY,2021/06/30 00:00,612345678,false
+airline-12,"iberia",LCC,http://example.org/a/b?,LUXURY,2021/06/30 00:00,612345678,false
 airline-13,"iberia",LQK,https://www.lorem.com,LUXURY,2021/06/30 00:00,612345678,false
 airline-14,"iberia",NSJ,http://www.lorem.com/dolor/sit.html#dolor,LUXURY,2021/06/30 00:00,612345678,false
 airline-15,"iberia",OMV,http://example.org?a=1&b=2,LUXURY,2021/06/30 00:00,612345678,false
