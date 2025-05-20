@@ -1,54 +1,54 @@
 key,model,registration-number,capacity,cargo-weight,status,details,key:airline
-aircraft-01,Modelo 1,1234,100,25,ACTIVE,Detalles del aircraft.,airline-01
-aircraft-02,Modelo 2,12345,100,25,ACTIVE,Detalles del aircraft.,airline-02
+aircraft-01,Modelo 1,1234,100,2000,ACTIVE,Detalles del aircraft.,airline-01
+aircraft-02,Modelo 2,12345,100,2000,ACTIVE,Detalles del aircraft.,airline-02
 # Base-entity
-aircraft-00,Model 0,0,100,25,ACTIVE,No comment,airline-03
+aircraft-00,Model 0,0,100,2000,ACTIVE,No comment,airline-03
 # model - standard variations
-aircraft-03,L,1,100,25,ACTIVE,No comment,airline-04
-aircraft-04,Lo,2,100,25,ACTIVE,No comment,airline-05
-aircraft-05,"Lorem ipsum dolor sit amet, consectetur adipiscin",3,100,25,ACTIVE,No comment,airline-06
-aircraft-06,"Lorem ipsum dolor sit amet, consectetur adipiscing",4,100,25,ACTIVE,No comment,airline-07
-aircraft-07,โลเร็ม อิปซัม,5,100,25,ACTIVE,No comment,airline-08
-aircraft-09,洛伦·伊普森,6,100,25,ACTIVE,No comment,airline-10
-aircraft-10,<marquee>Hacked</marquee>,7,100,25,ACTIVE,No comment,airline-11
-aircraft-11,<script>alert(‘Hacked!’);</script>,8,100,25,ACTIVE,No comment,airline-12
-aircraft-12,' or 'A' = 'A,9,100,25,ACTIVE,No comment,airline-13
+aircraft-03,L,1,100,2000,ACTIVE,No comment,airline-04
+aircraft-04,Lo,2,100,2000,ACTIVE,No comment,airline-05
+aircraft-05,"Lorem ipsum dolor sit amet, consectetur adipiscin",3,100,2000,ACTIVE,No comment,airline-06
+aircraft-06,"Lorem ipsum dolor sit amet, consectetur adipiscing",4,100,2000,ACTIVE,No comment,airline-07
+aircraft-07,โลเร็ม อิปซัม,5,100,2000,ACTIVE,No comment,airline-08
+aircraft-09,洛伦·伊普森,6,100,2000,ACTIVE,No comment,airline-10
+aircraft-10,<marquee>Hacked</marquee>,7,100,2000,ACTIVE,No comment,airline-11
+aircraft-11,<script>alert(‘Hacked!’);</script>,8,100,2000,ACTIVE,No comment,airline-12
+aircraft-12,' or 'A' = 'A,9,100,2000,ACTIVE,No comment,airline-13
 # registration-number - standard variations
-aircraft-13,Model 0,L,100,25,ACTIVE,No comment,airline-14
-aircraft-14,Model 0,Lo,100,25,ACTIVE,No comment,airline-15
-aircraft-15,Model 0,"Lorem ipsum dolor sit amet, consectetur adipiscin",100,25,ACTIVE,No comment,airline-16
-aircraft-16,Model 0,"Lorem ipsum dolor sit amet, consectetur adipiscing",100,25,ACTIVE,No comment,airline-17
-aircraft-17,Model 0,โลเร็ม อิปซัม,100,25,ACTIVE,No comment,airline-18
-aircraft-18,Model 0,لوريم إيسوم,100,25,ACTIVE,No comment,airline-19
-aircraft-19,Model 0,洛伦·伊普森,100,25,ACTIVE,No comment,airline-20
-aircraft-20,Model 0,<marquee>Hacked</marquee>,100,25,ACTIVE,No comment,airline-21
-aircraft-21,Model 0,<script>alert(‘Hacked!’);</script>,100,25,ACTIVE,No comment,airline-22
-aircraft-22,Model 0,' or 'A' = 'A,100,25,ACTIVE,No comment,airline-22
+aircraft-13,Model 0,L,100,2000,ACTIVE,No comment,airline-14
+aircraft-14,Model 0,Lo,100,2000,ACTIVE,No comment,airline-15
+aircraft-15,Model 0,"Lorem ipsum dolor sit amet, consectetur adipiscin",100,2000,ACTIVE,No comment,airline-16
+aircraft-16,Model 0,"Lorem ipsum dolor sit amet, consectetur adipiscing",100,2000,ACTIVE,No comment,airline-17
+aircraft-17,Model 0,โลเร็ม อิปซัม,100,2000,ACTIVE,No comment,airline-18
+aircraft-18,Model 0,لوريم إيسوم,100,2000,ACTIVE,No comment,airline-19
+aircraft-19,Model 0,洛伦·伊普森,100,2000,ACTIVE,No comment,airline-20
+aircraft-20,Model 0,<marquee>Hacked</marquee>,100,2000,ACTIVE,No comment,airline-21
+aircraft-21,Model 0,<script>alert(‘Hacked!’);</script>,100,2000,ACTIVE,No comment,airline-22
+aircraft-22,Model 0,' or 'A' = 'A,100,2000,ACTIVE,No comment,airline-22
 # capacity - standard variations
-aircraft-23,Model 0,10,1,25,ACTIVE,No comment,airline-22
-aircraft-24,Model 0,11,2,25,ACTIVE,No comment,airline-22
-aircraft-25,Model 0,12,999998,25,ACTIVE,No comment,airline-22
-aircraft-26,Model 0,13,999999,25,ACTIVE,No comment,airline-22
+aircraft-23,Model 0,10,1,2000,ACTIVE,No comment,airline-22
+aircraft-24,Model 0,11,2,2000,ACTIVE,No comment,airline-22
+aircraft-25,Model 0,12,999998,2000,ACTIVE,No comment,airline-22
+aircraft-26,Model 0,13,999999,2000,ACTIVE,No comment,airline-22
 # cargo-weight - standard variations
-aircraft-27,Model 0,14,100,2,ACTIVE,No comment,airline-22
-aircraft-28,Model 0,15,100,3,ACTIVE,No comment,airline-22
-aircraft-29,Model 0,16,100,49,ACTIVE,No comment,airline-22
-aircraft-30,Model 0,17,100,50,ACTIVE,No comment,airline-22
+aircraft-27,Model 0,14,100,2000,ACTIVE,No comment,airline-22
+aircraft-28,Model 0,15,100,2001,ACTIVE,No comment,airline-22
+aircraft-29,Model 0,16,100,49999,ACTIVE,No comment,airline-22
+aircraft-30,Model 0,17,100,50000,ACTIVE,No comment,airline-22
 # status - standard variations
-aircraft-31,Model 0,18,100,25,ACTIVE,No comment,airline-22
-aircraft-32,Model 0,19,100,25,MAINTENANCE,No comment,airline-22
+aircraft-31,Model 0,18,100,2000,ACTIVE,No comment,airline-22
+aircraft-32,Model 0,19,100,2000,MAINTENANCE,No comment,airline-22
 # details - standard variations
-aircraft-33,Model 0,20,100,25,ACTIVE,null,airline-22
-aircraft-34,Model 0,21,100,25,ACTIVE,L,airline-22
-aircraft-35,Model 0,22,100,25,ACTIVE,Lo,airline-22
-aircraft-36,Model 0,23,100,25,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscin",airline-22
-aircraft-37,Model 0,24,100,25,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-22
-aircraft-38,Model 0,25,100,25,ACTIVE,โลเร็ม อิปซัม,airline-22
-aircraft-39,Model 0,26,100,25,ACTIVE,لوريم إيسوم,airline-22
-aircraft-40,Model 0,27,100,25,ACTIVE,洛伦·伊普森,airline-22
-aircraft-41,Model 0,28,100,25,ACTIVE,<marquee>Hacked</marquee>,airline-22
-aircraft-42,Model 0,29,100,25,ACTIVE,<script>alert(‘Hacked!’);</script>,airline-22
-aircraft-43,Model 0,30,100,25,ACTIVE,' or 'A' = 'A,airline-22
-# key:airline - standard variations
-aircraft-44,Model 0,31,100,25,ACTIVE,No comment,airline-22
-aircraft-45,Model 0,32,100,25,ACTIVE,No comment,airline-04
+aircraft-33,Model 0,20,100,2000,ACTIVE,null,airline-22
+aircraft-34,Model 0,21,100,2000,ACTIVE,L,airline-22
+aircraft-35,Model 0,22,100,2000,ACTIVE,Lo,airline-22
+aircraft-36,Model 0,23,100,2000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscin",airline-22
+aircraft-37,Model 0,24,100,2000,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-22
+aircraft-38,Model 0,25,100,2000,ACTIVE,โลเร็ม อิปซัม,airline-22
+aircraft-39,Model 0,26,100,2000,ACTIVE,لوريم إيسوم,airline-22
+aircraft-40,Model 0,27,100,2000,ACTIVE,洛伦·伊普森,airline-22
+aircraft-41,Model 0,28,100,2000,ACTIVE,<marquee>Hacked</marquee>,airline-22
+aircraft-42,Model 0,29,100,2000,ACTIVE,<script>alert(‘Hacked!’);</script>,airline-22
+aircraft-43,Model 0,30,100,2000,ACTIVE,' or 'A' = 'A,airline-22
+# key:airline - standard variations,"","","",""
+aircraft-44,Model 0,31,100,2000,ACTIVE,No comment,airline-22
+aircraft-45,Model 0,32,100,2000,ACTIVE,No comment,airline-04
