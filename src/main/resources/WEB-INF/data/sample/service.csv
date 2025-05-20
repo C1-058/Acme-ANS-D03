@@ -13,7 +13,7 @@ service-09,<marquee>Hacked</marquee>,http://www.ejemplo.com,75.54,CODE-08,EUR 10
 service-10,"<script>alert(‘Hacked!’),</script>",http://www.ejemplo.com,75.54,CODE-09,EUR 100
 service-11,' or 'A' = 'A,http://www.ejemplo.com,75.54,CODE-10,EUR 100
 # pictureUrl - variation
-service-12,VIP catering,http://a,75.54,CODE-20,EUR 100
+service-12,VIP catering,http://a.a,75.54,CODE-20,EUR 100
 service-13,VIP catering,https://a.b,75.54,CODE-30,EUR 100
 service-14,VIP catering,https://www.lorem.com,75.54,CODE-40,EUR 100
 service-15,VIP catering,http://www.lorem.com/dolor/sit.html#dolor,75.54,CODE-50,EUR 100
