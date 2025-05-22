@@ -38,7 +38,6 @@ aircraft-30,Model 0,17,100,50000,ACTIVE,No comment,airline-22
 aircraft-31,Model 0,18,100,2000,ACTIVE,No comment,airline-22
 aircraft-32,Model 0,19,100,2000,MAINTENANCE,No comment,airline-22
 # details - standard variations
-<<<<<<< HEAD
 aircraft-33,Model 0,20,100,2000,ACTIVE,null,airline-22
 aircraft-34,Model 0,21,100,2000,ACTIVE,L,airline-22
 aircraft-35,Model 0,22,100,2000,ACTIVE,Lo,airline-22
@@ -50,24 +49,8 @@ aircraft-40,Model 0,27,100,2000,ACTIVE,洛伦·伊普森,airline-22
 aircraft-41,Model 0,28,100,2000,ACTIVE,<marquee>Hacked</marquee>,airline-22
 aircraft-42,Model 0,29,100,2000,ACTIVE,<script>alert(‘Hacked!’);</script>,airline-22
 aircraft-43,Model 0,30,100,2000,ACTIVE,' or 'A' = 'A,airline-22
-# key:airline - standard variations,"","","",""
+# key:airline - standard variations
 aircraft-44,Model 0,31,100,2000,ACTIVE,No comment,airline-22
 aircraft-45,Model 0,32,100,2000,ACTIVE,No comment,airline-04
-=======
-aircraft-33,Model 0,20,100,25,ACTIVE,null,airline-22
-aircraft-34,Model 0,21,100,25,ACTIVE,L,airline-22
-aircraft-35,Model 0,22,100,25,ACTIVE,Lo,airline-22
-aircraft-36,Model 0,23,100,25,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscin",airline-22
-aircraft-37,Model 0,24,100,25,ACTIVE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-22
-aircraft-38,Model 0,25,100,25,ACTIVE,โลเร็ม อิปซัม,airline-22
-aircraft-39,Model 0,26,100,25,ACTIVE,لوريم إيسوم,airline-22
-aircraft-40,Model 0,27,100,25,ACTIVE,洛伦·伊普森,airline-22
-aircraft-41,Model 0,28,100,25,ACTIVE,<marquee>Hacked</marquee>,airline-22
-aircraft-42,Model 0,29,100,25,ACTIVE,<script>alert(‘Hacked!’);</script>,airline-22
-aircraft-43,Model 0,30,100,25,ACTIVE,' or 'A' = 'A,airline-22
-# key:airline - standard variations
-aircraft-44,Model 0,31,100,25,ACTIVE,No comment,airline-22
-aircraft-45,Model 0,32,100,25,ACTIVE,No comment,airline-04
 # leg tests
-aircraft-46,Modelo 1,33,100,25,ACTIVE,Avión para los tests de leg.,airline-01
->>>>>>> branch 'main' of https://github.com/C1-058/Acme-ANS-D01
+aircraft-46,Modelo 1,33,100,2000,ACTIVE,Avión para los tests de leg.,airline-01
