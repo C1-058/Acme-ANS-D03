@@ -1,14 +1,3 @@
-/*
- * CustomerBookingRepository.java
- *
- * Copyright (C) 2012-2025 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
 package acme.features.customer.booking;
 
@@ -54,8 +43,8 @@ public interface CustomerBookingRepository extends AbstractRepository {
 	@Query("select f from Flight f")
 	Collection<Flight> findAllFlights();
 
-	// Ahora mismo no se puede ejecutar, no existe draftMode para Flight en esta rama y getScheduledDeparture es @Transient
-	//@Query("select f from Flight f where f.draftMode=false and f.getScheduledDeparture > :currentMoment")
+	//getDeparture es @Transient
+	//@Query("select f from Flight f where f.draftMode=false and f.getDeparture > :currentMoment")
 	//Collection<Flight> findAvailablesFlights(Date currentMoment);
 
 	@Query("select f from Flight f where f.draftMode=false")
