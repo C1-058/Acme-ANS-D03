@@ -54,6 +54,12 @@ master.menu.flightCrewMember.listPlanned = List planned assignments
 master.menu.manager = Manager
 master.menu.manager.list-flights = List flights
 
+# master.menu.technician ##########################################################
+
+master.menu.technician = Technician
+master.menu.technician.maintenance-records = List maintenance records
+master.menu.technician.tasks = List tasks
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

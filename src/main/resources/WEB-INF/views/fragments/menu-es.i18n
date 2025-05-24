@@ -49,11 +49,16 @@ master.menu.flightCrewMember = Tripulante de vuelo
 master.menu.flightCrewMember.listCompleted = Listar asignaciones completadas
 master.menu.flightCrewMember.listPlanned = Listar asignaciones planeadas
  
-
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
 master.menu.manager.list-flights = Ver vuelos
+
+# master.menu.technician ##########################################################
+
+master.menu.technician = Técnico
+master.menu.technician.maintenance-records = Listar registros de mantenimiento
+master.menu.technician.tasks = Listar tareas
 
 # master.menu.user-account ####################################################
 
@@ -73,3 +78,4 @@ master.menu.customer = Cliente
 master.menu.customer.list-bookings = Ver mis reservas
 master.menu.customer.list-passengers = Ver pasajeros en mis reservas
 master.menu.customer.list-all-passengers = Ver todos mis pasajeros
+
