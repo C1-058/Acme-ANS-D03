@@ -1,0 +1,23 @@
+customer.booking.list.title = Lista de reservas
+customer.booking.form.title = Formulario de reservas
+
+customer.booking.list.label.locatorCode = Codigo Localizador
+customer.booking.list.label.purchaseMoment = Fecha Compra
+customer.booking.form.label.flight = Vuelo
+customer.booking.list.label.travelClass = Clase vuelo
+customer.booking.list.label.price = Precio
+customer.booking.list.label.draftMode = Modo borrador
+
+customer.booking.list.button.create = Crear
+
+customer.booking.form.label.locatorCode = Codigo Localizador
+customer.booking.form.label.purchaseMoment = Fecha Compra
+customer.booking.form.label.travelClass = Clase vuelo
+customer.booking.form.label.price = Precio
+customer.booking.form.label.lastNibble = Ult Digitos Tarjeta
+customer.booking.form.label.customer.identity.fullName = Nombre Cliente
+
+customer.booking.form.button.passengers = Pasajeros
+customer.booking.form.button.update = Actualizar
+customer.booking.form.button.publish = Publicar
+customer.booking.form.button.create = Crear
