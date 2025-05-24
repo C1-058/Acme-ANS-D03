@@ -1,6 +1,8 @@
 flight-crew-member.flight-assignment.list.label.duty = Deber
 flight-crew-member.flight-assignment.list.label.lastUpdate = Última actualización
 flight-crew-member.flight-assignment.list.label.status = Estado
+flight-crew-member.flight-assignment.list.label.draftMode = Modo Borrador
+flight-crew-member.flight-assignment.list.label.leg = Tramo
 flight-crew-member.flight-assignment.list.title = Mis asignaciones de vuelo
 
 flight-crew-member.flight-assignment.form.title = Detalles de asignación

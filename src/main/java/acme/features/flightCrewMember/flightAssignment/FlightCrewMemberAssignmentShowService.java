@@ -16,7 +16,7 @@ import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
 @GuiService
-public class FlightCrewMemberFlightAssignmentShowService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
+public class FlightCrewMemberAssignmentShowService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
 
 	// Internal state ---------------------------------------------------------
 

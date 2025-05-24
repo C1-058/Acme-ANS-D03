@@ -17,7 +17,7 @@ import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
 @GuiService
-public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
+public class FlightCrewMemberAssignmentCreateService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -55,15 +55,16 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 	}
 
 	@Override
-	public void perform(final FlightAssignment flightAssignment) {
-		this.repository.save(flightAssignment);
+	public void perform(final FlightAssignment assignment) {
+		assert assignment != null;
+		this.repository.save(assignment);
 	}
 
 	@Override
 	public void unbind(final FlightAssignment assignment) {
 		Dataset dataset;
 		SelectChoices dutyChoice;
-		SelectChoices statusChoice;
+		SelectChoices currentStatusChoice;
 
 		SelectChoices legChoice;
 		Collection<Leg> legs;
@@ -72,7 +73,7 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 		Collection<FlightCrewMember> flightCrewMembers;
 
 		dutyChoice = SelectChoices.from(Duty.class, assignment.getDuty());
-		statusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
+		currentStatusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
 
 		legs = this.repository.findAllLegs();
 		legChoice = SelectChoices.from(legs, "id", assignment.getLeg());
@@ -82,7 +83,7 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 
 		dataset = super.unbindObject(assignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg", "draftMode");
 		dataset.put("dutyChoice", dutyChoice);
-		dataset.put("statusChoice", statusChoice);
+		dataset.put("currentStatusChoice", currentStatusChoice);
 		dataset.put("legChoice", legChoice);
 		dataset.put("flightCrewMemberChoice", flightCrewMemberChoice);
 

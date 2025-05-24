@@ -26,3 +26,7 @@ leg-17,1121,2021/07/30 02:00,2021/07/30 03:00,ON_TIME,true,flight-03,airport-68,
 leg-18,2406,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-26,airport-69,airport-70,aircraft-46
 # flight-assignment test
 leg-19,2407,2021/07/30 00:00,2021/07/30 01:30,LANDED,true,flight-26,airport-68,airport-71,aircraft-46
+leg-20,2408,2021/07/30 00:00,2021/07/30 01:30,CANCELLED,true,flight-26,airport-68,airport-71,aircraft-46
+leg-21,2409,2021/07/30 00:00,2021/07/30 01:30,ON_TIME,true,flight-26,airport-68,airport-71,aircraft-46
+leg-22,2410,2021/07/30 00:00,2021/07/30 01:30,DELAYED,true,flight-26,airport-68,airport-71,aircraft-46
+leg-23,2411,2030/07/30 00:00,2030/07/30 01:30,DELAYED,true,flight-26,airport-68,airport-71,aircraft-46
