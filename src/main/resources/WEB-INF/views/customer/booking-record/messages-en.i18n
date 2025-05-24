@@ -1,0 +1,15 @@
+customer.booking-record.form.title = Passenger in booking form
+customer.booking-record.list.title = Listing of passengers in booking
+
+customer.booking-record.form.label.passenger = Passenger
+customer.booking-record.form.label.locatorCode = Booking Locator Code
+
+customer.booking-record.passenger.form.label.fullName = Full Name
+
+customer.booking-record.form.button.create = Create
+
+customer.booking-record.passenger.list.label.fullName = Full Name
+customer.booking-record.passenger.list.label.email = Email
+customer.booking-record.passenger.list.label.passportNumber = Passport Number
+
+customer.booking-record.passenger.list.button.create = Create
