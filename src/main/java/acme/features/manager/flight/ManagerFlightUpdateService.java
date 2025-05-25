@@ -70,7 +70,8 @@ public class ManagerFlightUpdateService extends AbstractGuiService<Manager, Flig
 		if (confirmation && !flight.getDraftMode())
 			super.state(confirmation, "*", "manager.flight.deletePublishedFlight");
 
-		super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.wrongCurrency");
+		if (flightCost != null)
+			super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.wrongCurrency");
 
 		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}

@@ -111,27 +111,31 @@ public class ManagerLegCreateService extends AbstractGuiService<Manager, Leg> {
 			Date arrival = leg.getArrival();
 			Aircraft newAircraft = super.getRequest().getData("aircraft", Aircraft.class);
 
-			if (newFlightNumberDigits != null && departureAirportCode != null && arrivalAirportCode != null && departure != null && arrival != null && newAircraft != null) {
+			if (newFlightNumberDigits != null) {
 				Optional<Leg> currentLegWithFlightNumberDigits = this.repository.findLegByFlightNumberDigits(newFlightNumberDigits);
-
-				List<String> numbersAtTheSameTime = this.repository.findLegsByMomentBracket(departure, arrival, LegStatus.ON_TIME, LegStatus.DELAYED).stream().filter(x -> x.getId() != legId).map(x -> x.getAircraft().getRegistrationNumber()).toList();
 
 				if (currentLegWithFlightNumberDigits.isPresent() && currentLegWithFlightNumberDigits.get().getId() != legId)
 					super.state(false, "flightNumberDigits", "manager.leg.existingFlightNumberDigits");
+			}
 
+			if (departureAirportCode != null && arrivalAirportCode != null)
 				if (departureAirportCode.equals(arrivalAirportCode))
 					super.state(false, "*", "manager.leg.sameAirports");
 
+			if (departure != null)
 				if (MomentHelper.isPast(departure))
 					super.state(false, "departure", "manager.leg.departureInThePast");
 
+			if (arrival != null)
 				if (arrival.before(departure))
 					super.state(false, "arrival", "manager.leg.arrivalBeforeDeparture");
 
+			if (departure != null && arrival != null && newAircraft != null) {
+				List<String> numbersAtTheSameTime = this.repository.findLegsByMomentBracket(departure, arrival, LegStatus.ON_TIME, LegStatus.DELAYED).stream().filter(x -> x.getId() != legId).map(x -> x.getAircraft().getRegistrationNumber()).toList();
+
 				if (numbersAtTheSameTime.contains(newAircraft.getRegistrationNumber()))
 					super.state(false, "aircraft", "manager.leg.usedAircraft");
-			} else
-				super.state(false, "*", "manager.leg.form.null");
+			}
 
 			super.state(leg.getDraftMode(), "*", "manager.leg.deletePublishedLeg");
 		} else
