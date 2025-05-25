@@ -31,5 +31,6 @@ manager.flight.deletePublishedFlight = No se puede eliminar o editar un vuelo pu
 
 manager.flight.form.publish.noLegs = Este vuelo no tiene ningún tramo
 manager.flight.form.publish.legNotPublished = Este vuelo tiene tramos sin publicar
-manager.flight.form.currency = Esta moneda no es válida
+manager.flight.form.wrongCurrency = Esta moneda no es válida
 manager.flight.form.nullCost = El coste no debe ser nulo
+manager.flight.form.invalidCost = Formato del coste inválido

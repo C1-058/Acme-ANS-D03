@@ -33,19 +33,54 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 	@Override
 	public void authorise() {
 		boolean status;
-		int legId;
+		int masterId;
+		Flight flight;
 		Leg leg;
+		String status_;
+		int aircraftId;
+		Aircraft aircraft;
+		int arrivalAirportId;
+		Airport arrivalAirport;
+		int departureAirportId;
+		Airport departureAirport;
+		boolean aircraftStatus;
+		boolean departureAirportStatus;
+		boolean arrivalAirportStatus;
+		boolean statusStatus;
 
-		legId = super.getRequest().getData("id", int.class);
+		masterId = super.getRequest().getData("id", int.class);
+		leg = this.repository.findLegById(masterId);
 
-		leg = this.repository.findLegById(legId);
-
-		if (leg != null) {
-			int managerId = super.getRequest().getPrincipal().getActiveRealm().getId();
-			status = leg.getFlight().getManager().getId() == managerId && leg.getDraftMode();
-		} else
+		if (leg == null)
 			status = false;
+		else {
+			flight = this.repository.findFlightById(leg.getFlight().getId());
+			if (!leg.getDraftMode() || !super.getRequest().getPrincipal().hasRealm(flight.getManager()))
+				status = false;
+			else if (super.getRequest().getMethod().equals("GET"))
+				status = true;
+			else {
+				status_ = super.getRequest().getData("status", String.class);
+				List<String> statusList = List.of("ON_TIME", "DELAYED", "CANCELLED", "LANDED", "0");
+				statusStatus = statusList.contains(status_);
 
+				aircraftId = super.getRequest().getData("aircraft", int.class);
+				aircraft = this.repository.findAircraftById(aircraftId);
+				aircraftStatus = aircraftId == 0 || aircraft != null;
+				if (aircraft != null)
+					aircraftStatus = aircraftStatus && aircraft.getAirline().getIataCode().equals(flight.getManager().getAirline().getIataCode());
+
+				departureAirportId = super.getRequest().getData("departureAirport", int.class);
+				departureAirport = this.repository.findAirportById(departureAirportId);
+				departureAirportStatus = departureAirportId == 0 || departureAirport != null;
+
+				arrivalAirportId = super.getRequest().getData("arrivalAirport", int.class);
+				arrivalAirport = this.repository.findAirportById(arrivalAirportId);
+				arrivalAirportStatus = arrivalAirportId == 0 || arrivalAirport != null;
+
+				status = aircraftStatus && departureAirportStatus && arrivalAirportStatus && statusStatus;
+			}
+		}
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -62,7 +97,7 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 
 	@Override
 	public void bind(final Leg leg) {
-		super.bindObject(leg, "flightNumberDigits", "departure", "arrival", "status");
+		super.bindObject(leg, "flightNumberDigits", "departure", "arrival", "status", "aircraft", "departureAirport", "arrivalAirport");
 	}
 
 	@Override
@@ -76,8 +111,8 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 			String newFlightNumberDigits = super.getRequest().getData("flightNumberDigits", String.class);
 			Airport departureAirportCode = super.getRequest().getData("departureAirport", Airport.class);
 			Airport arrivalAirportCode = super.getRequest().getData("arrivalAirport", Airport.class);
-			Date departure = super.getRequest().getData("departure", Date.class);
-			Date arrival = super.getRequest().getData("arrival", Date.class);
+			Date departure = leg.getDeparture();
+			Date arrival = leg.getArrival();
 			Aircraft newAircraft = super.getRequest().getData("aircraft", Aircraft.class);
 
 			if (newFlightNumberDigits != null && departureAirportCode != null && arrivalAirportCode != null && departure != null && arrival != null && newAircraft != null) {
@@ -117,20 +152,20 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 	@Override
 	public void unbind(final Leg leg) {
 		Dataset dataset;
-		SelectChoices flightChoices;
+		//SelectChoices flightChoices;
 		SelectChoices departureAirportChoices;
 		SelectChoices arrivalAirportChoices;
 		SelectChoices aircraftChoices;
 		SelectChoices statusChoices;
 
-		List<Flight> flights = this.repository.findFlightsByManager(leg.getFlight().getManager().getId());
-		flightChoices = SelectChoices.from(flights, "tag", leg.getFlight());
+		//List<Flight> flights = this.repository.findFlightsByManager(leg.getFlight().getManager().getId());
+		//flightChoices = SelectChoices.from(flights, "tag", leg.getFlight());
 
 		List<Airport> airports = this.repository.findAllAirports();
 		departureAirportChoices = SelectChoices.from(airports, "iataCode", leg.getDepartureAirport());
 		arrivalAirportChoices = SelectChoices.from(airports, "iataCode", leg.getArrivalAirport());
 
-		List<Aircraft> aircrafts = this.repository.findAllAircrafts();
+		List<Aircraft> aircrafts = this.repository.findAllAircrafts(leg.getFlight().getManager().getAirline().getIataCode());
 		aircraftChoices = SelectChoices.from(aircrafts, "registrationNumber", leg.getAircraft());
 
 		statusChoices = SelectChoices.from(LegStatus.class, leg.getStatus());
@@ -142,7 +177,7 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 		dataset.put("statusChoices", statusChoices);
 		dataset.put("published", !leg.getDraftMode());
 		dataset.put("flight", leg.getFlight().getTag());
-		dataset.put("flights", flightChoices);
+		//dataset.put("flights", flightChoices);
 		dataset.put("aircraft", aircraftChoices.getSelected().getKey());
 		dataset.put("aircrafts", aircraftChoices);
 		dataset.put("departureAirport", departureAirportChoices.getSelected().getKey());
@@ -150,6 +185,7 @@ public class ManagerLegUpdateService extends AbstractGuiService<Manager, Leg> {
 		dataset.put("arrivalAirport", arrivalAirportChoices.getSelected().getKey());
 		dataset.put("arrivalAirports", arrivalAirportChoices);
 
+		super.getResponse().addGlobal("masterId", leg.getFlight().getId());
 		super.getResponse().addData(dataset);
 	}
 
