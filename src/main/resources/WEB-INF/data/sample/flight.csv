@@ -30,5 +30,7 @@ flight-22,"Para borrar",true,100.00 EUR,"Aerolina comprometida con sus clientes"
 flight-23,"Prueba para publicar un vuelo 1.",true,100.00 EUR,"La publicación de este vuelo debe ser exitosa.",true,0
 flight-24,"Prueba para publicar un vuelo 2.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0
 flight-25,"Prueba para publicar un vuelo 3.",true,100.00 EUR,"La publicación de este vuelo debe ser fallida.",true,0
-# calim test
+# claim test
 flight-26,"Claim tests.",true,100.00 EUR,"Vuelo para los tests de claim",true,3
+# booking test
+flight-27,"Booking tests.",true,100.00 EUR,"Vuelo para los tests de booking",true,3

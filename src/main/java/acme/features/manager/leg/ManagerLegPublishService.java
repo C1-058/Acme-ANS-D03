@@ -89,7 +89,7 @@ public class ManagerLegPublishService extends AbstractGuiService<Manager, Leg> {
 		departureAirportChoices = SelectChoices.from(airports, "iataCode", leg.getDepartureAirport());
 		arrivalAirportChoices = SelectChoices.from(airports, "iataCode", leg.getArrivalAirport());
 
-		List<Aircraft> aircrafts = this.repository.findAllAircrafts();
+		List<Aircraft> aircrafts = this.repository.findAllAircrafts(leg.getFlight().getManager().getAirline().getIataCode());
 		aircraftChoices = SelectChoices.from(aircrafts, "registrationNumber", leg.getAircraft());
 
 		statusChoices = SelectChoices.from(LegStatus.class, leg.getStatus());
