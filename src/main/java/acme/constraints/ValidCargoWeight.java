@@ -17,13 +17,13 @@ import javax.validation.constraints.Min;
 @Constraint(validatedBy = {})
 @ReportAsSingleViolation
 
-@Min(2)
-@Max(50)
+@Min(2000)
+@Max(50000)
 public @interface ValidCargoWeight {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "The cargo weight must be in between 2 an 50 (thousands or kgs)";
+	String message() default "The cargo weight must be in between 2000 and 50000 kgs";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

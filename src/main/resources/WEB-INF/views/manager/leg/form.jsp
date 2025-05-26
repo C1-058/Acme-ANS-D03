@@ -4,13 +4,17 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="manager.leg.form.label.flightNumber" path="flightNumber" readonly="true"/>
+	<jstl:if test="${_command != 'create'}">
+		<acme:input-textbox code="manager.leg.form.label.flight" path="flight" readonly="true"/>
+		<acme:input-textbox code="manager.leg.form.label.flightNumber" path="flightNumber" readonly="true"/>
+	</jstl:if>
 	<acme:input-textbox code="manager.leg.form.label.flightNumberDigits" path="flightNumberDigits"/>
-	<acme:input-textbox code="manager.leg.form.label.duration" path="duration" readonly="true"/>
 	<acme:input-moment code="manager.leg.form.label.departure" path="departure"/>
 	<acme:input-moment code="manager.leg.form.label.arrival" path="arrival"/>
+	<jstl:if test="${_command != 'create'}">
+		<acme:input-textbox code="manager.leg.form.label.duration" path="duration" readonly="true"/>
+	</jstl:if>
 	<acme:input-select code="manager.leg.form.label.status" path="status" choices="${statusChoices}"/>
-	<acme:input-select code="manager.leg.form.label.flight" path="flight" choices="${flights}"/>
 	<acme:input-select code="manager.leg.form.label.aircraft" path="aircraft" choices="${aircrafts}"/>
 	<acme:input-select code="manager.leg.form.label.departureAirport" path="departureAirport" choices="${departureAirports}"/>
 	<acme:input-select code="manager.leg.form.label.arrivalAirport" path="arrivalAirport" choices="${arrivalAirports}"/>

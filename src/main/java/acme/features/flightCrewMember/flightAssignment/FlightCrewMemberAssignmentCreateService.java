@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
-import acme.entities.activitylog.ActivityLog;
 import acme.entities.flight.Leg;
 import acme.entities.flightassignment.AssignmentStatus;
 import acme.entities.flightassignment.Duty;
@@ -17,7 +17,7 @@ import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
 @GuiService
-public class FlightCrewMemberFlightAssignmentDeleteService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
+public class FlightCrewMemberAssignmentCreateService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -34,39 +34,37 @@ public class FlightCrewMemberFlightAssignmentDeleteService extends AbstractGuiSe
 
 	@Override
 	public void load() {
-		FlightAssignment assignment;
-		int id;
+		FlightAssignment flightAssignment;
+		FlightCrewMember flightCrewMember = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
 
-		id = super.getRequest().getData("id", int.class);
-		assignment = this.repository.findFlightAssignmentById(id);
+		flightAssignment = new FlightAssignment();
+		flightAssignment.setFlightCrewMember(flightCrewMember);
+		flightAssignment.setMoment(MomentHelper.getCurrentMoment());
+		super.getBuffer().addData(flightAssignment);
 
-		super.getBuffer().addData(assignment);
 	}
 
 	@Override
-	public void bind(final FlightAssignment assignment) {
-		super.bindObject(assignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg");
+	public void bind(final FlightAssignment flightAssignment) {
+		super.bindObject(flightAssignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg", "draftMode");
 	}
 
 	@Override
-	public void validate(final FlightAssignment assignment) {
+	public void validate(final FlightAssignment flightAssignment) {
 		;
 	}
 
 	@Override
 	public void perform(final FlightAssignment assignment) {
-		Collection<ActivityLog> logs;
-
-		logs = this.repository.findActivityLogsByAssignmentId(assignment.getId());
-		this.repository.deleteAll(logs);
-		this.repository.delete(assignment);
+		assert assignment != null;
+		this.repository.save(assignment);
 	}
 
 	@Override
 	public void unbind(final FlightAssignment assignment) {
 		Dataset dataset;
 		SelectChoices dutyChoice;
-		SelectChoices statusChoice;
+		SelectChoices currentStatusChoice;
 
 		SelectChoices legChoice;
 		Collection<Leg> legs;
@@ -75,7 +73,7 @@ public class FlightCrewMemberFlightAssignmentDeleteService extends AbstractGuiSe
 		Collection<FlightCrewMember> flightCrewMembers;
 
 		dutyChoice = SelectChoices.from(Duty.class, assignment.getDuty());
-		statusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
+		currentStatusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
 
 		legs = this.repository.findAllLegs();
 		legChoice = SelectChoices.from(legs, "id", assignment.getLeg());
@@ -85,12 +83,11 @@ public class FlightCrewMemberFlightAssignmentDeleteService extends AbstractGuiSe
 
 		dataset = super.unbindObject(assignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg", "draftMode");
 		dataset.put("dutyChoice", dutyChoice);
-		dataset.put("statusChoice", statusChoice);
+		dataset.put("currentStatusChoice", currentStatusChoice);
 		dataset.put("legChoice", legChoice);
 		dataset.put("flightCrewMemberChoice", flightCrewMemberChoice);
 
 		super.getResponse().addData(dataset);
 
 	}
-
 }

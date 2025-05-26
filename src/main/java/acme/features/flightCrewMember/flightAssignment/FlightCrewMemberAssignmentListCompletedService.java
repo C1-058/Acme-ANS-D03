@@ -2,13 +2,14 @@
 package acme.features.flightCrewMember.flightAssignment;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
-import acme.entities.flight.LegStatus;
 import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
@@ -30,11 +31,14 @@ public class FlightCrewMemberAssignmentListCompletedService extends AbstractGuiS
 
 	@Override
 	public void load() {
-		LegStatus status = LegStatus.LANDED;
-		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
 		Collection<FlightAssignment> assignments;
 
-		assignments = this.repository.assignmentsWithCompletedLegs(status, memberId);
+		Date currentMoment = MomentHelper.getCurrentMoment();
+		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		assignments = this.repository.assignmentsWithCompletedLegs(currentMoment, memberId);
+
 		super.getBuffer().addData(assignments);
 	}
 
@@ -42,8 +46,9 @@ public class FlightCrewMemberAssignmentListCompletedService extends AbstractGuiS
 	public void unbind(final FlightAssignment assignment) {
 		Dataset dataset;
 
-		dataset = super.unbindObject(assignment, "duty", "moment", "status");
+		dataset = super.unbindObject(assignment, "duty", "moment", "status", "draftMode", "leg");
 		super.addPayload(dataset, assignment, "remarks", "draftMode", "flightCrewMember", "leg.status");
+		dataset.put("leg", assignment.getLeg().getFlightNumber());
 
 		super.getResponse().addData(dataset);
 	}

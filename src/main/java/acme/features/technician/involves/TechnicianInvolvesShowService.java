@@ -9,6 +9,7 @@ import acme.client.components.models.Dataset;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
+import acme.entities.maintenanceRecord.MaintenanceRecord;
 import acme.entities.task.Involves;
 import acme.entities.task.Task;
 import acme.realms.Technician;
@@ -28,7 +29,8 @@ public class TechnicianInvolvesShowService extends AbstractGuiService<Technician
 
 		id = super.getRequest().getData("id", int.class);
 		involves = this.repository.findInvolvesById(id);
-		status = involves != null && super.getRequest().getPrincipal().hasRealm(involves.getMaintenanceRecord().getTechnician());
+		status = involves != null && super.getRequest().getPrincipal().getActiveRealm().getId() == //
+			involves.getMaintenanceRecord().getTechnician().getId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -48,17 +50,26 @@ public class TechnicianInvolvesShowService extends AbstractGuiService<Technician
 	public void unbind(final Involves involves) {
 		Dataset dataset;
 		SelectChoices taskChoices;
+		SelectChoices maintenanceRecordChoices;
 		Collection<Task> tasks;
+		Collection<MaintenanceRecord> maintenanceRecords;
 		final boolean draftRecord;
 
 		tasks = this.repository.findAllTasks();
 		taskChoices = SelectChoices.from(tasks, "ticker", involves.getTask());
 
-		dataset = super.unbindObject(involves, "task");
-		dataset.put("maintenanceRecord", involves.getMaintenanceRecord().getId());
+		maintenanceRecords = this.repository.findAllMaintenanceRecords();
+		maintenanceRecordChoices = SelectChoices.from(maintenanceRecords, "ticker", involves.getMaintenanceRecord());
+
+		dataset = super.unbindObject(involves);
+
 		dataset.put("task", taskChoices.getSelected().getKey());
 		dataset.put("tasks", taskChoices);
 		dataset.put("taskTechnician", involves.getTask().getTechnician().getLicenseNumber());
+
+		dataset.put("maintenanceRecord", maintenanceRecordChoices.getSelected().getKey());
+		dataset.put("maintenanceRecords", maintenanceRecordChoices);
+		dataset.put("maintenanceRecordTechnician", involves.getTask().getTechnician().getLicenseNumber());
 
 		draftRecord = involves.getMaintenanceRecord().isDraftMode();
 		super.getResponse().addGlobal("draftRecord", draftRecord);

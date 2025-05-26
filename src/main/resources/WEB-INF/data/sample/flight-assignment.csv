@@ -28,3 +28,8 @@ flight-assignment-20,PILOT,2010/06/03 00:00,CONFIRMED,"' or 'A' = 'A",true,fligh
 flight-assignment-21,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-02,leg-19
 #draftMode -standard variations
 flight-assignment-23,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,flight-crew-member-01,leg-19
+#test
+flight-assignment-24,PILOT,2010/06/03 00:00,PENDING,"Prueba con Leg: Cancelled",false,flight-crew-member-01,leg-20
+flight-assignment-25,PILOT,2010/06/03 00:00,PENDING,"Prueba con Leg: ON TIME",false,flight-crew-member-01,leg-21
+flight-assignment-26,PILOT,2010/06/03 00:00,CONFIRMED,"Prueba con Leg: DELAYED",false,flight-crew-member-01,leg-22
+flight-assignment-27,PILOT,2020/06/03 00:00,CONFIRMED,"Prueba con Leg Planned",true,flight-crew-member-01,leg-23
