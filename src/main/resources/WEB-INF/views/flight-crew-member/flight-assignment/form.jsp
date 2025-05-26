@@ -12,7 +12,7 @@
  
  	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:submit code="flight-crew-member.flight-assignment.form.button.return" action="/flightCrewMember/flightAssignment/list"/>
+			<acme:submit code="flight-crew-member.flight-assignment.form.button.activity-log" action="/flightCrewMember/flightAssignment/list"/>
 		</jstl:when>
 
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
