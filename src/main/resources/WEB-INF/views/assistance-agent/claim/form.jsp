@@ -21,12 +21,15 @@
 	<acme:input-textarea code="assistanceAgent.claim.form.label.description" path="description"/>	
 	<acme:input-select code="assistanceAgent.claim.form.label.type" path="type" choices="${types}"/>
 	<acme:input-select code="assistanceAgent.claim.form.label.leg" path="leg" choices="${legs}"/>
-	<acme:input-textbox code="assistanceAgent.claim.form.label.indicator" path="indicator" readonly="true"/>
-		
+	<jstl:if test="${_command != 'create'}">
+    <acme:input-textbox code="assistanceAgent.claim.form.label.indicator" path="indicator" readonly="true"/>
+	</jstl:if>
+	<jstl:if test="${_command == 'create'}">
+	</jstl:if>
 
 	
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|publish')}">
+		<jstl:when test="${acme:anyOf(_command, 'show|update|publish|delete')}">
 		<jstl:if test="${draftMode}">
 			<acme:submit code="assistanceAgent.claim.form.button.update" action="/assistance-agent/claim/update"/>
 			<acme:submit code="assistanceAgent.claim.form.button.publish" action="/assistance-agent/claim/publish"/>
@@ -37,10 +40,10 @@
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="assistanceAgent.claim.form.button.create" action="/assistance-agent/claim/create"/>
-		</jstl:when>			
+		</jstl:when>		
 	</jstl:choose>	
 		<jstl:if test="${_command != 'create'}">
 		<acme:button code="assistanceAgent.claim.form.show.trackingLogs" action="/assistance-agent/tracking-log/list?claimId=${id}"/>
+		<acme:button code="assistanceAgent.claim.form.create.trackingLog" action="/assistance-agent/tracking-log/create?claimId=${id}"/>
 	</jstl:if>
-	
 </acme:form>
