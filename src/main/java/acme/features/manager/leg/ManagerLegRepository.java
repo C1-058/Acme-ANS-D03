@@ -15,6 +15,7 @@ import acme.entities.airport.Airport;
 import acme.entities.flight.Flight;
 import acme.entities.flight.Leg;
 import acme.entities.flight.LegStatus;
+import acme.realms.Manager;
 
 @Repository
 public interface ManagerLegRepository extends AbstractRepository {
@@ -34,12 +35,21 @@ public interface ManagerLegRepository extends AbstractRepository {
 	@Query("select a from Airport a")
 	List<Airport> findAllAirports();
 
-	@Query("select a from Aircraft a")
-	List<Aircraft> findAllAircrafts();
+	@Query("select a from Aircraft a where a.airline.iataCode = :managerAirline")
+	List<Aircraft> findAllAircrafts(String managerAirline);
 
 	@Query("select l from Leg l where l.flightNumberDigits = :flightNumberDigits")
 	Optional<Leg> findLegByFlightNumberDigits(String flightNumberDigits);
 
 	@Query("select l from Leg l where l.departure < :arrival and l.arrival > :departure and (l.status = :onTime or l.status = :delayed)")
 	List<Leg> findLegsByMomentBracket(Date departure, Date arrival, LegStatus onTime, LegStatus delayed);
+
+	@Query("select m from Manager m where m.id = :managerId")
+	Manager findManagerById(int managerId);
+
+	@Query("select a from Aircraft a where a.id = :aircraftId")
+	Aircraft findAircraftById(int aircraftId);
+
+	@Query("select a from Airport a where a.id = :airportId")
+	Airport findAirportById(int airportId);
 }

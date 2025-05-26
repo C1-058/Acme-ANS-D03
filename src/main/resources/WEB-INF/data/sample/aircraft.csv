@@ -53,4 +53,10 @@ aircraft-43,Model 0,30,100,2000,ACTIVE,' or 'A' = 'A,airline-22
 aircraft-44,Model 0,31,100,2000,ACTIVE,No comment,airline-22
 aircraft-45,Model 0,32,100,2000,ACTIVE,No comment,airline-04
 # leg tests
-aircraft-46,Modelo 1,33,100,2000,ACTIVE,Avión para los tests de leg.,airline-01
+aircraft-46,Avión malo,Avión para vuelos cortos-1,100,25,ACTIVE,Avión para los tests de leg.,airline-01
+aircraft-47,Avión bueno,Avión para vuelos largos-1,100,25,ACTIVE,Avión para los tests de leg.,airline-01
+aircraft-48,Avión malo,Avión para vuelos cortos-2,100,25,ACTIVE,Avión para los tests de leg.,airline-02
+aircraft-49,Avión bueno,Avión para vuelos largos-2,100,25,ACTIVE,Avión para los tests de leg.,airline-02
+aircraft-50,Avión malo,Avión para vuelos cortos-3,100,25,ACTIVE,Avión para los tests de leg.,airline-03
+aircraft-51,Avión bueno,Avión para vuelos largos-3,100,25,ACTIVE,Avión para los tests de leg.,airline-03
+

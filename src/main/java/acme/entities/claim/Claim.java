@@ -4,7 +4,9 @@ package acme.entities.claim;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -16,6 +18,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.helpers.SpringHelper;
+import acme.constraints.ValidClaim;
 import acme.constraints.ValidText;
 import acme.entities.flight.Leg;
 import acme.entities.tracking_log.TrackingLog;
@@ -27,6 +30,10 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidClaim
+@Table(indexes = {
+	@Index(columnList = "assistance_agent_id"), @Index(columnList = "id")
+})
 public class Claim extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
