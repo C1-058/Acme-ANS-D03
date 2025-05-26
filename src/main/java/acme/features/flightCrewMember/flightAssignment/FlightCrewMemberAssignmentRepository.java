@@ -36,4 +36,7 @@ public interface FlightCrewMemberAssignmentRepository extends AbstractRepository
 
 	@Query("select al from ActivityLog al where al.flightAssignment.id = ?1")
 	Collection<ActivityLog> findActivityLogsByAssignmentId(int id);
+
+	@Query("select case when count(a) > 0 then true else false end " + "from FlightAssignment a " + "where a.id = :id " + "and a.leg.arrival < :currentMoment")
+	Boolean areLegsCompleted(int id, Date currentMoment);
 }

@@ -7,14 +7,15 @@ flight-crew-member.flight-assignment.list.label.leg = Leg
 flight-crew-member.flight-assignment.list.title = My Flight Assignments
 
 flight-crew-member.flight-assignment.form.title = Assignment details
+
 # Labels
-flight-crew-member.flight-assignment.form.label.flightCrewMember = Flight Crew Member
 flight-crew-member.flight-assignment.form.label.flightCrewDuty = Flight Crew Duty
 flight-crew-member.flight-assignment.form.label.lastUpdate = Last Update
 flight-crew-member.flight-assignment.form.label.assignmentStatus = Assignment Status
 flight-crew-member.flight-assignment.form.label.remarks = Remarks
-flight-crew-member.flight-assignment.form.label.draftMode = Draft Mode
 flight-crew-member.flight-assignment.form.label.leg = Leg 
+flight-crew-member.flight-assignment.form.label.memberCode = Member Employee Code
+
 
 # Buttons
 flight-crew-member.flight-assignment.form.button.return = Return

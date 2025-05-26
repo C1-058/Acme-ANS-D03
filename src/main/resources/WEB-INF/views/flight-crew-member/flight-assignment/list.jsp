@@ -7,8 +7,9 @@
 	<acme:list-column code="flight-crew-member.flight-assignment.list.label.duty" path="duty" width="30%"/>
 	<acme:list-column code="flight-crew-member.flight-assignment.list.label.lastUpdate" path="moment" width="30%"/>
 	<acme:list-column code="flight-crew-member.flight-assignment.list.label.status" path="status" width="30%"/>
-	<acme:list-column code="flight-crew-member.flight-assignment.list.label.draftMode" path="draftMode" width="20%"/>
 	<acme:list-column code="flight-crew-member.flight-assignment.list.label.leg" path="leg" width="20%"/>
+	<acme:list-column code="flight-crew-member.flight-assignment.list.label.draftMode" path="draftMode" width="20%"/>
+
 	<acme:list-payload path="payload"/>
 </acme:list>
 

@@ -3,13 +3,12 @@
  <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
  
  <acme:form>
- 	<acme:input-select code="flight-crew-member.flight-assignment.form.label.flightCrewDuty" path="duty" choices="${dutyChoice}"/>
-	<acme:input-moment code="flight-crew-member.flight-assignment.form.label.lastUpdate" path="moment" readonly="true"/>
-	<acme:input-select code="flight-crew-member.flight-assignment.form.label.assignmentStatus" path="status" choices="${currentStatusChoice}"/>
+ 	<acme:input-select code="flight-crew-member.flight-assignment.form.label.leg" path="leg" choices="${legChoice}"/>
+ 	<acme:input-textbox code="flight-crew-member.flight-assignment.form.label.memberCode" path = "member" readonly="true"/>
+ 	<acme:input-select code="flight-crew-member.flight-assignment.form.label.flightCrewDuty" path="duty" choices="${dutyChoice}"/>	
+ 	<acme:input-select code="flight-crew-member.flight-assignment.form.label.assignmentStatus" path="status" choices="${currentStatusChoice}"/>
 	<acme:input-textarea code="flight-crew-member.flight-assignment.form.label.remarks" path="remarks"/>
-	<acme:input-checkbox code="flight-crew-member.flight-assignment.form.label.draftMode" path="draftMode"/>
-	<acme:input-select code="flight-crew-member.flight-assignment.form.label.flightCrewMember" path="flightCrewMember" choices="${flightCrewMemberChoice}"/>
-	<acme:input-select code="flight-crew-member.flight-assignment.form.label.leg" path="leg" choices="${legChoice}"/>
+	<acme:input-moment code="flight-crew-member.flight-assignment.form.label.lastUpdate" path="moment" readonly="true"/>
  
  	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">

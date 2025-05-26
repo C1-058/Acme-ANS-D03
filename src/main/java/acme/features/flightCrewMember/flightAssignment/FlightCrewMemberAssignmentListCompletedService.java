@@ -48,6 +48,7 @@ public class FlightCrewMemberAssignmentListCompletedService extends AbstractGuiS
 
 		dataset = super.unbindObject(assignment, "duty", "moment", "status", "draftMode", "leg");
 		super.addPayload(dataset, assignment, "remarks", "draftMode", "flightCrewMember", "leg.status");
+		dataset.put("leg", assignment.getLeg().getFlightNumber());
 
 		super.getResponse().addData(dataset);
 	}
