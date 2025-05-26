@@ -22,6 +22,7 @@ master.menu.anonymous.favourite-link-pablo = 75919464Y: Vargas Sáez, Pablo
 master.menu.administrator = Administrator
 master.menu.administrator.list-airports = List Airports
 master.menu.administrator.list-airlines = List airlines
+master.menu.administrator.list-maintenance-records = List maintenance records
 master.menu.administrator.list-user-accounts = List user accounts
 master.menu.administrator.populate-db-initial = Populate DB (initial)
 master.menu.administrator.populate-db-sample = Populate DB (samples)

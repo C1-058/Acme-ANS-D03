@@ -1,0 +1,84 @@
+# validation-es.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+acme.validation.header.message  	= Debe tener entre 1 y 50 caracteres
+acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres 
+acme.validation.phone.message       = Debe ser +código-país (código-área) número, donde sólo el número es obligatorio
+
+# Flight Assignaments
+acme.validation.FlightAssignament.havePilot.message= Ese tramo ya tiene un piloto asignado
+acme.validation.FlightAssignament.haveCopilot.message= Ese tramo ya tiene un copiloto asignado
+acme.validation.FlightAssignament.flightCrewMemberNotAvailable.message= Ese miembro de la tripulación no está disponible
+acme.validation.FlightAssignament.FlightCrewMemberIncompatibleLegs.message= Ese miembro de la tripulación tiene tramos de vuelo incompatibles con ese
+acme.validation.FlightAssignament.LegAlreadyCompleted.message= El tramo al que esta asignacion de vuelo estaba asociado ya terminó, por lo que no podés publicarla
+acme.validation.flightAssignament.availableFlightCrewMember.message= La asignación de vuelo debe tener un miembro de la tripulación disponible asignado
+
+#Activity Log
+acme.validation.activityLog.wrongMoment.message = El momento de registro del Registro de Actividad debe ser posterior a la fecha de llegada de la leg
+acme.validation.ActivityLog.FlightAssignamentNotPublished.message = No puede publicar el Registro de Actividad si la asignación de vuelo a la que está asociado no se publico
+
+#Technician
+acme.validation.task-record.ticker.message = El ticker debe tener entre 5 y 15 caracteres y solo puede contener letras, números, subrayados y guiones
+acme.validation.nextInspection.message = La fecha de la próxima inspección debe ser, al menos, una hora después del momento del registro de mantenimiento
+acme.validation.task-record.ticker.duplicated.message = El ticker ya existe, utilice uno distinto
+acme.validation.maintenance-record.tasks.not-draft.message = El registro de mantenimiento debe tener, al menos, una tarea publicada y no debe tener ni una tarea que no esté publicada
+acme.validation.maintenance-record.moment-next-inspection.create.messsage = Al crear un registro de mantenimiento, el momento será la fecha y hora actuales. El valor actual de la fecha de la próxima inspección no es al menos una hora después que la fecha y hora actuales
+acme.validation.maintenance-record.moment-next-inspection.update.messsage = Al actualizar este registro de mantenimiento, el momento será la fecha y hora actuales. El valor actual de la fecha de la próxima inspección no es al menos una hora después que la fecha y hora actuales
+acme.validation.maintenance-record.moment-next-inspection.publish.messsage = Al publicar este registro de mantenimiento, el momento será la fecha y hora actuales. El valor actual de la fecha de la próxima inspección no es al menos una hora después que la fecha y hora actuales
+acme.validation.involves.draft-record.message = Registro de mantenimiento publicado. El involucramiento en tareas de un registro de mantenimiento publicado no debe ser modificado
+acme.validation.technician.license-number.duplicated.message = El número de licencia ya está en uso
+acme.validation.technician.phone-number.duplicated.message = El número de teléfono ya está en uso
+
+#Acme:
+
+javax.validation.constraints.AssertFalse.message = Debe ser falso
+javax.validation.constraints.AssertTrue.message = Debe ser cierto
+javax.validation.constraints.DecimalMax.message = Debe ser menor o igual a {value}
+javax.validation.constraints.DecimalMin.message = Debe ser mayor o igual a {value}
+javax.validation.constraints.Digits.message = Puede tener hasta {integer} dígitos enteros y {fraction} dígitos decimales
+javax.validation.constraints.Email.message = No es un e-mail correcto
+javax.validation.constraints.Future.message = Debe ser en el futuro
+javax.validation.constraints.Max.message = Debe ser menor o igual a {value}
+javax.validation.constraints.Min.message = Debe ser mayor o igual a {value}
+javax.validation.constraints.NotBlank.message = No puede estar en blanco
+javax.validation.constraints.NotEmpty.message = No puede estar vacío
+javax.validation.constraints.NotNull.message = No puede ser nulo
+javax.validation.constraints.Null.message = Debe ser nulo
+javax.validation.constraints.PastOrPresent.message = Debe estar en el pasado
+javax.validation.constraints.Past.message = Debe estar en el pasado
+javax.validation.constraints.Pattern.message = Debe encajar en el patrón "{regexp}"
+javax.validation.constraints.Size.message = Debe tener entre {min} y {max} elementos
+
+org.hibernate.validator.constraints.CreditCardNumber.message = Número de tarjeta incorrecto
+org.hibernate.validator.constraints.Length.message = La longitud debe estar entre {min} y {max}
+org.hibernate.validator.constraints.Range.message = Debe estar entre {min} y {max}
+org.hibernate.validator.constraints.SafeHtml.message = El contenido HTML puede ser inseguro
+org.hibernate.validator.constraints.ScriptAssert.message = La expresión "{script}" debe devolver true
+org.hibernate.validator.constraints.URL.message = No es una URL correcta
+
+acme.validation.object.message = Valor incorrecto
+acme.validation.entity.message = Entidad inválida
+acme.validation.uuid.message = UUID inválido
+acme.validation.decimal-max.message = Debe ser menor o igual que {0}
+acme.validation.decimal-min.message = Debe ser mayor o igual que {0}
+acme.validation.digits.message = Debe tener un máximo de {0} dígitos y {1} decimales
+acme.validation.max.message = Debe ser menor o igual que {0}
+acme.validation.min.message = Debe ser mayor o igual que {0}
+acme.validation.score.message = Debe estar entre 0.00 y 1.00
+acme.validation.pattern.message = Debe seguir el patrón "{0}"
+acme.validation.length.message = La longitud debe ser entre {0} y {1}
+acme.validation.range.message = Debe estar entre {0} y {1}
+acme.validation.script.message = El script "{0}" debe devolver true
+acme.validation.currency.message = Moneda incorrecta
+acme.validation.confirmation.message = Debe confirmar
+acme.validation.lastNibble.notPattern.message = Los 4 últimos digitos deben ser numéricos
+acme.validation.lastNibble.startIdentifier.message = El identificador debe comenzar por las iniciales del usuario
+acme.validation.identifier.invalidIdentifier.message = El identificador dado no es válido
+acme.validation.employeeCode.invalidEmployeeCode.message = El código de empleado no es válido

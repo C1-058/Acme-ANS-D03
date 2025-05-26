@@ -1,6 +1,7 @@
 
 package acme.features.technician.maintenanceRecord;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.Date;
 
@@ -34,7 +35,24 @@ public class TechnicianMaintenanceRecordPublishService extends AbstractGuiServic
 		masterId = super.getRequest().getData("id", int.class);
 		maintenanceRecord = this.repository.findMaintenanceRecordById(masterId);
 		technician = maintenanceRecord == null ? null : maintenanceRecord.getTechnician();
-		status = maintenanceRecord != null && maintenanceRecord.isDraftMode() && super.getRequest().getPrincipal().hasRealm(technician);
+		status = maintenanceRecord != null && maintenanceRecord.isDraftMode() && // 
+			super.getRequest().getPrincipal().getActiveRealm().getId() == technician.getId();
+
+		if (status) {
+			String method;
+			int aircraftId;
+			Aircraft aircraft;
+
+			method = super.getRequest().getMethod();
+
+			if (method.equals("GET"))
+				status = true;
+			else {
+				aircraftId = super.getRequest().getData("aircraft", int.class);
+				aircraft = this.repository.findAircraftById(aircraftId);
+				status = aircraftId == 0 || aircraft != null;
+			}
+		}
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -52,10 +70,12 @@ public class TechnicianMaintenanceRecordPublishService extends AbstractGuiServic
 
 	@Override
 	public void bind(final MaintenanceRecord maintenanceRecord) {
+		int aircraftId;
 		Aircraft aircraft;
 		Date currentMoment;
 
-		aircraft = super.getRequest().getData("aircraft", Aircraft.class);
+		aircraftId = super.getRequest().getData("aircraft", int.class);
+		aircraft = this.repository.findAircraftById(aircraftId);
 		currentMoment = MomentHelper.getCurrentMoment();
 
 		super.bindObject(maintenanceRecord, "ticker", "status", "nextInspectionDueTime", "estimatedCost", "notes");
@@ -70,6 +90,8 @@ public class TechnicianMaintenanceRecordPublishService extends AbstractGuiServic
 		boolean tasksValid;
 		MaintenanceRecord existMaintenanceRecord;
 		boolean validTicker;
+		Date minimumNextInspection;
+		boolean validNextInspection;
 
 		tasks = this.repository.findTasksAssociatedWithMaintenanceRecordById(maintenanceRecord.getId());
 		allTasksNotDraft = tasks.stream().allMatch(task -> !task.isDraftMode());
@@ -79,7 +101,15 @@ public class TechnicianMaintenanceRecordPublishService extends AbstractGuiServic
 
 		existMaintenanceRecord = this.repository.findMaintenanceRecordByTicker(maintenanceRecord.getTicker());
 		validTicker = existMaintenanceRecord == null || existMaintenanceRecord.getId() == maintenanceRecord.getId();
-		super.state(validTicker, "ticker", "acme.validation.task-record.ticker.duplicated.message");
+		if (!validTicker)
+			super.state(validTicker, "ticker", "acme.validation.task-record.ticker.duplicated.message");
+
+		minimumNextInspection = MomentHelper.deltaFromMoment(maintenanceRecord.getMoment(), 1L, ChronoUnit.HOURS);
+		validNextInspection = maintenanceRecord.getNextInspectionDueTime() == null ? //
+			false : //
+			MomentHelper.isAfterOrEqual(maintenanceRecord.getNextInspectionDueTime(), minimumNextInspection);
+
+		super.state(validNextInspection, "nextInspectionDueTime", "acme.validation.maintenance-record.moment-next-inspection.publish.messsage");
 	}
 
 	@Override
