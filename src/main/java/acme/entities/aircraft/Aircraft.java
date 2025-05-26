@@ -12,7 +12,6 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.constraints.ValidCargoWeight;
 import acme.constraints.ValidShortText;
 import acme.entities.airline.Airline;
 import lombok.Getter;
@@ -41,7 +40,7 @@ public class Aircraft extends AbstractEntity {
 	private Integer				capacity;
 
 	@Mandatory
-	@ValidCargoWeight
+	@ValidNumber(min = 2000, max = 50000)
 	@Automapped
 	private Integer				cargoWeight;
 
