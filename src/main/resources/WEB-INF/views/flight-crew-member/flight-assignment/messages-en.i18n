@@ -24,3 +24,6 @@ flight-crew-member.flight-assignment.form.button.delete = Delete
 flight-crew-member.flight-assignment.form.button.create = Create
 
 flight-crew-member.flight-assignment.form.button.activity-log = Activity Logs
+
+acme.validation.flight-crew-member.assignment.leg.required = Leg required
+acme.validation.flight-crew-member.assignment.form.error.leg-not-published = Leg must be not published
