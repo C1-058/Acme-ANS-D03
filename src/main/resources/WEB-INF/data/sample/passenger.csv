@@ -1,51 +1,51 @@
-key,fullName,email,passportNumber,dateOfBirth,specialNeeds
+key,fullName,email,passportNumber,dateOfBirth,specialNeeds,draftMode,key:customer
 # base entity
-passenger-00,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment
+passenger-00,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
 #fullName - standard variations
-passenger-01,L,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-02,Lo,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-03,"Lorem ipsum dolor sit amet, consectetur adipis",marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-04,"Lorem ipsum dolor sit amet, consectetur adipisc",marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-05,โลเร็ม อิปซัม,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-06,لوريم إيبسوم,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-07,洛伦·伊普森,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-08,<marquee>Hacked</marquee>,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-09,<script>alert(‘Hacked!’),marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
-passenger-10,' or 'A' = 'A,marylou@gmail.com,ABC123,2000/01/01 00:00,"mobility impairment"
+passenger-01,L,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-02,Lo,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-03,"Lorem ipsum dolor sit amet, consectetur adipis",marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-04,"Lorem ipsum dolor sit amet, consectetur adipisc",marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-05,โลเร็ม อิปซัม,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-06,لوريم إيبسوم,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-07,洛伦·伊普森,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-08,<marquee>Hacked</marquee>,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-09,<script>alert(‘Hacked!’),marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-10,' or 'A' = 'A,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
 #email - standard variations
-passenger-11,Mary Lou,a@b.c,ABC123,2000/01/01 00:00,mobility impairment
-passenger-12,Mary Lou,verylongemailaddresswithmultiplecharacters@averylongdomainnameincludingmultiplesubdomains.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-13,Mary Lou,johnsmith@example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-14,Mary Lou,123456@example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-15,Mary Lou,john123@example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-16,Mary Lou,user.name@example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-17,Mary Lou,user_name@example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-18,Mary Lou,a1.b2_c3+d4-e5%f6@example-domain.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-19,Mary Lou,user@example.co.uk,ABC123,2000/01/01 00:00,mobility impairment
-passenger-20,Mary Lou,user@mail.sub.example.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-21,Mary Lou,John.Doe@Example.COM,ABC123,2000/01/01 00:00,mobility impairment
-passenger-22,Mary Lou,user@x.com,ABC123,2000/01/01 00:00,mobility impairment
+passenger-11,Mary Lou,a@b.c,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-12,Mary Lou,verylongemailaddresswithmultiplecharacters@averylongdomainnameincludingmultiplesubdomains.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-13,Mary Lou,johnsmith@example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-14,Mary Lou,123456@example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-15,Mary Lou,john123@example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-16,Mary Lou,user.name@example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-17,Mary Lou,user_name@example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-18,Mary Lou,a1.b2_c3+d4-e5%f6@example-domain.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-19,Mary Lou,user@example.co.uk,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-20,Mary Lou,user@mail.sub.example.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-21,Mary Lou,John.Doe@Example.COM,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-22,Mary Lou,user@x.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
 #passportNumber - standard variations
-passenger-23,Mary Lou,marylou@gmail.com,AAA000,2000/01/01 00:00,mobility impairment
-passenger-24,Mary Lou,marylou@gmail.com,ZZZ999,2000/01/01 00:00,mobility impairment
-passenger-25,Mary Lou,marylou@gmail.com,000000,2000/01/01 00:00,mobility impairment
-passenger-26,Mary Lou,marylou@gmail.com,99999999,2000/01/01 00:00,mobility impairment
-passenger-27,Mary Lou,marylou@gmail.com,ZZZZZZZZ,2000/01/01 00:00,mobility impairment
-passenger-28,Mary Lou,marylou@gmail.com,AAAAAA,2000/01/01 00:00,mobility impairment
+passenger-23,Mary Lou,marylou@gmail.com,AAA000,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-24,Mary Lou,marylou@gmail.com,ZZZ999,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-25,Mary Lou,marylou@gmail.com,000000,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-26,Mary Lou,marylou@gmail.com,99999999,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-27,Mary Lou,marylou@gmail.com,ZZZZZZZZ,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-28,Mary Lou,marylou@gmail.com,AAAAAA,2000/01/01 00:00,mobility impairment,false,customer-01
 #dateOfBirth - standard variations
-passenger-29,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment
-passenger-30,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:01,mobility impairment
-passenger-31,Mary Lou,marylou@gmail.com,ABC123,2022/07/29 23:58,mobility impairment
-passenger-32,Mary Lou,marylou@gmail.com,ABC123,2022/07/29 23:59,mobility impairment
+passenger-29,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,mobility impairment,false,customer-01
+passenger-30,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:01,mobility impairment,false,customer-01
+passenger-31,Mary Lou,marylou@gmail.com,ABC123,2022/07/29 23:58,mobility impairment,false,customer-01
+passenger-32,Mary Lou,marylou@gmail.com,ABC123,2022/07/29 23:59,mobility impairment,false,customer-01
 #specialNeeds - standard variations
-passenger-33,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,null
-passenger-34,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,L
-passenger-35,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,Lo
-passenger-36,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,"Lorem ipsum dolor sit amet, consectetur adipis"
-passenger-37,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,"Lorem ipsum dolor sit amet, consectetur adipisc"
-passenger-38,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,โลเร็ม อิปซัม
-passenger-39,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,لوريم إيبسوم
-passenger-40,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,洛伦·伊普森
-passenger-41,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,<marquee>Hacked</marquee>
-passenger-42,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,<script>alert(‘Hacked!’);</script>
-passenger-43,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,' or 'A' = 'A
+passenger-33,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,null,false,customer-01
+passenger-34,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,L,false,customer-01
+passenger-35,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,Lo,false,customer-01
+passenger-36,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,"Lorem ipsum dolor sit amet, consectetur adipis",false,customer-01
+passenger-37,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,"Lorem ipsum dolor sit amet, consectetur adipisc",false,customer-01
+passenger-38,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,โลเร็ม อิปซัม,false,customer-01
+passenger-39,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,لوريم إيبسوم,false,customer-01
+passenger-40,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,洛伦·伊普森,false,customer-01
+passenger-41,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,<marquee>Hacked</marquee>,false,customer-02
+passenger-42,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,<script>alert(‘Hacked!’);</script>,false,customer-02
+passenger-43,Mary Lou,marylou@gmail.com,ABC123,2000/01/01 00:00,' or 'A' = 'A,false,customer-03
