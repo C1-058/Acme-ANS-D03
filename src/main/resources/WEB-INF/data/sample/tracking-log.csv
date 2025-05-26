@@ -1,37 +1,37 @@
-key,lastUpdateMoment,step,resolutionPercentage,indicator,resolution,key:claim
+key,lastUpdateMoment,step,resolutionPercentage,indicator,key:claim
 #base-entity
-tracking-log-01,2021/07/30 00:00,First step,50,PENDING,Destroy the airport,claim-01
+tracking-log-01,2021/07/30 00:00,First step,50,PENDING,claim-01
 #lastUpdateMoment - variations
-tracking-log-02,2000/01/01 00:00,First step,50,PENDING,Destroy the airport,claim-01
-tracking-log-03,2000/01/01 00:01,First step,50,PENDING,Destroy the airport,claim-01
-tracking-log-04,2022/07/29 23:59,First step,50,PENDING,Destroy the airport,claim-01
+tracking-log-02,2000/01/01 00:00,First step,50,PENDING,claim-01
+tracking-log-03,2000/01/01 00:01,First step,50,PENDING,claim-01
+tracking-log-04,2022/07/29 23:59,First step,50,PENDING,claim-01
 #step - variations
-tracking-log-05,2021/07/30 00:00,L,50,PENDING,Destroy the airport,claim-01
-tracking-log-06,2021/07/30 00:00,Lo,50,PENDING,Destroy the airport,claim-01
-tracking-log-07,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipis",50,PENDING,Destroy the airport,claim-01
-tracking-log-08,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipisc",50,PENDING,Destroy the airport,claim-01
-tracking-log-09,2021/07/30 00:00,โลเร็ม อิปซัม,50,PENDING,Destroy the airport,claim-01
-tracking-log-10,2021/07/30 00:00,لوريم إيبسوم,50,PENDING,Destroy the airport,claim-01
-tracking-log-11,2021/07/30 00:00,洛伦·伊普森,50,PENDING,Destroy the airport,claim-01
-tracking-log-12,2021/07/30 00:00,<marquee>Hacked</marquee>,50,PENDING,Destroy the airport,claim-01
-tracking-log-13,2021/07/30 00:00,"<script>alert(‘Hacked!’),</script>",50,PENDING,Destroy the airport,claim-01
-tracking-log-14,2021/07/30 00:00,or 'A' = 'A,50,PENDING,Destroy the airport,claim-01
+tracking-log-05,2021/07/30 00:00,L,50,PENDING,claim-01
+tracking-log-06,2021/07/30 00:00,Lo,50,PENDING,claim-01
+tracking-log-07,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipis",50,PENDING,claim-01
+tracking-log-08,2021/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipisc",50,PENDING,claim-01
+tracking-log-09,2021/07/30 00:00,โลเร็ม อิปซัม,50,PENDING,claim-01
+tracking-log-10,2021/07/30 00:00,لوريم إيبسوم,50,PENDING,claim-01
+tracking-log-11,2021/07/30 00:00,洛伦·伊普森,50,PENDING,claim-01
+tracking-log-12,2021/07/30 00:00,<marquee>Hacked</marquee>,50,PENDING,claim-01
+tracking-log-13,2021/07/30 00:00,"<script>alert(‘Hacked!’),</script>",50,PENDING,claim-01
+tracking-log-14,2021/07/30 00:00,or 'A' = 'A,50,PENDING,claim-01
 #resolutionPercentage - variations
-tracking-log-15,2021/07/30 00:00,First step,0.00,PENDING,Destroy the airport,claim-01
-tracking-log-16,2021/07/30 00:00,First step,0.01,PENDING,Destroy the airport,claim-01
-tracking-log-17,2021/07/30 00:00,First step,99.99,PENDING,Destroy the airport,claim-01
-tracking-log-18,2021/07/30 00:00,First step,100.00,PENDING,Destroy the airport,claim-01
+tracking-log-15,2021/07/30 00:00,First step,0.00,PENDING,claim-01
+tracking-log-16,2021/07/30 00:00,First step,0.01,PENDING,claim-01
+tracking-log-17,2021/07/30 00:00,First step,99.99,PENDING,claim-01
+tracking-log-18,2021/07/30 00:00,First step,100.00,PENDING,claim-01
 #indicator - variations
-tracking-log-19,2021/07/30 00:00,First step,100,ACCEPTED,Destroy the airport,claim-27
-tracking-log-30,2021/07/30 00:00,First step,100,REJECTED,Destroy the airport,claim-28
+tracking-log-19,2021/07/30 00:00,First step,100,ACCEPTED,claim-27
+tracking-log-30,2021/07/30 00:00,First step,100,REJECTED,claim-28
 #resolution - variations
-tracking-log-20,2021/07/30 00:00,First step,50,PENDING,L,claim-01
-tracking-log-21,2021/07/30 00:00,First step,50,PENDING,Lo,claim-01
-tracking-log-22,2021/07/30 00:00,First step,50,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",claim-01
-tracking-log-23,2021/07/30 00:00,First step,50,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",claim-01
-tracking-log-24,2021/07/30 00:00,First step,50,PENDING,โลเร็ม อิปซัม,claim-01
-tracking-log-25,2021/07/30 00:00,First step,50,PENDING,لوريم إيبسوم,claim-01
-tracking-log-26,2021/07/30 00:00,First step,50,PENDING,洛伦·伊普森,claim-01
-tracking-log-27,2021/07/30 00:00,First step,50,PENDING,<marquee>Hacked</marquee>,claim-01
-tracking-log-28,2021/07/30 00:00,First step,50,PENDING,"<script>alert(‘Hacked!’),</script>",claim-01
-tracking-log-29,2021/07/30 00:00,First step,50,PENDING,or 'A' = 'A,claim-01
+tracking-log-20,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-21,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-22,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-23,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-24,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-25,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-26,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-27,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-28,2021/07/30 00:00,First step,50,PENDING,claim-01
+tracking-log-29,2021/07/30 00:00,First step,50,PENDING,claim-01

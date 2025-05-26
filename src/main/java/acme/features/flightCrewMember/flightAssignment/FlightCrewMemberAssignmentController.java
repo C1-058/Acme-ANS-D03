@@ -20,13 +20,19 @@ public class FlightCrewMemberAssignmentController extends AbstractGuiController<
 	private FlightCrewMemberAssignmentListPlannedService	listPlannedService;
 
 	@Autowired
-	private FlightCrewMemberFlightAssignmentShowService		showService;
+	private FlightCrewMemberAssignmentShowService			showService;
 
 	@Autowired
-	private FlightCrewMemberFlightAssignmentCreateService	createService;
+	private FlightCrewMemberAssignmentCreateService			createService;
 
 	@Autowired
 	private FlightCrewMemberAssignmentUpdateService			updateService;
+
+	@Autowired
+	private FlightCrewMemberAssignmentDeleteService			deleteService;
+
+	@Autowired
+	private FlightCrewMemberAssignmentPublishService		publishService;
 
 
 	@PostConstruct
@@ -36,5 +42,9 @@ public class FlightCrewMemberAssignmentController extends AbstractGuiController<
 		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("create", this.createService);
 		super.addBasicCommand("update", this.updateService);
+		super.addBasicCommand("delete", this.deleteService);
+
+		super.addCustomCommand("publish", "update", this.publishService);
+
 	}
 }

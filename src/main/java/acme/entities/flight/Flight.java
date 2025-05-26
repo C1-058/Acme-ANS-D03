@@ -4,7 +4,9 @@ package acme.entities.flight;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
@@ -24,6 +26,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "manager_id")
+})
 public class Flight extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -107,6 +112,23 @@ public class Flight extends AbstractEntity {
 		res = repository.findNumberOfLegs(this.getId());
 
 		return res == 0 ? res : res - 1;
+	}
+
+	@Transient
+	public String getDisplayTag() {
+
+		Date scheduledDeparture;
+		Date scheduledArrival;
+
+		scheduledDeparture = this.getDeparture();
+		scheduledArrival = this.getArrival();
+
+		int departureHour = scheduledDeparture != null ? this.getDeparture().getHours() : 0;
+		int departureMinute = scheduledDeparture != null ? this.getDeparture().getMinutes() : 0;
+		int arrivalHour = scheduledArrival != null ? this.getArrival().getHours() : 0;
+		int arrivalMinute = scheduledArrival != null ? this.getArrival().getMinutes() : 0;
+
+		return String.format("%02d:%02d %s → %02d:%02d %s", departureHour, departureMinute, this.getDepartureCity(), arrivalHour, arrivalMinute, this.getArrivalCity());
 	}
 
 

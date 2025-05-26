@@ -63,14 +63,15 @@ public class ManagerFlightUpdateService extends AbstractGuiService<Manager, Flig
 		boolean confirmation;
 		List<String> acceptedCurrencies = List.of("EUR", "USD", "GBP");
 
-		Money flightCost = super.getRequest().getData("cost", Money.class);
+		Money flightCost = flight.getCost();
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 
 		if (confirmation && !flight.getDraftMode())
 			super.state(confirmation, "*", "manager.flight.deletePublishedFlight");
 
-		super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.currency");
+		if (flightCost != null)
+			super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.wrongCurrency");
 
 		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}

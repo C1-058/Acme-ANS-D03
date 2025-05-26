@@ -5,16 +5,18 @@
 
 <acme:form>
 	<acme:input-textbox code="manager.flight.form.label.tag" path="tag"/>
-	<acme:input-textbox code="manager.flight.form.label.airline" path="airline" readonly="true"/>
 	<acme:input-checkbox code="manager.flight.form.label.requiresSelfTransfer" path="requiresSelfTransfer"/>
 	<acme:input-money code="manager.flight.form.label.cost" path="cost"/>
 	<acme:input-textbox code="manager.flight.form.description" path="description"/>
-	<acme:input-moment code="manager.flight.form.label.departure" path="departure" readonly="true"/>
-	<acme:input-moment code="manager.flight.form.label.arrival" path="arrival" readonly="true"/>
-	<acme:input-textbox code="manager.flight.form.label.departureCity" path="departureCity" readonly="true"/>
-	<acme:input-textbox code="manager.flight.form.label.arrivalCity" path="arrivalCity" readonly="true"/>
-	<acme:input-textbox code="manager.flight.form.label.numberOfLayovers" path="numberOfLayovers" readonly="true"/>
-
+	<jstl:if test="${_command != 'create'}">
+		<acme:input-textbox code="manager.flight.form.label.airline" path="airline" readonly="true"/>
+		<acme:input-moment code="manager.flight.form.label.departure" path="departure" readonly="true"/>
+		<acme:input-moment code="manager.flight.form.label.arrival" path="arrival" readonly="true"/>
+		<acme:input-textbox code="manager.flight.form.label.departureCity" path="departureCity" readonly="true"/>
+		<acme:input-textbox code="manager.flight.form.label.arrivalCity" path="arrivalCity" readonly="true"/>
+		<acme:input-textbox code="manager.flight.form.label.numberOfLayovers" path="numberOfLayovers" readonly="true"/>
+	</jstl:if>
+	
 	<acme:input-checkbox code="manager.flight.form.label.confirmation" path="confirmation"/>
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">

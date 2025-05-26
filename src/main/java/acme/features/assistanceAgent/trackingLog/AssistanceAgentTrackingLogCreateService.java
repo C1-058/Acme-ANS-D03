@@ -1,7 +1,6 @@
 
 package acme.features.assistanceAgent.trackingLog;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,16 +25,28 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 
 	@Override
 	public void authorise() {
-		boolean status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class);
+		boolean status;
+		Integer claimId;
+		Claim claim;
+
+		claimId = super.getRequest().getData("claimId", Integer.class);
+		claim = null;
+		if (claimId != null)
+			claim = this.repository.getClaimById(claimId);
+		status = claim != null && super.getRequest().getPrincipal().hasRealm(claim.getAssistanceAgent());
+
 		super.getResponse().setAuthorised(status);
 
 	}
 	@Override
 	public void load() {
 		TrackingLog trackingLog;
+		int claimId = super.getRequest().getData("claimId", int.class);
+		Claim claim = this.repository.getClaimById(claimId);
 
 		trackingLog = new TrackingLog();
 		trackingLog.setDraftMode(true);
+		trackingLog.setClaim(claim);
 		trackingLog.setLastUpdateMoment(MomentHelper.getCurrentMoment());
 
 		super.getBuffer().addData(trackingLog);
@@ -43,17 +54,17 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 
 	@Override
 	public void bind(final TrackingLog trackingLog) {
-		super.bindObject(trackingLog, "lastUpdateMoment", "step", "resolutionPercentage", "indicator", "resolution", "claim");
+		super.bindObject(trackingLog, "step", "resolutionPercentage", "indicator", "resolution");
 
 	}
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
 		boolean valid;
-		valid = trackingLog.getResolutionPercentage() != null;
-		super.state(valid, "ResolutionPercentage", "assistanceAgent.trackingLog.form.error.cantBeNull");
+		//valid = trackingLog.getResolutionPercentage() != null;
+		//super.state(valid, "ResolutionPercentage", "assistanceAgent.trackingLog.form.error.cantBeNull");
 
-		if (trackingLog.getResolutionPercentage() != null && trackingLog.getResolutionPercentage() < 100.0) {
+		if (trackingLog.getResolutionPercentage() != null && trackingLog.getResolutionPercentage() != null && trackingLog.getIndicator() != null && trackingLog.getResolutionPercentage() < 100.0) {
 			valid = trackingLog.getIndicator().equals(ClaimStatus.PENDING);
 			super.state(valid, "indicator", "assistanceAgent.trackingLog.form.error.badStatus");
 		} else if (trackingLog.getIndicator() != null) {
@@ -95,20 +106,15 @@ public class AssistanceAgentTrackingLogCreateService extends AbstractGuiService<
 	@Override
 	public void unbind(final TrackingLog trackingLog) {
 
-		Collection<Claim> claims;
 		SelectChoices statusChoices;
-		SelectChoices claimChoices;
 		Dataset dataset;
-		int assistanceAgentId;
-		assistanceAgentId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
 		statusChoices = SelectChoices.from(ClaimStatus.class, trackingLog.getIndicator());
 
-		claims = this.repository.findClaimsByAssistanceAgent(assistanceAgentId);
-		claimChoices = SelectChoices.from(claims, "id", trackingLog.getClaim());
-
-		dataset = super.unbindObject(trackingLog, "claim", "lastUpdateMoment", "step", "resolutionPercentage", "indicator", "resolution", "draftMode", "id");
+		dataset = super.unbindObject(trackingLog, "lastUpdateMoment", "step", "resolutionPercentage", "indicator", "resolution", "draftMode", "id");
 		dataset.put("statusChoices", statusChoices);
-		dataset.put("claimChoices", claimChoices);
+		int claimId = super.getRequest().getData("claimId", int.class);
+		dataset.put("claimId", claimId);
 
 		super.getResponse().addData(dataset);
 
