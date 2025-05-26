@@ -22,6 +22,7 @@ master.menu.anonymous.favourite-link-pablo = 75919464Y: Vargas Sáez, Pablo
 master.menu.administrator = Administrador
 master.menu.administrator.list-airports = Ver Aeropuertos
 master.menu.administrator.list-airlines = Ver aerolíneas
+master.menu.administrator.list-maintenance-records = Listado de registros de mantenimiento
 master.menu.administrator.list-user-accounts = Ver cuentas de usuario
 master.menu.administrator.populate-db-initial = Poblar BD (inicial)
 master.menu.administrator.populate-db-sample = Poblar BD (ejemplos)
@@ -59,6 +60,7 @@ master.menu.manager.list-flights = Ver vuelos
 
 master.menu.technician = Técnico
 master.menu.technician.maintenance-records = Listar registros de mantenimiento
+master.menu.technician.involves = Listar involucramientos
 master.menu.technician.tasks = Listar tareas
 
 # master.menu.user-account ####################################################

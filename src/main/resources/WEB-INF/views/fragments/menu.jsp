@@ -29,6 +29,7 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.list-airports" action="/administrator/airport/list"/>
 			<acme:menu-suboption code="master.menu.administrator.list-airlines" action="/administrator/airline/list"/>
+			<acme:menu-suboption code="master.menu.administrator.list-maintenance-records" action="/administrator/maintenance-record/list"/>
 			<acme:menu-suboption code="master.menu.administrator.list-aircrafts" action="/administrator/aircraft/list"/>
 			<acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.list-bookings" action="/administrator/booking/list" />
@@ -69,6 +70,7 @@
 		
 		<acme:menu-option code="master.menu.technician" access="hasRealm('Technician')">
 			<acme:menu-suboption code="master.menu.technician.maintenance-records" action="/technician/maintenance-record/list"/>
+			<acme:menu-suboption code="master.menu.technician.involves" action="/technician/involves/list"/>
 			<acme:menu-suboption code="master.menu.technician.tasks" action="/technician/task/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
