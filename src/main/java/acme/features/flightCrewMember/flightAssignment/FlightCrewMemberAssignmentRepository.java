@@ -39,4 +39,10 @@ public interface FlightCrewMemberAssignmentRepository extends AbstractRepository
 
 	@Query("select case when count(a) > 0 then true else false end " + "from FlightAssignment a " + "where a.id = :id " + "and a.leg.arrival < :currentMoment")
 	Boolean areLegsCompleted(int id, Date currentMoment);
+
+	@Query("select distinct a.leg from FlightAssignment a where a.flightCrewMember.id = :id")
+	Collection<Leg> findLegsByCrewId(int id);
+
+	@Query("select m from FlightCrewMember m where m.id = :id")
+	FlightCrewMember findMemberById(int id);
 }
