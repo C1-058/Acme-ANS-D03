@@ -2,6 +2,7 @@
 package acme.features.administrator.airline;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,13 @@ public class AdministratorAirlineUpdateService extends AbstractGuiService<Admini
 	public void authorise() {
 		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRealmOfType(Administrator.class);
+		if (super.getRequest().getMethod().equals("GET"))
+			status = super.getRequest().getPrincipal().hasRealmOfType(Administrator.class);
+		else {
+			List<String> existingTypes = List.of("LUXURY", "STANDARD", "LOW_COST", "0");
+			String type = super.getRequest().getData("type", String.class);
+			status = super.getRequest().getPrincipal().hasRealmOfType(Administrator.class) && existingTypes.contains(type);
+		}
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -57,15 +64,17 @@ public class AdministratorAirlineUpdateService extends AbstractGuiService<Admini
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 		if (confirmation) {
-			String newIataCode = super.getRequest().getData("iataCode", String.class);
+			String newIataCode = airline.getIataCode();
 			int airlineId = super.getRequest().getData("id", int.class);
-			Date newDate = super.getRequest().getData("foundation", Date.class);
+			Date newDate = airline.getFoundation();
 			Optional<Airline> currentAirlineWithIataCode = this.repository.findAirlineByIataCode(newIataCode);
 
 			if (currentAirlineWithIataCode.isPresent() && currentAirlineWithIataCode.get().getId() != airlineId)
 				super.state(false, "iataCode", "administrator.airline.update.existingIataCode");
-			if (MomentHelper.isFuture(newDate))
-				super.state(false, "foundation", "administrator.airline.update.dateInTheFuture");
+			if (newDate != null)
+				if (MomentHelper.isFuture(newDate))
+					super.state(false, "foundation", "administrator.airline.update.dateInTheFuture");
+
 		} else
 			super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}

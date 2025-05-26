@@ -24,11 +24,28 @@ public class ClaimShowService extends AbstractGuiService<AssistanceAgent, Claim>
 
 	@Override
 	public void authorise() {
-		int agentId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		int claimId = super.getRequest().getData("id", int.class);
-		Claim claim = this.repository.findClaimById(claimId);
+		try {
+			if (!super.getRequest().getMethod().equals("GET"))
+				super.getResponse().setAuthorised(false);
+			else {
+				boolean status = super.getRequest().getPrincipal().hasRealmOfType(AssistanceAgent.class);
 
-		super.getResponse().setAuthorised(agentId == claim.getAssistanceAgent().getId());
+				super.getResponse().setAuthorised(status);
+
+				int agentId = super.getRequest().getPrincipal().getActiveRealm().getId();
+				Integer claimId = super.getRequest().getData("id", Integer.class);
+				if (claimId == null)
+					super.getResponse().setAuthorised(false);
+				else {
+					Claim claim = this.repository.findClaimById(claimId);
+
+					super.getResponse().setAuthorised(agentId == claim.getAssistanceAgent().getId());
+				}
+			}
+
+		} catch (Throwable t) {
+			super.getResponse().setAuthorised(false);
+		}
 	}
 
 	@Override
@@ -52,8 +69,8 @@ public class ClaimShowService extends AbstractGuiService<AssistanceAgent, Claim>
 
 		indicator = claim.getIndicator();
 		choices = SelectChoices.from(ClaimType.class, claim.getType());
-		legs = this.repository.findAllLeg();
-		choices2 = SelectChoices.from(legs, "flightNumberDigits", claim.getLeg());
+		legs = this.repository.findAllLegPublish();
+		choices2 = SelectChoices.from(legs, "flightNumber", claim.getLeg());
 
 		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "draftMode", "id");
 		dataset.put("types", choices);

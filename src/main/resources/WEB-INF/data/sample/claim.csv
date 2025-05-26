@@ -2,8 +2,8 @@ key,registrationMoment,passengerEmail,description,type,draftMode,key:assistanceA
 #base-entity
 claim-01,2021/07/30 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 #registrationMoment - variations
-claim-02,2000/01/01 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
-claim-03,2000/01/01 00:01,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
+claim-02,2022/01/01 00:00,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
+claim-03,2022/01/01 00:01,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 claim-04,2022/07/29 23:59,claimer@gmail.com,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18
 #passengerEmail - variations
 claim-05,2021/07/30 00:00,a@b.c,My seat is broken,FLIGHT_ISSUES,false,agent1,leg-18

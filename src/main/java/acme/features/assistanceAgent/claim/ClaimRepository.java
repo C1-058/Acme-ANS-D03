@@ -15,12 +15,6 @@ import acme.entities.tracking_log.TrackingLog;
 @Repository
 public interface ClaimRepository extends AbstractRepository {
 
-	//@Query("SELECT DISTINCT c FROM Claim c JOIN TrackingLog t ON t.claim.id = c.id WHERE t.lastUpdateMoment = (SELECT MAX(t2.lastUpdateMoment) FROM TrackingLog t2 WHERE t2.claim = c) AND (t.status != 'PENDING' AND c.assistanceAgent.id = :agentId)")
-	//List<Claim> findCompletedClaimsByAssistanceAgent(int agentId);
-
-	//@Query("SELECT DISTINCT c FROM Claim c JOIN TrackingLog t ON t.claim.id = c.id WHERE t.lastUpdateMoment = (SELECT MAX(t2.lastUpdateMoment) FROM TrackingLog t2 WHERE t2.claim = c) AND (t.status = 'PENDING' AND c.assistanceAgent.id = :agentId)")
-	//List<Claim> findPendingClaimsByAssistanceAgent(int agentId);
-
 	@Query("Select c from Claim c where c.assistanceAgent.id=:agentId")
 	List<Claim> findClaimsByAssistanceAgent(int agentId);
 
@@ -30,10 +24,13 @@ public interface ClaimRepository extends AbstractRepository {
 	@Query("SELECT l FROM Leg l WHERE l.id = :legId")
 	Leg findLegByLegId(int legId);
 
-	@Query("SELECT l FROM Leg l")
-	Collection<Leg> findAllLeg();
+	@Query("SELECT l FROM Leg l WHERE l.draftMode = false")
+	Collection<Leg> findAllLegPublish();
 
 	@Query("select tl FROM TrackingLog tl where tl.claim.id = :claimId")
 	Collection<TrackingLog> findTrackingLogsByClaimId(int claimId);
+
+	@Query("select l FROM Leg l where l.id = :legId")
+	Leg getLegById(int legId);
 
 }
