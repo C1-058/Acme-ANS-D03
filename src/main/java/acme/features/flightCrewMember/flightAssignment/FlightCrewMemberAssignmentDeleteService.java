@@ -9,6 +9,7 @@ import acme.client.components.models.Dataset;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
+import acme.entities.activitylog.ActivityLog;
 import acme.entities.flight.Leg;
 import acme.entities.flightassignment.AssignmentStatus;
 import acme.entities.flightassignment.Duty;
@@ -16,7 +17,7 @@ import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
 @GuiService
-public class FlightCrewMemberFlightAssignmentShowService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
+public class FlightCrewMemberAssignmentDeleteService extends AbstractGuiService<FlightCrewMember, FlightAssignment> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -29,14 +30,14 @@ public class FlightCrewMemberFlightAssignmentShowService extends AbstractGuiServ
 	@Override
 	public void authorise() {
 		boolean status;
-		int masterId;
-		FlightCrewMember member;
 		FlightAssignment assignment;
+		int assignmentId;
+		int memberId;
 
-		masterId = super.getRequest().getData("id", int.class);
-		assignment = this.repository.findFlightAssignmentById(masterId);
-		member = assignment == null ? null : assignment.getFlightCrewMember();
-		status = super.getRequest().getPrincipal().hasRealm(member) || assignment != null && assignment.getDraftMode() == true;
+		assignmentId = super.getRequest().getData("id", int.class);
+		assignment = this.repository.findFlightAssignmentById(assignmentId);
+		memberId = assignment == null ? null : super.getRequest().getPrincipal().getActiveRealm().getId();
+		status = assignment != null && assignment.getFlightCrewMember().getId() == memberId && assignment.getDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -53,31 +54,47 @@ public class FlightCrewMemberFlightAssignmentShowService extends AbstractGuiServ
 	}
 
 	@Override
+	public void bind(final FlightAssignment assignment) {
+		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		FlightCrewMember member = this.repository.findMemberById(memberId);
+		super.bindObject(assignment, "duty", "status", "remarks", "leg");
+		assignment.setFlightCrewMember(member);
+	}
+
+	@Override
+	public void validate(final FlightAssignment assignment) {
+	}
+
+	@Override
+	public void perform(final FlightAssignment assignment) {
+		Collection<ActivityLog> logs;
+
+		logs = this.repository.findActivityLogsByAssignmentId(assignment.getId());
+		this.repository.deleteAll(logs);
+		this.repository.delete(assignment);
+	}
+
+	@Override
 	public void unbind(final FlightAssignment assignment) {
 		Dataset dataset;
 		SelectChoices dutyChoice;
-		SelectChoices statusChoice;
+		SelectChoices currentStatusChoice;
 
 		SelectChoices legChoice;
 		Collection<Leg> legs;
 
-		SelectChoices flightCrewMemberChoice;
-		Collection<FlightCrewMember> flightCrewMembers;
-
 		dutyChoice = SelectChoices.from(Duty.class, assignment.getDuty());
-		statusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
+		currentStatusChoice = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
 
 		legs = this.repository.findAllLegs();
 		legChoice = SelectChoices.from(legs, "id", assignment.getLeg());
 
-		flightCrewMembers = this.repository.findAllFlightCrewMembers();
-		flightCrewMemberChoice = SelectChoices.from(flightCrewMembers, "id", assignment.getFlightCrewMember());
-
-		dataset = super.unbindObject(assignment, "duty", "moment", "status", "remarks", "draftMode", "leg", "flightCrewMember");
+		dataset = super.unbindObject(assignment, "duty", "moment", "status", "remarks", "flightCrewMember", "leg", "draftMode");
+		dataset.put("confirmation", false);
 		dataset.put("dutyChoice", dutyChoice);
-		dataset.put("currentStatusChoice", statusChoice);
+		dataset.put("currentStatusChoice", currentStatusChoice);
+		dataset.put("member", assignment.getFlightCrewMember().getEmployeeCode());
 		dataset.put("legChoice", legChoice);
-		dataset.put("flightCrewMemberChoice", flightCrewMemberChoice);
 
 		super.getResponse().addData(dataset);
 

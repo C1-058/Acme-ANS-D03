@@ -1,0 +1,15 @@
+customer.booking-record.form.title = Detalles de pasajero en reserva
+customer.booking-record.list.title = Lista de pasajeros en reserva
+
+customer.booking-record.form.label.passenger = Pasajero
+customer.booking-record.form.label.locatorCode = Codigo Localizador de Reserva
+
+customer.booking-record.passenger.form.label.fullName = Nombre completo
+
+customer.booking-record.form.button.create = Crear
+
+customer.booking-record.passenger.list.label.fullName = Nombre Completo
+customer.booking-record.passenger.list.label.email = Email
+customer.booking-record.passenger.list.label.passportNumber = Número de pasaporte
+
+customer.booking-record.passenger.list.button.create = Crear

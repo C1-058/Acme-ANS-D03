@@ -14,7 +14,7 @@ flight-assignment-08,PILOT,2022/07/29 23:59,CONFIRMED,"Lorem ipsum dolor sit ame
 flight-assignment-09,PILOT,2010/06/03 00:00,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-01,leg-19
 flight-assignment-10,PILOT,2010/06/03 00:00,CANCELLED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-01,leg-19
 #remarks - standard variations
-flight-assignment-11,PILOT,2010/06/03 00:00,CONFIRMED,"L",true,flight-crew-member-03,leg-09
+flight-assignment-11,PILOT,2010/06/03 00:00,CONFIRMED,"L",true,flight-crew-member-03,leg-19
 flight-assignment-12,PILOT,2010/06/03 00:00,CONFIRMED,"Lo",true,flight-crew-member-04,leg-19
 flight-assignment-13,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",true,flight-crew-member-03,leg-19
 flight-assignment-14,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",true,flight-crew-member-04,leg-19
@@ -28,3 +28,8 @@ flight-assignment-20,PILOT,2010/06/03 00:00,CONFIRMED,"' or 'A' = 'A",true,fligh
 flight-assignment-21,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-02,leg-19
 #draftMode -standard variations
 flight-assignment-23,PILOT,2010/06/03 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,flight-crew-member-01,leg-19
+#test
+flight-assignment-24,PILOT,2010/06/03 00:00,PENDING,"Prueba con Leg: Cancelled",false,flight-crew-member-01,leg-20
+flight-assignment-25,PILOT,2010/06/03 00:00,PENDING,"Prueba con Leg: ON TIME",false,flight-crew-member-01,leg-21
+flight-assignment-26,PILOT,2010/06/03 00:00,CONFIRMED,"Prueba con Leg: DELAYED",false,flight-crew-member-01,leg-22
+flight-assignment-27,PILOT,2020/06/03 00:00,CONFIRMED,"Prueba con Leg Planned",true,flight-crew-member-01,leg-23

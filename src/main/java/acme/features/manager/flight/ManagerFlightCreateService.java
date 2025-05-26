@@ -56,10 +56,10 @@ public class ManagerFlightCreateService extends AbstractGuiService<Manager, Flig
 		List<String> acceptedCurrencies = List.of("EUR", "USD", "GBP");
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
+		Money flightCost = flight.getCost();
 
-		Money flightCost = super.getRequest().getData("cost", Money.class);
-
-		super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.currency");
+		if (flightCost != null)
+			super.state(acceptedCurrencies.contains(flightCost.getCurrency()), "cost", "manager.flight.form.wrongCurrency");
 
 		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
 	}

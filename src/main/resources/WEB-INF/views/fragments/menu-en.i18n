@@ -27,6 +27,7 @@ master.menu.administrator.list-user-accounts = List user accounts
 master.menu.administrator.populate-db-initial = Populate DB (initial)
 master.menu.administrator.populate-db-sample = Populate DB (samples)
 master.menu.administrator.shut-system-down = Shut system down
+master.menu.administrator.list-aircrafts = List aircrafts
 
 # mater.menu.assistance-agent ####################################################
 
@@ -70,3 +71,15 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-customer = Become a customer
+master.menu.user-account.customer-profile = Customer profile
+
+
+# master.menu.customer ###################################################
+
+master.menu.customer = Customer
+
+master.menu.customer.list-bookings = List my bookings
+master.menu.customer.list-passengers = List passengers in my bookings
+master.menu.customer.list-all-passengers = List all my passengers
+

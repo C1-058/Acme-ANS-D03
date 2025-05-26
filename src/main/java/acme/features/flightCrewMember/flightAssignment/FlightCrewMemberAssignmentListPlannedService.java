@@ -2,14 +2,14 @@
 package acme.features.flightCrewMember.flightAssignment;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
-import acme.entities.flight.LegStatus;
 import acme.entities.flightassignment.FlightAssignment;
 import acme.realms.flightcrewmembers.FlightCrewMember;
 
@@ -31,12 +31,13 @@ public class FlightCrewMemberAssignmentListPlannedService extends AbstractGuiSer
 
 	@Override
 	public void load() {
-		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		Collection<FlightAssignment> assignments;
-		Collection<LegStatus> statuses = List.of(LegStatus.DELAYED, LegStatus.ON_TIME);
+		Collection<FlightAssignment> plannedAssignments;
 
-		assignments = this.repository.assignmentsWithPlannedLegs(statuses, memberId);
-		super.getBuffer().addData(assignments);
+		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		Date currentMoment = MomentHelper.getCurrentMoment();
+
+		plannedAssignments = this.repository.assignmentsWithPlannedLegs(currentMoment, memberId);
+		super.getBuffer().addData(plannedAssignments);
 
 	}
 
@@ -44,8 +45,9 @@ public class FlightCrewMemberAssignmentListPlannedService extends AbstractGuiSer
 	public void unbind(final FlightAssignment assignment) {
 		Dataset dataset;
 
-		dataset = super.unbindObject(assignment, "duty", "moment", "status");
+		dataset = super.unbindObject(assignment, "duty", "moment", "status", "draftMode", "leg");
 		super.addPayload(dataset, assignment, "remarks", "draftMode", "flightCrewMember", "leg.status");
+		dataset.put("leg", assignment.getLeg().getFlightNumber());
 
 		super.getResponse().addData(dataset);
 	}
