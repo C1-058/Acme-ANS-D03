@@ -25,7 +25,7 @@ administrator.airport.form.label.confirmation = Confirm changes
 administrator.airport.form.button.update = Update
 administrator.airport.form.button.create = Create
 
-administrator.airport.update.existifngIataCode = There´s already an airport with that IATA code
+administrator.airport.update.existingIataCode = There´s already an airport with that IATA code
 administrator.airport.create.existingIataCode = There´s already an airport with that IATA code
 
 
